@@ -15,9 +15,9 @@ This project implements a **local spec-aware AI agent** that converts hardware s
 
 The system performs **end-to-end verification and repair** using a feedback-driven loop.
 
-✅ Fully automated
-✅ Single-command execution
-✅ Reproducible pipeline
+* Fully automated
+* Single-command execution
+* Reproducible pipeline
 
 ---
 
