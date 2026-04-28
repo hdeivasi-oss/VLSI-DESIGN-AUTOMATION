@@ -28,7 +28,9 @@ No external dependencies required (uses standard Python libraries).
 Download from: https://bleyer.org/icarus/
 
 ### Install Icarus Verilog in Ubuntu
+```bash
 sudo apt install -y iverilog
+```
 Make sure `iverilog` and `vvp` are added to PATH.
 
 #### macOS (Homebrew)
@@ -36,8 +38,9 @@ Make sure `iverilog` and `vvp` are added to PATH.
 brew install icarus-verilog
 ```
 ### Install Yosys in Ubuntu
+```bash
 sudo apt install -y yosys
-
+```
 ### Install Openroad in Ubuntu
 # 1. Clone the repository
 ```bash
@@ -59,8 +62,9 @@ Run the entire pipeline with a single command:
 python3 agent.py --all specs/
 ```
 ### To see the Report 
+```bash
 summary_table.md
-
+```
 This will:
 1. Read every YAML spec from the specs/ directory.
 2. Create separate output and log folders for each spec.
@@ -149,7 +153,7 @@ Examples:
 - `output/<spec_name>/openroad/logs/base/6_report.log`
 - `output/<spec_name>/openroad/logs/base/6_report.json`
 - `output/<spec_name>/openroad/reports/base/6_finish.rpt`
-
+ ------------
 
 ## Expected Results
 
@@ -280,6 +284,7 @@ output/<spec_name>/openroad/openroad_run.log
     - At the end, summary files are generated:
       - summary_table.csv
       - summary_table.md
+-----------------
 
 ## How to Run Hidden Testcases
 
