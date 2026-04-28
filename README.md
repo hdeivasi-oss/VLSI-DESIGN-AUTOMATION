@@ -18,45 +18,38 @@ In this project I have installed WSL to access Ubuntu there I installed Iverilog
 - Icarus Verilog (iverilog + vvp)
 - Yosys
 - OpenRoad
+### Clone the repository
+The link which have uploaded in the canvas.
 
 ### Install Python dependencies
 No external dependencies required (uses standard Python libraries).
 
+#### Windows
+Download from: https://bleyer.org/icarus/
+
 ### Install Icarus Verilog in Ubuntu
 sudo apt install -y iverilog
+Make sure `iverilog` and `vvp` are added to PATH.
 
+#### macOS (Homebrew)
+```bash
+brew install icarus-verilog
+```
 ### Install Yosys in Ubuntu
 sudo apt install -y yosys
 
 ### Install Openroad in Ubuntu
-### 1. Clone the repository
+# 1. Clone the repository
 ```bash
 cd ~
 git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts.git
 cd OpenROAD-flow-scripts
 ./setup.sh
 ./build_openroad.sh --local
-###Add to the path is important
+
+## Add path is important
 echo 'export PATH=$HOME/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
-
-#### Windows
-Download from: https://bleyer.org/icarus/
-
-Make sure `iverilog` and `vvp` are added to PATH.
-
-#### Linux (Ubuntu)
-```bash
-sudo apt update
-sudo apt install iverilog
-```
-
-#### macOS (Homebrew)
-```bash
-brew install icarus-verilog
-```
-
----
 
 ## How to Run the System
 
@@ -65,7 +58,7 @@ Run the entire pipeline with a single command:
 ```bash
 python3 agent.py --all specs/
 ```
-###Report 
+### To see the Report 
 summary_table.md
 
 This will:
@@ -315,6 +308,9 @@ logs/<new_spec>/
 
 ## Repository Structure
 
+## Project Structure
+
+```text
 Spec_to_Tapeout-main/
 ├── specs/
 │   ├── p1.yaml
@@ -374,6 +370,8 @@ Spec_to_Tapeout-main/
 ├── summary_table.csv
 ├── summary_table.md
 └── AGENTS.md
+```
+
 
 Main folders
 - specs/ contains the input YAML hardware specifications.
@@ -383,7 +381,7 @@ Main folders
 - logs/ stores per-attempt logs and YAML reports for each spec.
 - openroad_runs/ stores OpenROAD working/run data.
 - summary_table.csv and summary_table.md contain the final all-spec summary after running the agent.
-- 
+
 ## Notes
 
 - The system is **spec-family aware**, not fully general
