@@ -54,18 +54,12 @@ cd OpenROAD-flow-scripts
 echo 'export PATH=$HOME/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 
-## How to Run the System
 
+### How to Run the System
 Run the entire pipeline with a single command:
-
 ```bash
 python3 agent.py --all specs/
 ```
-```bash
-summary_table.md
-```
-
-### How to Run the System
 This will:
 1. Read every YAML spec from the specs/ directory.
 2. Create separate output and log folders for each spec.
