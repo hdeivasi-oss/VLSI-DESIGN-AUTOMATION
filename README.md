@@ -231,6 +231,7 @@ Spec_to_Tapeout-main/
 git clone <your-repo-link>
 cd VLSI-DESIGN-AUTOMATION
 python3 agent.py --all specs/
+summary_table.md
 ```
 
 ---
