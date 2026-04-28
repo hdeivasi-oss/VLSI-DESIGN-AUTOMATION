@@ -1,0 +1,17 @@
+OpenROAD 26Q2-339-g0504146ce6 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+[INFO ODB-0227] LEF file: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef, created 13 layers, 25 vias
+[INFO ODB-0227] LEF file: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef, created 441 library cells
+link_design fir_filter
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/results/sky130hd/fir_filter/base/1_2_yosys.sdc
+[WARNING STA-0441] set_input_delay relative to a clock defined on the same port/pin not allowed.
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/results/sky130hd/fir_filter/base/1_synth.odb
+write_sdc -no_timestamp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/results/sky130hd/fir_filter/base/1_synth.sdc
+Elapsed time: 0:00.52[h:]min:sec. CPU time: user 0.48 sys 0.04 (99%). Peak memory: 148568KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+1_synth                            0            145 2d259e73d81d44e7ea1a

@@ -1,0 +1,5 @@
+$ /usr/bin/iverilog -g2012 -o /home/harish_d1121/Spec_to_Tapeout-main/output/p10/Synthesis/gls_sim.out /home/harish_d1121/Spec_to_Tapeout-main/output/p10/Synthesis/design_syn.v /home/harish_d1121/Spec_to_Tapeout-main/output/p10/tb_candidate.v
+
+$ /usr/bin/vvp /home/harish_d1121/Spec_to_Tapeout-main/output/p10/Synthesis/gls_sim.out
+TEST PASSED
+

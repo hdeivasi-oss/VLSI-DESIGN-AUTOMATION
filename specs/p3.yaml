@@ -1,0 +1,34 @@
+module_name: seq_detect_101
+description: Detects the overlapping sequence 101 on a serial input stream and asserts match for one cycle when detected.
+
+inputs:
+  - name: clk
+    width: 1
+  - name: rst
+    width: 1
+  - name: bit_in
+    width: 1
+
+outputs:
+  - name: match
+    width: 1
+
+clock:
+  name: clk
+  edge: posedge
+
+reset:
+  name: rst
+  type: synchronous
+  active_level: high
+
+behavior:
+  - "On each positive edge of clk, if rst is high, the detector returns to its initial state and match is 0."
+  - "Otherwise, the detector tracks the input stream and asserts match for one cycle whenever the sequence 101 has just been observed."
+  - "Overlapping matches are allowed."
+
+verification_goals:
+  - "Verify reset clears the FSM state."
+  - "Verify input sequence 101 produces one match pulse."
+  - "Verify overlapping sequence 10101 produces two match pulses."
+  - "Verify unrelated inputs do not produce false matches."

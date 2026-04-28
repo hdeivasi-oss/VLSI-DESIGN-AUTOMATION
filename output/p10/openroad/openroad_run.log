@@ -1,0 +1,2380 @@
+openroad_output_dir=/home/harish_d1121/Spec_to_Tapeout-main/output/p10/openroad
+openroad_run_home=/home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10
+platform=sky130hd
+design_name=rising_edge_detector
+clock_port=<none>
+clock_period=<none>
+retry_profile_1=core_utilization:35,core_margin:2,place_density:0.50,place_density_lb_addon:0.15,remove_abc_buffers:0,setup_slack_margin:0.0,hold_slack_margin:0.0,hold_repair_mode:baseline
+workspace=/tmp/spec2rtl_openroad/p10
+env: QT_QPA_PLATFORM=offscreen XDG_RUNTIME_DIR=/home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/.xdg_runtime DISPLAY=<unset>
+$ make -C /home/harish_d1121/OpenROAD-flow-scripts/flow DESIGN_CONFIG=/tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/config.mk PLATFORM=sky130hd DESIGN_NAME=rising_edge_detector WORK_HOME=/home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10
+# step: full_flow_profile_1
+make: Entering directory '/home/harish_d1121/OpenROAD-flow-scripts/flow'
+mkdir -p /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/
+echo  > /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/clock_period.txt
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth.sh /home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth_canonicalize.tcl /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/logs/sky130hd/rising_edge_detector/base/1_1_yosys_canonicalize.log
+Using ABC speed script.
+Extracting clock period from SDC file: /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/clock_period.txt
+1. Executing Liberty frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+2. Executing Liberty frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+3. Executing Verilog-2005 frontend: /tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/src/design_syn.v
+4. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_clkgate_hd.v
+5. Executing HIERARCHY pass (managing design hierarchy).
+6. Executing AST frontend in derive mode using pre-parsed AST for module `\rising_edge_detector'.
+6.1. Analyzing design hierarchy..
+6.2. Analyzing design hierarchy..
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module rising_edge_detector because it contains processes (run 'proc' command first).
+8. Executing RTLIL backend.
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: e6b0731948, time: 0.15s, user: 0.13s, system: 0.01s, MEM: 51.50 MB peak
+Yosys 0.64 (git sha1 8449dd470, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3) [the-openroad-project/yosys]
+Time spent: 78% 4x read_liberty (0 sec), 10% 4x read_verilog (0 sec), ...
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth.sh /home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth.tcl /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/logs/sky130hd/rising_edge_detector/base/1_2_yosys.log
+Using ABC speed script.
+Extracting clock period from SDC file: /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/clock_period.txt
+1. Executing RTLIL frontend.
+2. Executing HIERARCHY pass (managing design hierarchy).
+2.1. Analyzing design hierarchy..
+2.2. Analyzing design hierarchy..
+3. Executing SYNTH pass.
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+3.1.1. Analyzing design hierarchy..
+3.1.2. Analyzing design hierarchy..
+3.2. Executing PROC pass (convert processes to netlists).
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+3.3. Executing FLATTEN pass (flatten design).
+3.4. Executing OPT_EXPR pass (perform const folding).
+3.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.6. Executing CHECK pass (checking for obvious problems).
+3.7. Executing OPT pass (performing simple optimizations).
+3.7.1. Executing OPT_EXPR pass (perform const folding).
+3.7.2. Executing OPT_MERGE pass (detect identical cells).
+3.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.7.5. Executing OPT_MERGE pass (detect identical cells).
+3.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.7.8. Executing OPT_EXPR pass (perform const folding).
+3.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+3.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.7.12. Executing OPT_MERGE pass (detect identical cells).
+3.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+3.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.7.15. Executing OPT_EXPR pass (perform const folding).
+3.7.16. Finished fast OPT passes. (There is nothing left to do.)
+3.8. Executing FSM pass (extract and optimize FSM).
+3.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+3.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+3.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+3.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+3.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+3.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+3.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+3.9. Executing OPT pass (performing simple optimizations).
+3.9.1. Executing OPT_EXPR pass (perform const folding).
+3.9.2. Executing OPT_MERGE pass (detect identical cells).
+3.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.9.5. Executing OPT_MERGE pass (detect identical cells).
+3.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.9.8. Executing OPT_EXPR pass (perform const folding).
+3.9.9. Finished fast OPT passes. (There is nothing left to do.)
+3.10. Executing WREDUCE pass (reducing word size of cells).
+3.11. Executing PEEPOPT pass (run peephole optimizers).
+3.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.13. Executing ALUMACC pass (create $alu and $macc cells).
+3.14. Executing SHARE pass (SAT-based resource sharing).
+3.15. Executing OPT pass (performing simple optimizations).
+3.15.1. Executing OPT_EXPR pass (perform const folding).
+3.15.2. Executing OPT_MERGE pass (detect identical cells).
+3.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.15.5. Executing OPT_MERGE pass (detect identical cells).
+3.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.15.8. Executing OPT_EXPR pass (perform const folding).
+3.15.9. Finished fast OPT passes. (There is nothing left to do.)
+3.16. Executing MEMORY pass.
+3.16.1. Executing OPT_MEM pass (optimize memories).
+3.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+3.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+3.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+3.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+3.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+3.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+3.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+3.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+4. Executing SYNTH pass.
+4.1. Executing OPT pass (performing simple optimizations).
+4.1.1. Executing OPT_EXPR pass (perform const folding).
+4.1.2. Executing OPT_MERGE pass (detect identical cells).
+4.1.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.1.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.1.5. Finished fast OPT passes.
+4.2. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+4.3. Executing OPT pass (performing simple optimizations).
+4.3.1. Executing OPT_EXPR pass (perform const folding).
+4.3.2. Executing OPT_MERGE pass (detect identical cells).
+4.3.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.5. Executing OPT_MERGE pass (detect identical cells).
+4.3.6. Executing OPT_SHARE pass.
+4.3.7. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.9. Executing OPT_EXPR pass (perform const folding).
+4.3.10. Finished fast OPT passes. (There is nothing left to do.)
+4.4. Executing TECHMAP pass (map to technology primitives).
+4.4.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/tools/install/yosys/bin/../share/yosys/techmap.v
+4.4.2. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/common/lcu_kogge_stone.v
+4.4.3. Continuing TECHMAP pass.
+4.5. Executing OPT pass (performing simple optimizations).
+4.5.1. Executing OPT_EXPR pass (perform const folding).
+4.5.2. Executing OPT_MERGE pass (detect identical cells).
+4.5.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.5.5. Finished fast OPT passes.
+4.6. Executing HIERARCHY pass (managing design hierarchy).
+4.6.1. Analyzing design hierarchy..
+4.6.2. Analyzing design hierarchy..
+4.7. Printing statistics.
+4.8. Executing CHECK pass (checking for obvious problems).
+5. Executing OPT pass (performing simple optimizations).
+5.1. Executing OPT_EXPR pass (perform const folding).
+5.2. Executing OPT_MERGE pass (detect identical cells).
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+5.5. Executing OPT_MERGE pass (detect identical cells).
+5.6. Executing OPT_DFF pass (perform DFF optimizations).
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+5.8. Executing OPT_EXPR pass (perform const folding).
+5.9. Finished fast OPT passes. (There is nothing left to do.)
+6. Executing EXTRACT_FA pass (find and extract full/half adders).
+7. Executing TECHMAP pass (map to technology primitives).
+7.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_adders_hd.v
+7.2. Continuing TECHMAP pass.
+8. Executing TECHMAP pass (map to technology primitives).
+8.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/tools/install/yosys/bin/../share/yosys/techmap.v
+8.2. Continuing TECHMAP pass.
+9. Executing OPT pass (performing simple optimizations).
+9.1. Executing OPT_EXPR pass (perform const folding).
+9.2. Executing OPT_MERGE pass (detect identical cells).
+9.3. Executing OPT_DFF pass (perform DFF optimizations).
+9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+9.5. Finished fast OPT passes.
+10. Executing TECHMAP pass (map to technology primitives).
+10.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_latch_hd.v
+10.2. Continuing TECHMAP pass.
+11. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+11.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+12. Executing OPT pass (performing simple optimizations).
+12.1. Executing OPT_EXPR pass (perform const folding).
+12.2. Executing OPT_MERGE pass (detect identical cells).
+12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+12.5. Executing OPT_MERGE pass (detect identical cells).
+12.6. Executing OPT_DFF pass (perform DFF optimizations).
+12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+12.8. Executing OPT_EXPR pass (perform const folding).
+12.9. Finished fast OPT passes. (There is nothing left to do.)
+13. Executing SETUNDEF pass (replace undef values with defined constants).
+abc -script /home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/abc_speed.script -liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -dont_use sky130_fd_sc_hd__probe_p_8 -dont_use sky130_fd_sc_hd__probec_p_8 -dont_use sky130_fd_sc_hd__lpflow_bleeder_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_12 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_3 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_6 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_inputiso0n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso0p_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1p_1 -dont_use sky130_fd_sc_hd__lpflow_inputisolatch_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_16 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_2 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_4 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_8 -dont_use sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4 -constr /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/objects/sky130hd/rising_edge_detector/base/abc.constr
+14. Executing ABC pass (technology mapping using ABC).
+14.1. Extracting gate netlist of module `\rising_edge_detector' to `<abc-temp-dir>/input.blif'..
+14.1.1. Executed ABC.
+14.1.2. Re-integrating ABC results.
+15. Executing SPLITNETS pass (splitting up multi-bit signals).
+16. Executing OPT_CLEAN pass (remove unused cells and wires).
+17. Executing HILOMAP pass (mapping to constant drivers).
+18. Executing INSBUF pass (insert buffer cells for connected wires).
+19. Executing CHECK pass (checking for obvious problems).
+20. Printing statistics.
+21. Executing CHECK pass (checking for obvious problems).
+22. Executing Verilog backend.
+22.1. Executing BMUXMAP pass.
+22.2. Executing DEMUXMAP pass.
+exec cp /tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/constraint.sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.sdc
+End of script. Logfile hash: 581d8b9c24, time: 0.61s, user: 0.23s, system: 0.13s, MEM: 55.62 MB peak
+Yosys 0.64 (git sha1 8449dd470, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3) [the-openroad-project/yosys]
+Time spent: 37% 1x abc (0 sec), 12% 2x synth (0 sec), ...
+cp /tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/constraint.sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_2_yosys.sdc
+OpenROAD 26Q2-339-g0504146ce6 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+mkdir -p /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/objects/sky130hd/rising_edge_detector/base
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 1_synth synth_odb
+Running synth_odb.tcl, stage 1_synth
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+[INFO ODB-0227] LEF file: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef, created 13 layers, 25 vias
+[INFO ODB-0227] LEF file: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef, created 441 library cells
+link_design rising_edge_detector
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_2_yosys.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.odb
+write_sdc -no_timestamp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.sdc
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+1_synth                            0            117 2d9fc3639ce160544c13
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_1_floorplan floorplan
+Running floorplan.tcl, stage 2_1_floorplan
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+Master sky130_ef_sc_hd__decap_12 is loaded but not used in the design
+Removed 0 unused instances and 0 unused nets.
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+Warning: There are 3 input ports missing set_input_delay.
+Warning: There is 1 output port missing set_output_delay.
+Warning: There are 2 unclocked register/latch pins.
+Warning: There are 3 unconstrained endpoints.
+number instances in verilog is 4
+[INFO IFP-0107] Defining die area using utilization: 35.00% and aspect ratio: 1.
+[WARNING IFP-0028] Core area lower left (2.000, 2.000) snapped to (2.300, 2.720).
+[INFO IFP-0001] Added 4 rows of 27 site unithd.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 16.960 16.960 ) um
+[INFO IFP-0101] Core BBox: (  2.300  2.720 ) ( 14.720 13.600 ) um
+[INFO IFP-0102] Core area:                          135.130 um^2
+[INFO IFP-0103] Total instances area:                58.806 um^2
+[INFO IFP-0104] Effective utilization:                0.435
+[INFO IFP-0105] Number of instances:                      4
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/make_tracks.tcl
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/fastroute.tcl
+Repair tie lo fanout...
+Repair tie hi fanout...
+repair_timing -setup_margin 0.0 -hold_margin 0.0 -repair_tns 100 -match_cell_footprint -setup -skip_last_gasp -sequence unbuffer,sizeup,swap,vt_swap -verbose
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove 
+[INFO RSZ-0098] No setup violations found
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+   Layer   | Unit Resistance | Unit Capacitance 
+           |       (kohm/um) |          (pF/um)
+------------------------------------------------
+       li1 |        7.18e-02 |         1.50e-04
+      met1 |        8.93e-04 |         1.72e-04
+      met2 |        8.93e-04 |         1.36e-04
+      met3 |        1.57e-04 |         2.15e-04
+      met4 |        1.57e-04 |         1.48e-04
+      met5 |        1.78e-05 |         1.54e-04
+------------------------------------------------
+
+   Layer   | Via Resistance 
+           |         (kohm) 
+----------------------------
+      mcon |       9.25e-03 
+       via |       4.50e-03 
+      via2 |       3.37e-03 
+      via3 |       3.77e-04 
+      via4 |       5.80e-06 
+----------------------------
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 59 um^2 44% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.odb
+write_sdc -no_timestamp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_1_floorplan                      0            137 850b0ebc6001a5a1c830
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_2_floorplan_macro macro_place
+Running macro_place.tcl, stage 2_2_floorplan_macro
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+No macros found: Skipping macro_placement
+Design area 59 um^2 44% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_2_floorplan_macro.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_2_floorplan_macro                0            114 850b0ebc6001a5a1c830
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_3_floorplan_tapcell tapcell
+Running tapcell.tcl, stage 2_3_floorplan_tapcell
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_2_floorplan_macro.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[INFO TAP-0005] Inserted 0 tapcells.
+Design area 59 um^2 44% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_3_floorplan_tapcell.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_3_floorplan_tapcell              0            115 850b0ebc6001a5a1c830
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_4_floorplan_pdn pdn
+Running pdn.tcl, stage 2_4_floorplan_pdn
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_3_floorplan_tapcell.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[ERROR PDN-0185] Insufficient width (12.42 um) to add straps on layer met4 in grid "grid" with total strap width 15.2 um and offset 13.6 um.
+Error: pdn.tcl, 6 PDN-0185
+make: Leaving directory '/home/harish_d1121/OpenROAD-flow-scripts/flow'
+
+Elapsed time: 0:00.16[h:]min:sec. CPU time: user 0.14 sys 0.02 (99%). Peak memory: 56704KB.
+Elapsed time: 0:00.62[h:]min:sec. CPU time: user 0.44 sys 0.18 (99%). Peak memory: 58880KB.
+Elapsed time: 0:00.38[h:]min:sec. CPU time: user 0.34 sys 0.04 (99%). Peak memory: 119900KB.
+Elapsed time: 0:00.39[h:]min:sec. CPU time: user 0.31 sys 0.07 (99%). Peak memory: 140608KB.
+Elapsed time: 0:00.32[h:]min:sec. CPU time: user 0.28 sys 0.04 (99%). Peak memory: 117412KB.
+Elapsed time: 0:00.32[h:]min:sec. CPU time: user 0.27 sys 0.05 (99%). Peak memory: 118044KB.
+Elapsed time: 0:00.33[h:]min:sec. CPU time: user 0.29 sys 0.03 (99%). Peak memory: 119372KB.
+make[1]: *** [Makefile:424: do-2_4_floorplan_pdn] Error 1
+make: *** [Makefile:424: /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_4_floorplan_pdn.odb] Error 2
+
+retry_reason=Detected PDN/floorplan width failure, retrying with relaxed floorplan constraints.
+retry_profile_2=core_utilization:35,core_margin:2,place_density:0.50,place_density_lb_addon:0.05,remove_abc_buffers:0,setup_slack_margin:0.0,hold_slack_margin:0.08,hold_repair_mode:hold_buffering
+workspace=/tmp/spec2rtl_openroad/p10
+env: QT_QPA_PLATFORM=offscreen XDG_RUNTIME_DIR=/home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/.xdg_runtime DISPLAY=<unset>
+$ make -C /home/harish_d1121/OpenROAD-flow-scripts/flow DESIGN_CONFIG=/tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/config.mk PLATFORM=sky130hd DESIGN_NAME=rising_edge_detector WORK_HOME=/home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10
+# step: full_flow_profile_2
+make: Entering directory '/home/harish_d1121/OpenROAD-flow-scripts/flow'
+mkdir -p /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/
+echo  > /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/clock_period.txt
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth.sh /home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth_canonicalize.tcl /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/logs/sky130hd/rising_edge_detector/base/1_1_yosys_canonicalize.log
+Using ABC speed script.
+Extracting clock period from SDC file: /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/clock_period.txt
+1. Executing Liberty frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+2. Executing Liberty frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+3. Executing Verilog-2005 frontend: /tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/src/design_syn.v
+4. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_clkgate_hd.v
+5. Executing HIERARCHY pass (managing design hierarchy).
+6. Executing AST frontend in derive mode using pre-parsed AST for module `\rising_edge_detector'.
+6.1. Analyzing design hierarchy..
+6.2. Analyzing design hierarchy..
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module rising_edge_detector because it contains processes (run 'proc' command first).
+8. Executing RTLIL backend.
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: e6b0731948, time: 0.15s, user: 0.12s, system: 0.02s, MEM: 51.50 MB peak
+Yosys 0.64 (git sha1 8449dd470, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3) [the-openroad-project/yosys]
+Time spent: 79% 4x read_liberty (0 sec), 9% 4x read_verilog (0 sec), ...
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth.sh /home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth.tcl /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/logs/sky130hd/rising_edge_detector/base/1_2_yosys.log
+Using ABC speed script.
+Extracting clock period from SDC file: /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/clock_period.txt
+1. Executing RTLIL frontend.
+2. Executing HIERARCHY pass (managing design hierarchy).
+2.1. Analyzing design hierarchy..
+2.2. Analyzing design hierarchy..
+3. Executing SYNTH pass.
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+3.1.1. Analyzing design hierarchy..
+3.1.2. Analyzing design hierarchy..
+3.2. Executing PROC pass (convert processes to netlists).
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+3.3. Executing FLATTEN pass (flatten design).
+3.4. Executing OPT_EXPR pass (perform const folding).
+3.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.6. Executing CHECK pass (checking for obvious problems).
+3.7. Executing OPT pass (performing simple optimizations).
+3.7.1. Executing OPT_EXPR pass (perform const folding).
+3.7.2. Executing OPT_MERGE pass (detect identical cells).
+3.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.7.5. Executing OPT_MERGE pass (detect identical cells).
+3.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.7.8. Executing OPT_EXPR pass (perform const folding).
+3.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+3.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.7.12. Executing OPT_MERGE pass (detect identical cells).
+3.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+3.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.7.15. Executing OPT_EXPR pass (perform const folding).
+3.7.16. Finished fast OPT passes. (There is nothing left to do.)
+3.8. Executing FSM pass (extract and optimize FSM).
+3.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+3.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+3.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+3.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+3.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+3.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+3.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+3.9. Executing OPT pass (performing simple optimizations).
+3.9.1. Executing OPT_EXPR pass (perform const folding).
+3.9.2. Executing OPT_MERGE pass (detect identical cells).
+3.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.9.5. Executing OPT_MERGE pass (detect identical cells).
+3.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.9.8. Executing OPT_EXPR pass (perform const folding).
+3.9.9. Finished fast OPT passes. (There is nothing left to do.)
+3.10. Executing WREDUCE pass (reducing word size of cells).
+3.11. Executing PEEPOPT pass (run peephole optimizers).
+3.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.13. Executing ALUMACC pass (create $alu and $macc cells).
+3.14. Executing SHARE pass (SAT-based resource sharing).
+3.15. Executing OPT pass (performing simple optimizations).
+3.15.1. Executing OPT_EXPR pass (perform const folding).
+3.15.2. Executing OPT_MERGE pass (detect identical cells).
+3.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.15.5. Executing OPT_MERGE pass (detect identical cells).
+3.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.15.8. Executing OPT_EXPR pass (perform const folding).
+3.15.9. Finished fast OPT passes. (There is nothing left to do.)
+3.16. Executing MEMORY pass.
+3.16.1. Executing OPT_MEM pass (optimize memories).
+3.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+3.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+3.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+3.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+3.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+3.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+3.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+3.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+4. Executing SYNTH pass.
+4.1. Executing OPT pass (performing simple optimizations).
+4.1.1. Executing OPT_EXPR pass (perform const folding).
+4.1.2. Executing OPT_MERGE pass (detect identical cells).
+4.1.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.1.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.1.5. Finished fast OPT passes.
+4.2. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+4.3. Executing OPT pass (performing simple optimizations).
+4.3.1. Executing OPT_EXPR pass (perform const folding).
+4.3.2. Executing OPT_MERGE pass (detect identical cells).
+4.3.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.5. Executing OPT_MERGE pass (detect identical cells).
+4.3.6. Executing OPT_SHARE pass.
+4.3.7. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.9. Executing OPT_EXPR pass (perform const folding).
+4.3.10. Finished fast OPT passes. (There is nothing left to do.)
+4.4. Executing TECHMAP pass (map to technology primitives).
+4.4.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/tools/install/yosys/bin/../share/yosys/techmap.v
+4.4.2. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/common/lcu_kogge_stone.v
+4.4.3. Continuing TECHMAP pass.
+4.5. Executing OPT pass (performing simple optimizations).
+4.5.1. Executing OPT_EXPR pass (perform const folding).
+4.5.2. Executing OPT_MERGE pass (detect identical cells).
+4.5.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.5.5. Finished fast OPT passes.
+4.6. Executing HIERARCHY pass (managing design hierarchy).
+4.6.1. Analyzing design hierarchy..
+4.6.2. Analyzing design hierarchy..
+4.7. Printing statistics.
+4.8. Executing CHECK pass (checking for obvious problems).
+5. Executing OPT pass (performing simple optimizations).
+5.1. Executing OPT_EXPR pass (perform const folding).
+5.2. Executing OPT_MERGE pass (detect identical cells).
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+5.5. Executing OPT_MERGE pass (detect identical cells).
+5.6. Executing OPT_DFF pass (perform DFF optimizations).
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+5.8. Executing OPT_EXPR pass (perform const folding).
+5.9. Finished fast OPT passes. (There is nothing left to do.)
+6. Executing EXTRACT_FA pass (find and extract full/half adders).
+7. Executing TECHMAP pass (map to technology primitives).
+7.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_adders_hd.v
+7.2. Continuing TECHMAP pass.
+8. Executing TECHMAP pass (map to technology primitives).
+8.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/tools/install/yosys/bin/../share/yosys/techmap.v
+8.2. Continuing TECHMAP pass.
+9. Executing OPT pass (performing simple optimizations).
+9.1. Executing OPT_EXPR pass (perform const folding).
+9.2. Executing OPT_MERGE pass (detect identical cells).
+9.3. Executing OPT_DFF pass (perform DFF optimizations).
+9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+9.5. Finished fast OPT passes.
+10. Executing TECHMAP pass (map to technology primitives).
+10.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_latch_hd.v
+10.2. Continuing TECHMAP pass.
+11. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+11.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+12. Executing OPT pass (performing simple optimizations).
+12.1. Executing OPT_EXPR pass (perform const folding).
+12.2. Executing OPT_MERGE pass (detect identical cells).
+12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+12.5. Executing OPT_MERGE pass (detect identical cells).
+12.6. Executing OPT_DFF pass (perform DFF optimizations).
+12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+12.8. Executing OPT_EXPR pass (perform const folding).
+12.9. Finished fast OPT passes. (There is nothing left to do.)
+13. Executing SETUNDEF pass (replace undef values with defined constants).
+abc -script /home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/abc_speed.script -liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -dont_use sky130_fd_sc_hd__probe_p_8 -dont_use sky130_fd_sc_hd__probec_p_8 -dont_use sky130_fd_sc_hd__lpflow_bleeder_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_12 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_3 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_6 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_inputiso0n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso0p_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1p_1 -dont_use sky130_fd_sc_hd__lpflow_inputisolatch_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_16 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_2 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_4 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_8 -dont_use sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4 -constr /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/objects/sky130hd/rising_edge_detector/base/abc.constr
+14. Executing ABC pass (technology mapping using ABC).
+14.1. Extracting gate netlist of module `\rising_edge_detector' to `<abc-temp-dir>/input.blif'..
+14.1.1. Executed ABC.
+14.1.2. Re-integrating ABC results.
+15. Executing SPLITNETS pass (splitting up multi-bit signals).
+16. Executing OPT_CLEAN pass (remove unused cells and wires).
+17. Executing HILOMAP pass (mapping to constant drivers).
+18. Executing INSBUF pass (insert buffer cells for connected wires).
+19. Executing CHECK pass (checking for obvious problems).
+20. Printing statistics.
+21. Executing CHECK pass (checking for obvious problems).
+22. Executing Verilog backend.
+22.1. Executing BMUXMAP pass.
+22.2. Executing DEMUXMAP pass.
+exec cp /tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/constraint.sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.sdc
+End of script. Logfile hash: 581d8b9c24, time: 0.57s, user: 0.21s, system: 0.13s, MEM: 55.88 MB peak
+Yosys 0.64 (git sha1 8449dd470, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3) [the-openroad-project/yosys]
+Time spent: 38% 1x abc (0 sec), 11% 2x synth (0 sec), ...
+cp /tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/constraint.sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_2_yosys.sdc
+OpenROAD 26Q2-339-g0504146ce6 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+mkdir -p /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/objects/sky130hd/rising_edge_detector/base
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 1_synth synth_odb
+Running synth_odb.tcl, stage 1_synth
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+[INFO ODB-0227] LEF file: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef, created 13 layers, 25 vias
+[INFO ODB-0227] LEF file: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef, created 441 library cells
+link_design rising_edge_detector
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_2_yosys.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.odb
+write_sdc -no_timestamp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.sdc
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+1_synth                            0            116 2d9fc3639ce160544c13
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_1_floorplan floorplan
+Running floorplan.tcl, stage 2_1_floorplan
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+Master sky130_ef_sc_hd__decap_12 is loaded but not used in the design
+Removed 0 unused instances and 0 unused nets.
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+Warning: There are 3 input ports missing set_input_delay.
+Warning: There is 1 output port missing set_output_delay.
+Warning: There are 2 unclocked register/latch pins.
+Warning: There are 3 unconstrained endpoints.
+number instances in verilog is 4
+[INFO IFP-0107] Defining die area using utilization: 35.00% and aspect ratio: 1.
+[WARNING IFP-0028] Core area lower left (2.000, 2.000) snapped to (2.300, 2.720).
+[INFO IFP-0001] Added 4 rows of 27 site unithd.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 16.960 16.960 ) um
+[INFO IFP-0101] Core BBox: (  2.300  2.720 ) ( 14.720 13.600 ) um
+[INFO IFP-0102] Core area:                          135.130 um^2
+[INFO IFP-0103] Total instances area:                58.806 um^2
+[INFO IFP-0104] Effective utilization:                0.435
+[INFO IFP-0105] Number of instances:                      4
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/make_tracks.tcl
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/fastroute.tcl
+Repair tie lo fanout...
+Repair tie hi fanout...
+repair_timing -setup_margin 0.0 -hold_margin 0.08 -repair_tns 100 -match_cell_footprint -setup -skip_last_gasp -sequence unbuffer,sizeup,swap,vt_swap -verbose
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove 
+[INFO RSZ-0098] No setup violations found
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+   Layer   | Unit Resistance | Unit Capacitance 
+           |       (kohm/um) |          (pF/um)
+------------------------------------------------
+       li1 |        7.18e-02 |         1.50e-04
+      met1 |        8.93e-04 |         1.72e-04
+      met2 |        8.93e-04 |         1.36e-04
+      met3 |        1.57e-04 |         2.15e-04
+      met4 |        1.57e-04 |         1.48e-04
+      met5 |        1.78e-05 |         1.54e-04
+------------------------------------------------
+
+   Layer   | Via Resistance 
+           |         (kohm) 
+----------------------------
+      mcon |       9.25e-03 
+       via |       4.50e-03 
+      via2 |       3.37e-03 
+      via3 |       3.77e-04 
+      via4 |       5.80e-06 
+----------------------------
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 59 um^2 44% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.odb
+write_sdc -no_timestamp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_1_floorplan                      0            136 850b0ebc6001a5a1c830
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_2_floorplan_macro macro_place
+Running macro_place.tcl, stage 2_2_floorplan_macro
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+No macros found: Skipping macro_placement
+Design area 59 um^2 44% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_2_floorplan_macro.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_2_floorplan_macro                0            114 850b0ebc6001a5a1c830
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_3_floorplan_tapcell tapcell
+Running tapcell.tcl, stage 2_3_floorplan_tapcell
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_2_floorplan_macro.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[INFO TAP-0005] Inserted 0 tapcells.
+Design area 59 um^2 44% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_3_floorplan_tapcell.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_3_floorplan_tapcell              0            114 850b0ebc6001a5a1c830
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_4_floorplan_pdn pdn
+Running pdn.tcl, stage 2_4_floorplan_pdn
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_3_floorplan_tapcell.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[ERROR PDN-0185] Insufficient width (12.42 um) to add straps on layer met4 in grid "grid" with total strap width 15.2 um and offset 13.6 um.
+Error: pdn.tcl, 6 PDN-0185
+make: Leaving directory '/home/harish_d1121/OpenROAD-flow-scripts/flow'
+
+Elapsed time: 0:00.16[h:]min:sec. CPU time: user 0.13 sys 0.02 (97%). Peak memory: 56576KB.
+Elapsed time: 0:00.58[h:]min:sec. CPU time: user 0.43 sys 0.15 (99%). Peak memory: 58752KB.
+Elapsed time: 0:00.36[h:]min:sec. CPU time: user 0.29 sys 0.07 (98%). Peak memory: 119652KB.
+Elapsed time: 0:00.40[h:]min:sec. CPU time: user 0.31 sys 0.09 (99%). Peak memory: 139900KB.
+Elapsed time: 0:00.32[h:]min:sec. CPU time: user 0.28 sys 0.04 (99%). Peak memory: 117508KB.
+Elapsed time: 0:00.32[h:]min:sec. CPU time: user 0.28 sys 0.04 (99%). Peak memory: 117424KB.
+Elapsed time: 0:00.32[h:]min:sec. CPU time: user 0.29 sys 0.03 (99%). Peak memory: 119168KB.
+make[1]: *** [Makefile:424: do-2_4_floorplan_pdn] Error 1
+make: *** [Makefile:424: /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_4_floorplan_pdn.odb] Error 2
+
+retry_reason=Detected PDN/floorplan width failure, retrying with relaxed floorplan constraints.
+retry_profile_3=core_utilization:10,core_margin:4,place_density:0.35,place_density_lb_addon:0.10,remove_abc_buffers:0,setup_slack_margin:0.05,hold_slack_margin:0.05,hold_repair_mode:setup_relaxed
+workspace=/tmp/spec2rtl_openroad/p10
+env: QT_QPA_PLATFORM=offscreen XDG_RUNTIME_DIR=/home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/.xdg_runtime DISPLAY=<unset>
+$ make -C /home/harish_d1121/OpenROAD-flow-scripts/flow DESIGN_CONFIG=/tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/config.mk PLATFORM=sky130hd DESIGN_NAME=rising_edge_detector WORK_HOME=/home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10
+# step: full_flow_profile_3
+make: Entering directory '/home/harish_d1121/OpenROAD-flow-scripts/flow'
+mkdir -p /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/
+echo  > /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/clock_period.txt
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth.sh /home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth_canonicalize.tcl /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/logs/sky130hd/rising_edge_detector/base/1_1_yosys_canonicalize.log
+Using ABC speed script.
+Extracting clock period from SDC file: /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/clock_period.txt
+1. Executing Liberty frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+2. Executing Liberty frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+3. Executing Verilog-2005 frontend: /tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/src/design_syn.v
+4. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_clkgate_hd.v
+5. Executing HIERARCHY pass (managing design hierarchy).
+6. Executing AST frontend in derive mode using pre-parsed AST for module `\rising_edge_detector'.
+6.1. Analyzing design hierarchy..
+6.2. Analyzing design hierarchy..
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module rising_edge_detector because it contains processes (run 'proc' command first).
+8. Executing RTLIL backend.
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: e6b0731948, time: 0.15s, user: 0.12s, system: 0.01s, MEM: 51.12 MB peak
+Yosys 0.64 (git sha1 8449dd470, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3) [the-openroad-project/yosys]
+Time spent: 79% 4x read_liberty (0 sec), 9% 4x read_verilog (0 sec), ...
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth.sh /home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth.tcl /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/logs/sky130hd/rising_edge_detector/base/1_2_yosys.log
+Using ABC speed script.
+Extracting clock period from SDC file: /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/clock_period.txt
+1. Executing RTLIL frontend.
+2. Executing HIERARCHY pass (managing design hierarchy).
+2.1. Analyzing design hierarchy..
+2.2. Analyzing design hierarchy..
+3. Executing SYNTH pass.
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+3.1.1. Analyzing design hierarchy..
+3.1.2. Analyzing design hierarchy..
+3.2. Executing PROC pass (convert processes to netlists).
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+3.3. Executing FLATTEN pass (flatten design).
+3.4. Executing OPT_EXPR pass (perform const folding).
+3.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.6. Executing CHECK pass (checking for obvious problems).
+3.7. Executing OPT pass (performing simple optimizations).
+3.7.1. Executing OPT_EXPR pass (perform const folding).
+3.7.2. Executing OPT_MERGE pass (detect identical cells).
+3.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.7.5. Executing OPT_MERGE pass (detect identical cells).
+3.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.7.8. Executing OPT_EXPR pass (perform const folding).
+3.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+3.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.7.12. Executing OPT_MERGE pass (detect identical cells).
+3.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+3.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.7.15. Executing OPT_EXPR pass (perform const folding).
+3.7.16. Finished fast OPT passes. (There is nothing left to do.)
+3.8. Executing FSM pass (extract and optimize FSM).
+3.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+3.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+3.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+3.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+3.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+3.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+3.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+3.9. Executing OPT pass (performing simple optimizations).
+3.9.1. Executing OPT_EXPR pass (perform const folding).
+3.9.2. Executing OPT_MERGE pass (detect identical cells).
+3.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.9.5. Executing OPT_MERGE pass (detect identical cells).
+3.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.9.8. Executing OPT_EXPR pass (perform const folding).
+3.9.9. Finished fast OPT passes. (There is nothing left to do.)
+3.10. Executing WREDUCE pass (reducing word size of cells).
+3.11. Executing PEEPOPT pass (run peephole optimizers).
+3.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.13. Executing ALUMACC pass (create $alu and $macc cells).
+3.14. Executing SHARE pass (SAT-based resource sharing).
+3.15. Executing OPT pass (performing simple optimizations).
+3.15.1. Executing OPT_EXPR pass (perform const folding).
+3.15.2. Executing OPT_MERGE pass (detect identical cells).
+3.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.15.5. Executing OPT_MERGE pass (detect identical cells).
+3.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.15.8. Executing OPT_EXPR pass (perform const folding).
+3.15.9. Finished fast OPT passes. (There is nothing left to do.)
+3.16. Executing MEMORY pass.
+3.16.1. Executing OPT_MEM pass (optimize memories).
+3.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+3.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+3.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+3.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+3.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+3.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+3.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+3.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+4. Executing SYNTH pass.
+4.1. Executing OPT pass (performing simple optimizations).
+4.1.1. Executing OPT_EXPR pass (perform const folding).
+4.1.2. Executing OPT_MERGE pass (detect identical cells).
+4.1.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.1.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.1.5. Finished fast OPT passes.
+4.2. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+4.3. Executing OPT pass (performing simple optimizations).
+4.3.1. Executing OPT_EXPR pass (perform const folding).
+4.3.2. Executing OPT_MERGE pass (detect identical cells).
+4.3.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.5. Executing OPT_MERGE pass (detect identical cells).
+4.3.6. Executing OPT_SHARE pass.
+4.3.7. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.9. Executing OPT_EXPR pass (perform const folding).
+4.3.10. Finished fast OPT passes. (There is nothing left to do.)
+4.4. Executing TECHMAP pass (map to technology primitives).
+4.4.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/tools/install/yosys/bin/../share/yosys/techmap.v
+4.4.2. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/common/lcu_kogge_stone.v
+4.4.3. Continuing TECHMAP pass.
+4.5. Executing OPT pass (performing simple optimizations).
+4.5.1. Executing OPT_EXPR pass (perform const folding).
+4.5.2. Executing OPT_MERGE pass (detect identical cells).
+4.5.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.5.5. Finished fast OPT passes.
+4.6. Executing HIERARCHY pass (managing design hierarchy).
+4.6.1. Analyzing design hierarchy..
+4.6.2. Analyzing design hierarchy..
+4.7. Printing statistics.
+4.8. Executing CHECK pass (checking for obvious problems).
+5. Executing OPT pass (performing simple optimizations).
+5.1. Executing OPT_EXPR pass (perform const folding).
+5.2. Executing OPT_MERGE pass (detect identical cells).
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+5.5. Executing OPT_MERGE pass (detect identical cells).
+5.6. Executing OPT_DFF pass (perform DFF optimizations).
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+5.8. Executing OPT_EXPR pass (perform const folding).
+5.9. Finished fast OPT passes. (There is nothing left to do.)
+6. Executing EXTRACT_FA pass (find and extract full/half adders).
+7. Executing TECHMAP pass (map to technology primitives).
+7.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_adders_hd.v
+7.2. Continuing TECHMAP pass.
+8. Executing TECHMAP pass (map to technology primitives).
+8.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/tools/install/yosys/bin/../share/yosys/techmap.v
+8.2. Continuing TECHMAP pass.
+9. Executing OPT pass (performing simple optimizations).
+9.1. Executing OPT_EXPR pass (perform const folding).
+9.2. Executing OPT_MERGE pass (detect identical cells).
+9.3. Executing OPT_DFF pass (perform DFF optimizations).
+9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+9.5. Finished fast OPT passes.
+10. Executing TECHMAP pass (map to technology primitives).
+10.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_latch_hd.v
+10.2. Continuing TECHMAP pass.
+11. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+11.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+12. Executing OPT pass (performing simple optimizations).
+12.1. Executing OPT_EXPR pass (perform const folding).
+12.2. Executing OPT_MERGE pass (detect identical cells).
+12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+12.5. Executing OPT_MERGE pass (detect identical cells).
+12.6. Executing OPT_DFF pass (perform DFF optimizations).
+12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+12.8. Executing OPT_EXPR pass (perform const folding).
+12.9. Finished fast OPT passes. (There is nothing left to do.)
+13. Executing SETUNDEF pass (replace undef values with defined constants).
+abc -script /home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/abc_speed.script -liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -dont_use sky130_fd_sc_hd__probe_p_8 -dont_use sky130_fd_sc_hd__probec_p_8 -dont_use sky130_fd_sc_hd__lpflow_bleeder_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_12 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_3 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_6 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_inputiso0n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso0p_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1p_1 -dont_use sky130_fd_sc_hd__lpflow_inputisolatch_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_16 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_2 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_4 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_8 -dont_use sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4 -constr /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/objects/sky130hd/rising_edge_detector/base/abc.constr
+14. Executing ABC pass (technology mapping using ABC).
+14.1. Extracting gate netlist of module `\rising_edge_detector' to `<abc-temp-dir>/input.blif'..
+14.1.1. Executed ABC.
+14.1.2. Re-integrating ABC results.
+15. Executing SPLITNETS pass (splitting up multi-bit signals).
+16. Executing OPT_CLEAN pass (remove unused cells and wires).
+17. Executing HILOMAP pass (mapping to constant drivers).
+18. Executing INSBUF pass (insert buffer cells for connected wires).
+19. Executing CHECK pass (checking for obvious problems).
+20. Printing statistics.
+21. Executing CHECK pass (checking for obvious problems).
+22. Executing Verilog backend.
+22.1. Executing BMUXMAP pass.
+22.2. Executing DEMUXMAP pass.
+exec cp /tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/constraint.sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.sdc
+End of script. Logfile hash: 7f8adfd1a6, time: 0.57s, user: 0.22s, system: 0.11s, MEM: 55.75 MB peak
+Yosys 0.64 (git sha1 8449dd470, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3) [the-openroad-project/yosys]
+Time spent: 38% 1x abc (0 sec), 11% 2x synth (0 sec), ...
+cp /tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/constraint.sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_2_yosys.sdc
+OpenROAD 26Q2-339-g0504146ce6 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+mkdir -p /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/objects/sky130hd/rising_edge_detector/base
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 1_synth synth_odb
+Running synth_odb.tcl, stage 1_synth
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+[INFO ODB-0227] LEF file: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef, created 13 layers, 25 vias
+[INFO ODB-0227] LEF file: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef, created 441 library cells
+link_design rising_edge_detector
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_2_yosys.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.odb
+write_sdc -no_timestamp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.sdc
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+1_synth                            0            116 2d9fc3639ce160544c13
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_1_floorplan floorplan
+Running floorplan.tcl, stage 2_1_floorplan
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+Master sky130_ef_sc_hd__decap_12 is loaded but not used in the design
+Removed 0 unused instances and 0 unused nets.
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+Warning: There are 3 input ports missing set_input_delay.
+Warning: There is 1 output port missing set_output_delay.
+Warning: There are 2 unclocked register/latch pins.
+Warning: There are 3 unconstrained endpoints.
+number instances in verilog is 4
+[INFO IFP-0107] Defining die area using utilization: 10.00% and aspect ratio: 1.
+[WARNING IFP-0028] Core area lower left (4.000, 4.000) snapped to (4.140, 5.440).
+[INFO IFP-0001] Added 8 rows of 52 site unithd.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 32.250 32.250 ) um
+[INFO IFP-0101] Core BBox: (  4.140  5.440 ) ( 28.060 27.200 ) um
+[INFO IFP-0102] Core area:                          520.499 um^2
+[INFO IFP-0103] Total instances area:                58.806 um^2
+[INFO IFP-0104] Effective utilization:                0.113
+[INFO IFP-0105] Number of instances:                      4
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/make_tracks.tcl
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/fastroute.tcl
+Repair tie lo fanout...
+Repair tie hi fanout...
+repair_timing -setup_margin 0.05 -hold_margin 0.05 -repair_tns 100 -match_cell_footprint -setup -skip_last_gasp -sequence unbuffer,sizeup,swap,vt_swap -verbose
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove 
+[INFO RSZ-0098] No setup violations found
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+   Layer   | Unit Resistance | Unit Capacitance 
+           |       (kohm/um) |          (pF/um)
+------------------------------------------------
+       li1 |        7.18e-02 |         1.50e-04
+      met1 |        8.93e-04 |         1.72e-04
+      met2 |        8.93e-04 |         1.36e-04
+      met3 |        1.57e-04 |         2.15e-04
+      met4 |        1.57e-04 |         1.48e-04
+      met5 |        1.78e-05 |         1.54e-04
+------------------------------------------------
+
+   Layer   | Via Resistance 
+           |         (kohm) 
+----------------------------
+      mcon |       9.25e-03 
+       via |       4.50e-03 
+      via2 |       3.37e-03 
+      via3 |       3.77e-04 
+      via4 |       5.80e-06 
+----------------------------
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 59 um^2 11% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.odb
+write_sdc -no_timestamp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_1_floorplan                      0            137 61ba5b8389b51b6d90cd
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_2_floorplan_macro macro_place
+Running macro_place.tcl, stage 2_2_floorplan_macro
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+No macros found: Skipping macro_placement
+Design area 59 um^2 11% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_2_floorplan_macro.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_2_floorplan_macro                0            114 61ba5b8389b51b6d90cd
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_3_floorplan_tapcell tapcell
+Running tapcell.tcl, stage 2_3_floorplan_tapcell
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_2_floorplan_macro.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[INFO TAP-0005] Inserted 5 tapcells.
+Design area 65 um^2 13% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_3_floorplan_tapcell.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_3_floorplan_tapcell              0            114 1e9db1846ed9fbae047f
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_4_floorplan_pdn pdn
+Running pdn.tcl, stage 2_4_floorplan_pdn
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_3_floorplan_tapcell.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[ERROR PDN-0185] Insufficient width (23.92 um) to add straps on layer met4 in grid "grid" with total strap width 15.2 um and offset 13.6 um.
+Error: pdn.tcl, 6 PDN-0185
+make: Leaving directory '/home/harish_d1121/OpenROAD-flow-scripts/flow'
+
+Elapsed time: 0:00.16[h:]min:sec. CPU time: user 0.14 sys 0.02 (99%). Peak memory: 56576KB.
+Elapsed time: 0:00.58[h:]min:sec. CPU time: user 0.42 sys 0.15 (99%). Peak memory: 58752KB.
+Elapsed time: 0:00.36[h:]min:sec. CPU time: user 0.32 sys 0.04 (99%). Peak memory: 119648KB.
+Elapsed time: 0:00.39[h:]min:sec. CPU time: user 0.32 sys 0.07 (99%). Peak memory: 140352KB.
+Elapsed time: 0:00.32[h:]min:sec. CPU time: user 0.27 sys 0.04 (97%). Peak memory: 117528KB.
+Elapsed time: 0:00.32[h:]min:sec. CPU time: user 0.29 sys 0.03 (99%). Peak memory: 117528KB.
+Elapsed time: 0:00.32[h:]min:sec. CPU time: user 0.28 sys 0.04 (98%). Peak memory: 119040KB.
+make[1]: *** [Makefile:424: do-2_4_floorplan_pdn] Error 1
+make: *** [Makefile:424: /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_4_floorplan_pdn.odb] Error 2
+
+retry_reason=Detected PDN/floorplan width failure, retrying with relaxed floorplan constraints.
+retry_profile_4=core_utilization:5,core_margin:6,place_density:0.30,place_density_lb_addon:0.05,remove_abc_buffers:0,setup_slack_margin:0.10,hold_slack_margin:0.10,hold_repair_mode:setup_and_hold_aggressive
+workspace=/tmp/spec2rtl_openroad/p10
+env: QT_QPA_PLATFORM=offscreen XDG_RUNTIME_DIR=/home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/.xdg_runtime DISPLAY=<unset>
+$ make -C /home/harish_d1121/OpenROAD-flow-scripts/flow DESIGN_CONFIG=/tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/config.mk PLATFORM=sky130hd DESIGN_NAME=rising_edge_detector WORK_HOME=/home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10
+# step: full_flow_profile_4
+make: Entering directory '/home/harish_d1121/OpenROAD-flow-scripts/flow'
+mkdir -p /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/
+echo  > /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/clock_period.txt
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth.sh /home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth_canonicalize.tcl /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/logs/sky130hd/rising_edge_detector/base/1_1_yosys_canonicalize.log
+Using ABC speed script.
+Extracting clock period from SDC file: /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/clock_period.txt
+1. Executing Liberty frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+2. Executing Liberty frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+3. Executing Verilog-2005 frontend: /tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/src/design_syn.v
+4. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_clkgate_hd.v
+5. Executing HIERARCHY pass (managing design hierarchy).
+6. Executing AST frontend in derive mode using pre-parsed AST for module `\rising_edge_detector'.
+6.1. Analyzing design hierarchy..
+6.2. Analyzing design hierarchy..
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module rising_edge_detector because it contains processes (run 'proc' command first).
+8. Executing RTLIL backend.
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: e6b0731948, time: 0.15s, user: 0.13s, system: 0.01s, MEM: 51.00 MB peak
+Yosys 0.64 (git sha1 8449dd470, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3) [the-openroad-project/yosys]
+Time spent: 78% 4x read_liberty (0 sec), 8% 4x read_verilog (0 sec), ...
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth.sh /home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/synth.tcl /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/logs/sky130hd/rising_edge_detector/base/1_2_yosys.log
+Using ABC speed script.
+Extracting clock period from SDC file: /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/clock_period.txt
+1. Executing RTLIL frontend.
+2. Executing HIERARCHY pass (managing design hierarchy).
+2.1. Analyzing design hierarchy..
+2.2. Analyzing design hierarchy..
+3. Executing SYNTH pass.
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+3.1.1. Analyzing design hierarchy..
+3.1.2. Analyzing design hierarchy..
+3.2. Executing PROC pass (convert processes to netlists).
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+3.3. Executing FLATTEN pass (flatten design).
+3.4. Executing OPT_EXPR pass (perform const folding).
+3.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.6. Executing CHECK pass (checking for obvious problems).
+3.7. Executing OPT pass (performing simple optimizations).
+3.7.1. Executing OPT_EXPR pass (perform const folding).
+3.7.2. Executing OPT_MERGE pass (detect identical cells).
+3.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.7.5. Executing OPT_MERGE pass (detect identical cells).
+3.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.7.8. Executing OPT_EXPR pass (perform const folding).
+3.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+3.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.7.12. Executing OPT_MERGE pass (detect identical cells).
+3.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+3.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.7.15. Executing OPT_EXPR pass (perform const folding).
+3.7.16. Finished fast OPT passes. (There is nothing left to do.)
+3.8. Executing FSM pass (extract and optimize FSM).
+3.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+3.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+3.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+3.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+3.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+3.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+3.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+3.9. Executing OPT pass (performing simple optimizations).
+3.9.1. Executing OPT_EXPR pass (perform const folding).
+3.9.2. Executing OPT_MERGE pass (detect identical cells).
+3.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.9.5. Executing OPT_MERGE pass (detect identical cells).
+3.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.9.8. Executing OPT_EXPR pass (perform const folding).
+3.9.9. Finished fast OPT passes. (There is nothing left to do.)
+3.10. Executing WREDUCE pass (reducing word size of cells).
+3.11. Executing PEEPOPT pass (run peephole optimizers).
+3.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.13. Executing ALUMACC pass (create $alu and $macc cells).
+3.14. Executing SHARE pass (SAT-based resource sharing).
+3.15. Executing OPT pass (performing simple optimizations).
+3.15.1. Executing OPT_EXPR pass (perform const folding).
+3.15.2. Executing OPT_MERGE pass (detect identical cells).
+3.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+3.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+3.15.5. Executing OPT_MERGE pass (detect identical cells).
+3.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+3.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.15.8. Executing OPT_EXPR pass (perform const folding).
+3.15.9. Finished fast OPT passes. (There is nothing left to do.)
+3.16. Executing MEMORY pass.
+3.16.1. Executing OPT_MEM pass (optimize memories).
+3.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+3.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+3.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+3.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+3.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+3.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+3.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+3.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+3.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+4. Executing SYNTH pass.
+4.1. Executing OPT pass (performing simple optimizations).
+4.1.1. Executing OPT_EXPR pass (perform const folding).
+4.1.2. Executing OPT_MERGE pass (detect identical cells).
+4.1.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.1.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.1.5. Finished fast OPT passes.
+4.2. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+4.3. Executing OPT pass (performing simple optimizations).
+4.3.1. Executing OPT_EXPR pass (perform const folding).
+4.3.2. Executing OPT_MERGE pass (detect identical cells).
+4.3.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+4.3.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+4.3.5. Executing OPT_MERGE pass (detect identical cells).
+4.3.6. Executing OPT_SHARE pass.
+4.3.7. Executing OPT_DFF pass (perform DFF optimizations).
+4.3.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.3.9. Executing OPT_EXPR pass (perform const folding).
+4.3.10. Finished fast OPT passes. (There is nothing left to do.)
+4.4. Executing TECHMAP pass (map to technology primitives).
+4.4.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/tools/install/yosys/bin/../share/yosys/techmap.v
+4.4.2. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/common/lcu_kogge_stone.v
+4.4.3. Continuing TECHMAP pass.
+4.5. Executing OPT pass (performing simple optimizations).
+4.5.1. Executing OPT_EXPR pass (perform const folding).
+4.5.2. Executing OPT_MERGE pass (detect identical cells).
+4.5.3. Executing OPT_DFF pass (perform DFF optimizations).
+4.5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+4.5.5. Finished fast OPT passes.
+4.6. Executing HIERARCHY pass (managing design hierarchy).
+4.6.1. Analyzing design hierarchy..
+4.6.2. Analyzing design hierarchy..
+4.7. Printing statistics.
+4.8. Executing CHECK pass (checking for obvious problems).
+5. Executing OPT pass (performing simple optimizations).
+5.1. Executing OPT_EXPR pass (perform const folding).
+5.2. Executing OPT_MERGE pass (detect identical cells).
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+5.5. Executing OPT_MERGE pass (detect identical cells).
+5.6. Executing OPT_DFF pass (perform DFF optimizations).
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+5.8. Executing OPT_EXPR pass (perform const folding).
+5.9. Finished fast OPT passes. (There is nothing left to do.)
+6. Executing EXTRACT_FA pass (find and extract full/half adders).
+7. Executing TECHMAP pass (map to technology primitives).
+7.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_adders_hd.v
+7.2. Continuing TECHMAP pass.
+8. Executing TECHMAP pass (map to technology primitives).
+8.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/tools/install/yosys/bin/../share/yosys/techmap.v
+8.2. Continuing TECHMAP pass.
+9. Executing OPT pass (performing simple optimizations).
+9.1. Executing OPT_EXPR pass (perform const folding).
+9.2. Executing OPT_MERGE pass (detect identical cells).
+9.3. Executing OPT_DFF pass (perform DFF optimizations).
+9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+9.5. Finished fast OPT passes.
+10. Executing TECHMAP pass (map to technology primitives).
+10.1. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_latch_hd.v
+10.2. Continuing TECHMAP pass.
+11. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+11.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+12. Executing OPT pass (performing simple optimizations).
+12.1. Executing OPT_EXPR pass (perform const folding).
+12.2. Executing OPT_MERGE pass (detect identical cells).
+12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+12.5. Executing OPT_MERGE pass (detect identical cells).
+12.6. Executing OPT_DFF pass (perform DFF optimizations).
+12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+12.8. Executing OPT_EXPR pass (perform const folding).
+12.9. Finished fast OPT passes. (There is nothing left to do.)
+13. Executing SETUNDEF pass (replace undef values with defined constants).
+abc -script /home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/abc_speed.script -liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -dont_use sky130_fd_sc_hd__probe_p_8 -dont_use sky130_fd_sc_hd__probec_p_8 -dont_use sky130_fd_sc_hd__lpflow_bleeder_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_12 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_3 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_6 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_inputiso0n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso0p_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1p_1 -dont_use sky130_fd_sc_hd__lpflow_inputisolatch_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_16 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_2 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_4 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_8 -dont_use sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4 -constr /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/objects/sky130hd/rising_edge_detector/base/abc.constr
+14. Executing ABC pass (technology mapping using ABC).
+14.1. Extracting gate netlist of module `\rising_edge_detector' to `<abc-temp-dir>/input.blif'..
+14.1.1. Executed ABC.
+14.1.2. Re-integrating ABC results.
+15. Executing SPLITNETS pass (splitting up multi-bit signals).
+16. Executing OPT_CLEAN pass (remove unused cells and wires).
+17. Executing HILOMAP pass (mapping to constant drivers).
+18. Executing INSBUF pass (insert buffer cells for connected wires).
+19. Executing CHECK pass (checking for obvious problems).
+20. Printing statistics.
+21. Executing CHECK pass (checking for obvious problems).
+22. Executing Verilog backend.
+22.1. Executing BMUXMAP pass.
+22.2. Executing DEMUXMAP pass.
+exec cp /tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/constraint.sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.sdc
+End of script. Logfile hash: 581d8b9c24, time: 0.57s, user: 0.24s, system: 0.09s, MEM: 55.50 MB peak
+Yosys 0.64 (git sha1 8449dd470, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3) [the-openroad-project/yosys]
+Time spent: 38% 1x abc (0 sec), 11% 2x synth (0 sec), ...
+cp /tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/constraint.sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_2_yosys.sdc
+OpenROAD 26Q2-339-g0504146ce6 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+mkdir -p /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/objects/sky130hd/rising_edge_detector/base
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 1_synth synth_odb
+Running synth_odb.tcl, stage 1_synth
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+[INFO ODB-0227] LEF file: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef, created 13 layers, 25 vias
+[INFO ODB-0227] LEF file: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef, created 441 library cells
+link_design rising_edge_detector
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_2_yosys.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.odb
+write_sdc -no_timestamp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.sdc
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+1_synth                            0            116 2d9fc3639ce160544c13
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_1_floorplan floorplan
+Running floorplan.tcl, stage 2_1_floorplan
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/1_synth.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+Master sky130_ef_sc_hd__decap_12 is loaded but not used in the design
+Removed 0 unused instances and 0 unused nets.
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+Warning: There are 3 input ports missing set_input_delay.
+Warning: There is 1 output port missing set_output_delay.
+Warning: There are 2 unclocked register/latch pins.
+Warning: There are 3 unconstrained endpoints.
+number instances in verilog is 4
+[INFO IFP-0107] Defining die area using utilization: 5.00% and aspect ratio: 1.
+[WARNING IFP-0028] Core area lower left (6.000, 6.000) snapped to (6.440, 8.160).
+[INFO IFP-0001] Added 11 rows of 73 site unithd.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 46.295 46.295 ) um
+[INFO IFP-0101] Core BBox: (  6.440  8.160 ) ( 40.020 38.080 ) um
+[INFO IFP-0102] Core area:                         1004.714 um^2
+[INFO IFP-0103] Total instances area:                58.806 um^2
+[INFO IFP-0104] Effective utilization:                0.059
+[INFO IFP-0105] Number of instances:                      4
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/make_tracks.tcl
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/fastroute.tcl
+Repair tie lo fanout...
+Repair tie hi fanout...
+repair_timing -setup_margin 0.1 -hold_margin 0.1 -repair_tns 100 -match_cell_footprint -setup -skip_last_gasp -sequence unbuffer,sizeup,swap,vt_swap -verbose
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove 
+[INFO RSZ-0098] No setup violations found
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+   Layer   | Unit Resistance | Unit Capacitance 
+           |       (kohm/um) |          (pF/um)
+------------------------------------------------
+       li1 |        7.18e-02 |         1.50e-04
+      met1 |        8.93e-04 |         1.72e-04
+      met2 |        8.93e-04 |         1.36e-04
+      met3 |        1.57e-04 |         2.15e-04
+      met4 |        1.57e-04 |         1.48e-04
+      met5 |        1.78e-05 |         1.54e-04
+------------------------------------------------
+
+   Layer   | Via Resistance 
+           |         (kohm) 
+----------------------------
+      mcon |       9.25e-03 
+       via |       4.50e-03 
+      via2 |       3.37e-03 
+      via3 |       3.77e-04 
+      via4 |       5.80e-06 
+----------------------------
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 59 um^2 6% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.odb
+write_sdc -no_timestamp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_1_floorplan                      0            137 456add267743e029df12
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_2_floorplan_macro macro_place
+Running macro_place.tcl, stage 2_2_floorplan_macro
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+No macros found: Skipping macro_placement
+Design area 59 um^2 6% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_2_floorplan_macro.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_2_floorplan_macro                0            115 456add267743e029df12
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_3_floorplan_tapcell tapcell
+Running tapcell.tcl, stage 2_3_floorplan_tapcell
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_2_floorplan_macro.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[INFO TAP-0005] Inserted 13 tapcells.
+Design area 75 um^2 7% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_3_floorplan_tapcell.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_3_floorplan_tapcell              0            114 2dfc10a31469d1ca3acb
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_4_floorplan_pdn pdn
+Running pdn.tcl, stage 2_4_floorplan_pdn
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_3_floorplan_tapcell.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[INFO PDN-0001] Inserting grid: grid
+Design area 75 um^2 7% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_4_floorplan_pdn.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_4_floorplan_pdn                  0            117 3b93246af837f5ee331d
+cp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_4_floorplan_pdn.odb /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_floorplan.odb
+cp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_1_floorplan.sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_floorplan.sdc
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_1_place_gp_skip_io global_place_skip_io
+Running global_place_skip_io.tcl, stage 3_1_place_gp_skip_io
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_floorplan.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[INFO GPL-0022] Initialize gpl and calculate uniform density.
+Placement density is 0.12650000028312208, computed from PLACE_DENSITY_LB_ADDON  0.05 and lower bound 0.07000000029802322
+global_placement -skip_io -density 0.12650000028312208 -pad_left 0 -pad_right 0
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: (  6.440  8.160 ) ( 40.020 38.080 ) um
+[INFO GPL-0036] Movable instances area:         58.806 um^2
+[INFO GPL-0037] Total instances area:           75.072 um^2
+[INFO GPL-0035] Pin density area adjust:         4.354 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:                17
+[INFO GPL-0007] Movable instances:                   4
+[INFO GPL-0008] Fixed instances:                    13
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                      7
+[INFO GPL-0011] Number of pins:                     13
+[INFO GPL-0012] Die BBox:  (  0.000  0.000 ) ( 46.295 46.295 ) um
+[INFO GPL-0013] Core BBox: (  6.440  8.160 ) ( 40.020 38.080 ) um
+[INFO GPL-0016] Core area:                    1004.714 um^2
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                  1004.714 um^2
+[INFO GPL-0017] Fixed instances area:           16.266 um^2
+[INFO GPL-0018] Movable instances area:         63.161 um^2
+[INFO GPL-0019] Utilization:                     6.390 %
+[INFO GPL-0020] Standard cells area:            63.161 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 4	Region center = 0
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[INFO GPL-0023] Placement target density:       0.1265
+[INFO GPL-0024] Movable insts average area:     15.790 um^2
+[INFO GPL-0025] Ideal bin area:                124.823 um^2
+[INFO GPL-0026] Ideal bin count:                     8
+[INFO GPL-0027] Total bin area:               1004.714 um^2
+[INFO GPL-0028] Bin count (X, Y):           2 ,      2
+[INFO GPL-0029] Bin size (W * H):      16.790 * 14.960 um
+[INFO GPL-0030] Number of bins:                      4
+[INFO GPL-0007] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.0000 |  1.383000e+01 |   +0.00% |  4.98e-12 |      
+        0 |   0.0000 |  1.383000e+01 |          |  5.18e-12 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 0
+[INFO GPL-1002] Placed Cell Area               63.1606
+[INFO GPL-1003] Available Free Area           988.4480
+[INFO GPL-1004] Minimum Feasible Density        0.0700 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.0710
+[INFO GPL-1008]     - For 80% usage of free space: 0.0799
+[INFO GPL-1009]     - For 50% usage of free space: 0.1278
+[INFO GPL-1014] Final placement area: 63.16 (+0.00%)
+Design area 75 um^2 7% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/3_1_place_gp_skip_io.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_1_place_gp_skip_io               0            115 fb981757b5a000e82795
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_2_place_iop io_placement
+Running io_placement.tcl, stage 3_2_place_iop
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/3_1_place_gp_skip_io.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+place_pins -hor_layers met3 -ver_layers met2
+Found 0 macro blocks.
+Using 2 tracks default min distance between IO pins.
+[INFO PPL-0001] Number of available slots 156
+[INFO PPL-0002] Number of I/O             4
+[INFO PPL-0003] Number of I/O w/sink      4
+[INFO PPL-0004] Number of I/O w/o sink    0
+[INFO PPL-0005] Slots per section         200
+[INFO PPL-0008] Successfully assigned pins to sections.
+[INFO PPL-0012] I/O nets HPWL: 88.59 um.
+Design area 75 um^2 7% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/3_2_place_iop.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_2_place_iop                      0            115 49bd5563879115ae2b2a
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_3_place_gp global_place
+Running global_place.tcl, stage 3_3_place_gp
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/3_2_place_iop.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[INFO RSZ-0026] Removed 0 buffers.
+Perform port buffering...
+[INFO RSZ-0027] Inserted 3 sky130_fd_sc_hd__clkdlybuf4s50_1 input buffers.
+[INFO RSZ-0028] Inserted 1 sky130_fd_sc_hd__clkdlybuf4s50_1 output buffers.
+[INFO GPL-0022] Initialize gpl and calculate uniform density.
+Placement density is 0.16449999943375587, computed from PLACE_DENSITY_LB_ADDON  0.05 and lower bound 0.10999999940395355
+global_placement -density 0.16449999943375587 -pad_left 0 -pad_right 0 -routability_driven -timing_driven -force_center_initial_place -min_phi_coef 0.95 -max_phi_coef 1.05
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: (  6.440  8.160 ) ( 40.020 38.080 ) um
+[INFO GPL-0036] Movable instances area:         98.845 um^2
+[INFO GPL-0037] Total instances area:          115.110 um^2
+[INFO GPL-0035] Pin density area adjust:         4.354 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:                21
+[INFO GPL-0007] Movable instances:                   8
+[INFO GPL-0008] Fixed instances:                    13
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                     11
+[INFO GPL-0011] Number of pins:                     25
+[INFO GPL-0012] Die BBox:  (  0.000  0.000 ) ( 46.295 46.295 ) um
+[INFO GPL-0013] Core BBox: (  6.440  8.160 ) ( 40.020 38.080 ) um
+[INFO GPL-0016] Core area:                    1004.714 um^2
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                  1004.714 um^2
+[INFO GPL-0017] Fixed instances area:           16.266 um^2
+[INFO GPL-0018] Movable instances area:        103.199 um^2
+[INFO GPL-0019] Utilization:                    10.441 %
+[INFO GPL-0020] Standard cells area:           103.199 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 8	Region center = 0
+[InitialPlace]  Iter: 1 conjugate gradient residual: 0.00000003 HPWL: 186518
+[InitialPlace]  Iter: 2 conjugate gradient residual: 0.00000001 HPWL: 173313
+[InitialPlace]  Iter: 3 conjugate gradient residual: 0.00000001 HPWL: 173797
+[InitialPlace]  Iter: 4 conjugate gradient residual: 0.00000004 HPWL: 173926
+[InitialPlace]  Iter: 5 conjugate gradient residual: 0.00000000 HPWL: 174009
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[INFO GPL-0023] Placement target density:       0.1645
+[INFO GPL-0024] Movable insts average area:     12.900 um^2
+[INFO GPL-0025] Ideal bin area:                 78.419 um^2
+[INFO GPL-0026] Ideal bin count:                    12
+[INFO GPL-0027] Total bin area:               1004.714 um^2
+[INFO GPL-0028] Bin count (X, Y):           2 ,      2
+[INFO GPL-0029] Bin size (W * H):      16.790 * 14.960 um
+[INFO GPL-0030] Number of bins:                      4
+[INFO GPL-0007] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.0000 |  1.012920e+02 |   +0.00% |  1.68e-11 |      
+[INFO GPL-0100] Timing-driven iteration 1/2, virtual: false.
+[INFO GPL-0101]    Iter: 1, overflow: 0.000, keep resizer changes at: 1, HPWL: 101292
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |        11
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+   Iter   |    Area   | Removed | Inserted |   Pins
+          |           | Buffers | Buffers  | Remaining
+-------------------------------------------------------
+        0 |     +0.0% |       0 |        0 |         8
+        1 |     +0.0% |       0 |        0 |         7
+        2 |     +0.0% |       0 |        0 |         6
+        3 |     +0.0% |       0 |        0 |         5
+        4 |     +0.0% |       0 |        0 |         4
+        5 |     +0.0% |       0 |        0 |         3
+        6 |     +0.0% |       0 |        0 |         2
+        7 |     +0.0% |       0 |        0 |         1
+    final |     +0.0% |       0 |        0 |         0
+-------------------------------------------------------
+[INFO GPL-0106] Timing-driven: worst slack 1e+30
+[WARNING GPL-0102] Timing-driven: no slacks found. Timing-driven mode disabled.
+[INFO GPL-0107] Timing-driven: repair_design delta area: 0.000 um^2 (+0.00%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl delta gcells: 0 (+0.00%)
+[INFO GPL-0109] Timing-driven: repair_design, gcells created: 0, deleted: 0
+[INFO GPL-0110] Timing-driven: new target density: 0.1645
+[INFO GPL-0038] Routability snapshot saved at iter = 1
+        0 |   0.0000 |  1.012920e+02 |          |           |      
+[INFO GPL-0040] Routability iteration: 1
+[INFO GPL-0041] Total routing overflow: 0.0000
+[INFO GPL-0042] Number of overflowed tiles: 0 (0.00%)
+[INFO GPL-0043] Average top 0.5% routing congestion: 0.5609
+[INFO GPL-0044] Average top 1.0% routing congestion: 0.5609
+[INFO GPL-0045] Average top 2.0% routing congestion: 0.5609
+[INFO GPL-0046] Average top 5.0% routing congestion: 0.5501
+[INFO GPL-0047] Routability iteration weighted routing congestion: 0.5609
+[INFO GPL-0050] Weighted routing congestion is lower than target routing congestion(1.0100), end routability optimization.
+[INFO GPL-0090] Routability finished. Target routing congestion achieved succesfully.
+        0 |   0.0000 |  1.012920e+02 |          |  1.75e-11 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 0
+[INFO GPL-1003] Routability mode iteration count: 0
+[INFO GPL-1005] Routability final weighted congestion: 0.5609
+[INFO GPL-1002] Placed Cell Area              103.1990
+[INFO GPL-1003] Available Free Area           988.4480
+[INFO GPL-1004] Minimum Feasible Density        0.1100 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.1160
+[INFO GPL-1008]     - For 80% usage of free space: 0.1305
+[INFO GPL-1009]     - For 50% usage of free space: 0.2088
+[INFO GPL-1011] Original area (um^2): 103.20
+[INFO GPL-1012] Total routability artificial inflation: 0.00 (+0.00%)
+[INFO GPL-1014] Final placement area: 103.20 (+0.00%)
+estimate_parasitics -placement
+Report metrics stage 3, global place...
+
+==========================================================================
+global place report_design_area
+--------------------------------------------------------------------------
+Design area 115 um^2 11% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/3_3_place_gp.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_3_place_gp                       0            207 aaedbf9e854485b30631
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_4_place_resized resize
+Running resize.tcl, stage 3_4_place_resized
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/3_3_place_gp.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |        11
+       10 |     +0.0% |       0 |       0 |             0 |         1
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 115 um^2 11% utilization.
+Instance count before 21, after 21
+Pin count before 21, after 21
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/3_4_place_resized.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_4_place_resized                  0            135 aaedbf9e854485b30631
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_5_place_dp detail_place
+Running detail_place.tcl, stage 3_5_place_dp
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/3_4_place_resized.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+detailed_placement
+[INFO DPL-0006] Core area: 1004.71 um^2, Instances area: 115.11 um^2, Utilization: 11.5%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1101] Legalizing using diamond search.
+Movements Summary
+---------------------------------------
+Total cells:                       8
+Diamond Move Success:              8 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement         23.7 u
+average displacement        1.1 u
+max displacement            6.7 u
+original HPWL             102.6 u
+legalized HPWL            134.6 u
+delta HPWL                   31 %
+
+improve_placement -max_displacement "5 1"
+Detailed placement improvement.
+[INFO DPL-0401] Setting random seed to 1.
+[INFO DPL-0402] Setting maximum displacement 5 1 to 13600 2720 units.
+[INFO DPL-0320] Collected 17 fixed cells.
+[INFO DPL-0318] Collected 8 single height cells.
+[INFO DPL-0321] Collected 0 wide cells.
+[INFO DPL-0322] Image (6440, 8160) - (40020, 38080)
+[INFO DPL-0310] Assigned 8 cells into segments.  Movement in X-direction is 0.000000, movement in Y-direction is 0.000000.
+[INFO DPL-0313] Found 0 cells in wrong regions.
+[INFO DPL-0315] Found 0 row alignment problems.
+[INFO DPL-0314] Found 0 site alignment problems.
+[INFO DPL-0311] Found 0 overlaps between adjacent cells.
+[INFO DPL-0312] Found 0 edge spacing violations and 0 padding violations.
+[INFO DPL-0303] Running algorithm for independent set matching.
+[INFO DPL-0300] Set matching objective is wirelength.
+[INFO DPL-0301] Pass   1 of matching; objective is 1.357180e+05.
+[INFO DPL-0302] End of matching; objective is 1.357180e+05, improvement is 0.00 percent.
+[INFO DPL-0303] Running algorithm for global swaps.
+[INFO DPL-0306] Pass   1 of global swaps; hpwl is 1.278460e+05.
+[INFO DPL-0306] Pass   2 of global swaps; hpwl is 1.278460e+05.
+[INFO DPL-0307] End of global swaps; objective is 1.278460e+05, improvement is 5.80 percent.
+[INFO DPL-0303] Running algorithm for vertical swaps.
+[INFO DPL-0308] Pass   1 of vertical swaps; hpwl is 1.266950e+05.
+[INFO DPL-0309] End of vertical swaps; objective is 1.266950e+05, improvement is 0.90 percent.
+[INFO DPL-0303] Running algorithm for reordering.
+[INFO DPL-0304] Pass   1 of reordering; objective is 1.266950e+05.
+[INFO DPL-0305] End of reordering; objective is 1.266950e+05, improvement is 0.00 percent.
+[INFO DPL-0303] Running algorithm for random improvement.
+[INFO DPL-0324] Random improver is using random generator.
+[INFO DPL-0325] Random improver is using hpwl objective.
+[INFO DPL-0326] Random improver cost string is (a).
+[INFO DPL-0332] End of pass, Generator random called 160 times.
+[INFO DPL-0335] Generator random, Cumulative attempts 160, swaps 8, moves    72 since last reset.
+[INFO DPL-0333] End of pass, Objective hpwl, Initial cost 1.266950e+05, Scratch cost 1.139520e+05, Incremental cost 1.139520e+05, Mismatch? N
+[INFO DPL-0338] End of pass, Total cost is 1.139520e+05.
+[INFO DPL-0327] Pass   1 of random improver; improvement in cost is 10.06 percent.
+[INFO DPL-0332] End of pass, Generator random called 160 times.
+[INFO DPL-0335] Generator random, Cumulative attempts 320, swaps 11, moves   142 since last reset.
+[INFO DPL-0333] End of pass, Objective hpwl, Initial cost 1.139520e+05, Scratch cost 1.107320e+05, Incremental cost 1.107320e+05, Mismatch? N
+[INFO DPL-0338] End of pass, Total cost is 1.107320e+05.
+[INFO DPL-0327] Pass   2 of random improver; improvement in cost is 2.83 percent.
+[INFO DPL-0332] End of pass, Generator random called 160 times.
+[INFO DPL-0335] Generator random, Cumulative attempts 480, swaps 12, moves   213 since last reset.
+[INFO DPL-0333] End of pass, Objective hpwl, Initial cost 1.107320e+05, Scratch cost 1.107320e+05, Incremental cost 1.107320e+05, Mismatch? N
+[INFO DPL-0338] End of pass, Total cost is 1.107320e+05.
+[INFO DPL-0327] Pass   3 of random improver; improvement in cost is 0.00 percent.
+[INFO DPL-0328] End of random improver; improvement is 12.599550 percent.
+[INFO DPL-0380] Cell flipping.
+[INFO DPL-0382] Changed 0 cell orientations for row compatibility.
+[INFO DPL-0383] Performed 2 cell flips.
+[INFO DPL-0384] End of flipping; objective is 1.027660e+05, improvement is 7.19 percent.
+[INFO DPL-0313] Found 0 cells in wrong regions.
+[INFO DPL-0315] Found 0 row alignment problems.
+[INFO DPL-0314] Found 0 site alignment problems.
+[INFO DPL-0311] Found 0 overlaps between adjacent cells.
+[INFO DPL-0312] Found 0 edge spacing violations and 0 padding violations.
+Detailed Improvement Results
+------------------------------------------
+Original HPWL              134.6 u (      82.0,       52.6)
+Final HPWL                 101.7 u (      59.7,       42.0)
+Delta HPWL                 -24.4 % (     -27.2,      -20.1)
+
+optimize_mirroring
+[INFO FLW-0012] Placement violations .
+estimate_parasitics -placement
+Report metrics stage 3, detailed place...
+
+==========================================================================
+detailed place report_design_area
+--------------------------------------------------------------------------
+Design area 115 um^2 11% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/3_5_place_dp.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_5_place_dp                       0            118 2112bd1008b031930908
+cp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/3_5_place_dp.odb /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/3_place.odb
+cp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/2_floorplan.sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/3_place.sdc
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 4_1_cts cts
+Running cts.tcl, stage 4_1_cts
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/3_place.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/3_place.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+clock_tree_synthesis -sink_clustering_enable -repair_clock_nets
+[INFO CTS-0050] Root buffer is sky130_fd_sc_hd__clkbuf_4.
+[INFO CTS-0051] Sink buffer is sky130_fd_sc_hd__clkbuf_8.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sky130_fd_sc_hd__clkbuf_4
+                    sky130_fd_sc_hd__clkbuf_8
+[INFO CTS-0049] Characterization buffer is sky130_fd_sc_hd__clkbuf_8.
+[WARNING CTS-0083] No clock nets have been found.
+[INFO CTS-0008] TritonCTS found 0 clock nets.
+[WARNING CTS-0082] No valid clock nets in the design.
+estimate_parasitics -placement
+detailed_placement
+[INFO DPL-0006] Core area: 1004.71 um^2, Instances area: 115.11 um^2, Utilization: 11.5%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1101] Legalizing using diamond search.
+Movements Summary
+---------------------------------------
+Total cells:                       8
+Diamond Move Success:              8 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL             101.7 u
+legalized HPWL            109.8 u
+delta HPWL                    8 %
+
+estimate_parasitics -placement
+repair_timing -setup_margin 0.1 -hold_margin 0.1 -repair_tns 100 -match_cell_footprint -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0033] No hold violations found.
+detailed_placement
+[INFO DPL-0006] Core area: 1004.71 um^2, Instances area: 115.11 um^2, Utilization: 11.5%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1101] Legalizing using diamond search.
+Movements Summary
+---------------------------------------
+Total cells:                       8
+Diamond Move Success:              8 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL             109.8 u
+legalized HPWL            109.8 u
+delta HPWL                    0 %
+
+Report metrics stage 4, cts final...
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 115 um^2 11% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/4_1_cts.odb
+write_sdc -no_timestamp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/4_cts.sdc
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+4_1_cts                            1            150 5131c46c4c1f8c774e0a
+cp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/4_1_cts.odb /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/4_cts.odb
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 5_1_grt global_route
+Running global_route.tcl, stage 5_1_grt
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/4_cts.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/4_cts.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+pin_access
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+
+Units:                1000
+Number of layers:     13
+Number of macros:     441
+Number of vias:       29
+Number of viarulegen: 25
+
+[INFO DRT-0150] Reading design.
+
+Design:                   rising_edge_detector
+Die area:                 ( 0 0 ) ( 46295 46295 )
+Number of track patterns: 12
+Number of DEF vias:       0
+Number of components:     21
+Number of terminals:      6
+Number of snets:          2
+Number of nets:           11
+
+[INFO DRT-0167] List of default vias:
+  Layer via
+    default via: M1M2_PR
+  Layer via2
+    default via: M2M3_PR
+  Layer via3
+    default via: M3M4_PR
+  Layer via4
+    default via: M4M5_PR
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 8.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete FR_MASTERSLICE.
+[INFO DRT-0024]   Complete Fr_VIA.
+[INFO DRT-0024]   Complete li1.
+[INFO DRT-0024]   Complete mcon.
+[INFO DRT-0024]   Complete met1.
+[INFO DRT-0024]   Complete via.
+[INFO DRT-0024]   Complete met2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete met3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete met4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete met5.
+[INFO DRT-0033] FR_MASTERSLICE shape region query size = 0.
+[INFO DRT-0033] FR_VIA shape region query size = 0.
+[INFO DRT-0033] li1 shape region query size = 320.
+[INFO DRT-0033] mcon shape region query size = 196.
+[INFO DRT-0033] met1 shape region query size = 82.
+[INFO DRT-0033] via shape region query size = 60.
+[INFO DRT-0033] met2 shape region query size = 37.
+[INFO DRT-0033] via2 shape region query size = 48.
+[INFO DRT-0033] met3 shape region query size = 39.
+[INFO DRT-0033] via3 shape region query size = 48.
+[INFO DRT-0033] met4 shape region query size = 16.
+[INFO DRT-0033] via4 shape region query size = 2.
+[INFO DRT-0033] met5 shape region query size = 6.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 45 pins.
+[INFO DRT-0081]   Complete 8 unique inst patterns.
+[INFO DRT-0084]   Complete 8 groups.
+#scanned instances     = 21
+#unique  instances     = 8
+#stdCellGenAp          = 122
+#stdCellValidPlanarAp  = 0
+#stdCellValidViaAp     = 80
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 21
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:00:01, elapsed time = 00:00:00, memory = 122.95 (MB), peak = 122.95 (MB)
+global_route -congestion_report_file /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/reports/sky130hd/rising_edge_detector/base/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+[INFO GRT-0020] Min routing layer: met1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 28
+[INFO GRT-0019] Found 0 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal        547           427          21.94%
+met2       Vertical          464           364          21.55%
+met3       Horizontal        328           255          22.26%
+met4       Vertical          230           173          24.78%
+met5       Horizontal         55            30          45.45%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 32
+[INFO GRT-0198] Via related Steiner nodes: 0
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 38
+[INFO GRT-0112] Final usage 3D: 126
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1                  0             0            0.00%             0 /  0 /  0
+met1               427             6            1.41%             0 /  0 /  0
+met2               364             5            1.37%             0 /  0 /  0
+met3               255             1            0.39%             0 /  0 /  0
+met4               173             0            0.00%             0 /  0 /  0
+met5                30             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total             1249            12            0.96%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 158 um
+[INFO GRT-0014] Routed nets: 11
+[INFO GRT-0303] Global routing runtime = 00:00:00
+estimate_parasitics -global_routing
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |        11
+       10 |     +0.0% |       0 |       0 |             0 |         1
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+global_route -start_incremental
+detailed_placement
+[INFO DPL-0006] Core area: 1004.71 um^2, Instances area: 115.11 um^2, Utilization: 11.5%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1101] Legalizing using diamond search.
+Movements Summary
+---------------------------------------
+Total cells:                       8
+Diamond Move Success:              8 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL             109.8 u
+legalized HPWL            109.8 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/reports/sky130hd/rising_edge_detector/base/congestion_post_repair_design.rpt
+Repair setup and hold violations...
+estimate_parasitics -global_routing
+repair_timing -setup_margin 0.1 -hold_margin 0.1 -repair_tns 100 -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0033] No hold violations found.
+global_route -start_incremental
+detailed_placement
+[INFO DPL-0006] Core area: 1004.71 um^2, Instances area: 115.11 um^2, Utilization: 11.5%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1101] Legalizing using diamond search.
+Movements Summary
+---------------------------------------
+Total cells:                       8
+Diamond Move Success:              8 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL             109.8 u
+legalized HPWL            109.8 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/reports/sky130hd/rising_edge_detector/base/congestion_post_repair_timing.rpt
+global_route -start_incremental
+global_route -end_incremental -congestion_report_file /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/reports/sky130hd/rising_edge_detector/base/congestion_post_recover_power.rpt
+Repair antennas...
+[INFO GRT-0012] Found 0 antenna violations.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Estimate parasitics...
+estimate_parasitics -global_routing
+Report metrics stage 5, global route...
+
+==========================================================================
+global route report_design_area
+--------------------------------------------------------------------------
+Design area 115 um^2 11% utilization.
+[WARNING FLW-0006] No clocks found.
+[INFO FLW-0011] Path endpoint path count 3
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_1_grt.odb
+write_sdc -no_timestamp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_1_grt.sdc
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+5_1_grt                            0            229 4d3f72708c8e32ee4870
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 5_2_route detail_route
+Running detail_route.tcl, stage 5_2_route
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_1_grt.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_1_grt.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+detailed_route -output_drc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/reports/sky130hd/rising_edge_detector/base/5_route_drc.rpt -output_maze /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/maze.log -droute_end_iter 64 -verbose 1 -drc_report_iter_step 5
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+
+Units:                1000
+Number of layers:     13
+Number of macros:     441
+Number of vias:       29
+Number of viarulegen: 25
+
+[INFO DRT-0150] Reading design.
+
+Design:                   rising_edge_detector
+Die area:                 ( 0 0 ) ( 46295 46295 )
+Number of track patterns: 12
+Number of DEF vias:       0
+Number of components:     21
+Number of terminals:      6
+Number of snets:          2
+Number of nets:           11
+
+[INFO DRT-0167] List of default vias:
+  Layer via
+    default via: M1M2_PR
+  Layer via2
+    default via: M2M3_PR
+  Layer via3
+    default via: M3M4_PR
+  Layer via4
+    default via: M4M5_PR
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 8.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete FR_MASTERSLICE.
+[INFO DRT-0024]   Complete Fr_VIA.
+[INFO DRT-0024]   Complete li1.
+[INFO DRT-0024]   Complete mcon.
+[INFO DRT-0024]   Complete met1.
+[INFO DRT-0024]   Complete via.
+[INFO DRT-0024]   Complete met2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete met3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete met4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete met5.
+[INFO DRT-0033] FR_MASTERSLICE shape region query size = 0.
+[INFO DRT-0033] FR_VIA shape region query size = 0.
+[INFO DRT-0033] li1 shape region query size = 320.
+[INFO DRT-0033] mcon shape region query size = 196.
+[INFO DRT-0033] met1 shape region query size = 82.
+[INFO DRT-0033] via shape region query size = 60.
+[INFO DRT-0033] met2 shape region query size = 37.
+[INFO DRT-0033] via2 shape region query size = 48.
+[INFO DRT-0033] met3 shape region query size = 39.
+[INFO DRT-0033] via3 shape region query size = 48.
+[INFO DRT-0033] met4 shape region query size = 16.
+[INFO DRT-0033] via4 shape region query size = 2.
+[INFO DRT-0033] met5 shape region query size = 6.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 45 pins.
+[INFO DRT-0081]   Complete 8 unique inst patterns.
+[INFO DRT-0084]   Complete 8 groups.
+#scanned instances     = 21
+#unique  instances     = 8
+#stdCellGenAp          = 122
+#stdCellValidPlanarAp  = 0
+#stdCellValidViaAp     = 80
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 21
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 200.97 (MB), peak = 200.97 (MB)
+
+[INFO DRT-0157] Number of guides:     50
+
+[INFO DRT-0169] Post process guides.
+[INFO DRT-0176] GCELLGRID X 0 DO 6 STEP 6900 ;
+[INFO DRT-0177] GCELLGRID Y 0 DO 6 STEP 6900 ;
+[INFO DRT-0028]   Complete FR_MASTERSLICE.
+[INFO DRT-0028]   Complete Fr_VIA.
+[INFO DRT-0028]   Complete li1.
+[INFO DRT-0028]   Complete mcon.
+[INFO DRT-0028]   Complete met1.
+[INFO DRT-0028]   Complete via.
+[INFO DRT-0028]   Complete met2.
+[INFO DRT-0028]   Complete via2.
+[INFO DRT-0028]   Complete met3.
+[INFO DRT-0028]   Complete via3.
+[INFO DRT-0028]   Complete met4.
+[INFO DRT-0028]   Complete via4.
+[INFO DRT-0028]   Complete met5.
+[INFO DRT-0178] Init guide query.
+[INFO DRT-0035]   Complete FR_MASTERSLICE (guide).
+[INFO DRT-0035]   Complete Fr_VIA (guide).
+[INFO DRT-0035]   Complete li1 (guide).
+[INFO DRT-0035]   Complete mcon (guide).
+[INFO DRT-0035]   Complete met1 (guide).
+[INFO DRT-0035]   Complete via (guide).
+[INFO DRT-0035]   Complete met2 (guide).
+[INFO DRT-0035]   Complete via2 (guide).
+[INFO DRT-0035]   Complete met3 (guide).
+[INFO DRT-0035]   Complete via3 (guide).
+[INFO DRT-0035]   Complete met4 (guide).
+[INFO DRT-0035]   Complete via4 (guide).
+[INFO DRT-0035]   Complete met5 (guide).
+[INFO DRT-0036] FR_MASTERSLICE guide region query size = 0.
+[INFO DRT-0036] FR_VIA guide region query size = 0.
+[INFO DRT-0036] li1 guide region query size = 18.
+[INFO DRT-0036] mcon guide region query size = 0.
+[INFO DRT-0036] met1 guide region query size = 13.
+[INFO DRT-0036] via guide region query size = 0.
+[INFO DRT-0036] met2 guide region query size = 7.
+[INFO DRT-0036] via2 guide region query size = 0.
+[INFO DRT-0036] met3 guide region query size = 3.
+[INFO DRT-0036] via3 guide region query size = 0.
+[INFO DRT-0036] met4 guide region query size = 0.
+[INFO DRT-0036] via4 guide region query size = 0.
+[INFO DRT-0036] met5 guide region query size = 0.
+[INFO DRT-0179] Init gr pin query.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 200.97 (MB), peak = 200.97 (MB)
+[INFO DRT-0245] skipped writing guide updates to database.
+[INFO DRT-0181] Start track assignment.
+[INFO DRT-0184] Done with 25 vertical wires in 1 frboxes and 16 horizontal wires in 1 frboxes.
+[INFO DRT-0186] Done with 1 vertical wires in 1 frboxes and 1 horizontal wires in 1 frboxes.
+[INFO DRT-0182] Complete track assignment.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 201.22 (MB), peak = 201.22 (MB)
+[INFO DRT-0187] Start routing data preparation.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 201.22 (MB), peak = 201.22 (MB)
+[INFO DRT-0194] Start detail routing.
+[INFO DRT-0195] Start 0th optimization iteration.
+    Completing 100% with 0 violations.
+    elapsed time = 00:00:00, memory = 203.16 (MB).
+[INFO DRT-0199]   Number of violations = 0.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 553.39 (MB), peak = 565.29 (MB)
+Total wire length = 107 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 48 um.
+Total wire length on LAYER met2 = 36 um.
+Total wire length on LAYER met3 = 22 um.
+Total wire length on LAYER met4 = 0 um.
+Total wire length on LAYER met5 = 0 um.
+Total number of vias = 40.
+Up-via summary (total 40):
+
+---------------------
+ FR_MASTERSLICE     0
+            li1    21
+           met1    16
+           met2     3
+           met3     0
+           met4     0
+---------------------
+               40
+
+
+[INFO DRT-0198] Complete detail routing.
+Total wire length = 107 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 48 um.
+Total wire length on LAYER met2 = 36 um.
+Total wire length on LAYER met3 = 22 um.
+Total wire length on LAYER met4 = 0 um.
+Total wire length on LAYER met5 = 0 um.
+Total number of vias = 40.
+Up-via summary (total 40):
+
+---------------------
+ FR_MASTERSLICE     0
+            li1    21
+           met1    16
+           met2     3
+           met3     0
+           met4     0
+---------------------
+               40
+
+
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 553.52 (MB), peak = 565.29 (MB)
+
+[INFO DRT-0180] Post processing.
+[INFO GRT-0012] Found 0 antenna violations.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Design area 115 um^2 11% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_2_route.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+5_2_route                          1            565 77af6f8dbdfdbd7118fc
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 5_3_fillcell fillcell
+Running fillcell.tcl, stage 5_3_fillcell
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_2_route.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_1_grt.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+filler_placement "sky130_fd_sc_hd__fill_1 sky130_fd_sc_hd__fill_2 sky130_fd_sc_hd__fill_4 sky130_fd_sc_hd__fill_8"
+[INFO DPL-0001] Placed 114 filler instances.
+Design area 115 um^2 11% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_3_fillcell.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+5_3_fillcell                       0            116 0cbc80bb278e764c6514
+cp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_3_fillcell.odb /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_route.odb
+cp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_1_grt.sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_route.sdc
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 6_1_fill density_fill
+Running density_fill.tcl, stage 6_1_fill
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_route.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_route.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+exec cp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_route.odb /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/6_1_fill.odb
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+6_1_fill                           0            114 0cbc80bb278e764c6514
+cp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_route.sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/6_1_fill.sdc
+/home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/flow.sh 6_report final_report
+Running final_report.tcl, stage 6_report
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/6_1_fill.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/6_1_fill.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/6_final.odb
+Deleted 0 routing obstructions
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation rising_edge_detector (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 17 rc segments
+[INFO RCX-0439] Coupling Cap extraction rising_edge_detector ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 73% of 76 wires extracted
+[INFO RCX-0442] 100% of 76 wires extracted
+[INFO RCX-0045] Extract 11 nets, 28 rsegs, 28 caps, 10 ccs
+[INFO RCX-0443] 11 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Total power      : 2.40e-05 W
+Supply voltage   : 1.80e+00 V
+Worstcase voltage: 1.80e+00 V
+Average voltage  : 1.80e+00 V
+Average IR drop  : 8.10e-06 V
+Worstcase IR drop: 3.16e-05 V
+Percentage drop  : 0.00 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Total power      : 2.40e-05 W
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 3.15e-05 V
+Average voltage  : 6.31e-06 V
+Average IR drop  : 6.31e-06 V
+Worstcase IR drop: 3.15e-05 V
+Percentage drop  : 0.00 %
+######################################
+Cell type report:                       Count       Area
+  Fill cell                               114     889.60
+  Tap cell                                 13      16.27
+  Timing Repair Buffer                      4      40.04
+  Sequential cell                           2      40.04
+  Multi-Input combinational cell            2      18.77
+  Total                                   135    1004.71
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 115 um^2 11% utilization.
+[WARNING GUI-0076] QStandardPaths: wrong permissions on runtime directory /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/.xdg_runtime, 0755 instead of 0700
+[WARNING GUI-0066] Heat map "IR Drop" has not been populated with data.
+[WARNING STA-0351] clock '*' not found.
+[WARNING GUI-0066] Heat map "Routing Congestion" has not been populated with data.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+6_report                           1            178                  N/A
+cp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/5_route.sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/6_final.sdc
+cp /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/objects/sky130hd/rising_edge_detector/base/klayout_tech.lef
+/usr/bin/python3 /home/harish_d1121/OpenROAD-flow-scripts/flow/util/generate_klayout_tech.py \
+	--template /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/sky130hd.lyt \
+	--output /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/objects/sky130hd/rising_edge_detector/base/klayout.lyt \
+	--lef-files /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/objects/sky130hd/rising_edge_detector/base/klayout_tech.lef /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef   \
+	--reference-dir /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base \
+	--map-files 
+/usr/bin/python3 /home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/run_command.py --log /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/logs/sky130hd/rising_edge_detector/base/6_1_merge.log --tee -- \
+        /home/harish_d1121/OpenROAD-flow-scripts/flow/scripts/klayout.sh -zz -rd design_name=rising_edge_detector \
+        -rd in_def=/home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/6_final.def \
+        -rd in_files="/home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/gds/sky130_fd_sc_hd.gds  " \
+        -rd seal_file="" \
+        -rd out_file=/home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/6_1_merged.gds \
+        -rd tech_file=/home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/objects/sky130hd/rising_edge_detector/base/klayout.lyt \
+        -rd layer_map= \
+        -r /home/harish_d1121/OpenROAD-flow-scripts/flow/util/def2stream.py
+KLayout 0.30.7
+[INFO] Reporting cells prior to loading DEF ...
+	/home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/gds/sky130_fd_sc_hd.gds
+[INFO] All LEF cells have matching GDS/OAS cells
+[INFO] No orphan cells in the final layout
+cp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/6_1_merged.gds /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/6_final.gds
+/home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/logs/sky130hd/rising_edge_detector/base
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+1_1_yosys_canonicalize             0             54 51abea5ebef2f713d664
+1_2_yosys                          0             57 46eda475e1e0b6d9a828
+1_synth                            0            116 2d9fc3639ce160544c13
+2_1_floorplan                      0            137 456add267743e029df12
+2_2_floorplan_macro                0            115 456add267743e029df12
+2_3_floorplan_tapcell              0            114 2dfc10a31469d1ca3acb
+2_4_floorplan_pdn                  0            117 3b93246af837f5ee331d
+3_1_place_gp_skip_io               0            115 fb981757b5a000e82795
+3_2_place_iop                      0            115 49bd5563879115ae2b2a
+3_3_place_gp                       0            207 aaedbf9e854485b30631
+3_4_place_resized                  0            135 aaedbf9e854485b30631
+3_5_place_dp                       0            118 2112bd1008b031930908
+4_1_cts                            1            150 5131c46c4c1f8c774e0a
+5_1_grt                            0            229 4d3f72708c8e32ee4870
+5_2_route                          1            565 77af6f8dbdfdbd7118fc
+5_3_fillcell                       0            116 0cbc80bb278e764c6514
+6_1_fill                           0            114 0cbc80bb278e764c6514
+6_1_merge                          1            428                  N/A
+6_report                           1            178                  N/A
+Total                              4            565                     
+make: Leaving directory '/home/harish_d1121/OpenROAD-flow-scripts/flow'
+
+Elapsed time: 0:00.16[h:]min:sec. CPU time: user 0.14 sys 0.02 (98%). Peak memory: 56192KB.
+Elapsed time: 0:00.58[h:]min:sec. CPU time: user 0.45 sys 0.13 (99%). Peak memory: 58624KB.
+Elapsed time: 0:00.36[h:]min:sec. CPU time: user 0.32 sys 0.04 (99%). Peak memory: 119688KB.
+Elapsed time: 0:00.39[h:]min:sec. CPU time: user 0.31 sys 0.08 (100%). Peak memory: 140588KB.
+Elapsed time: 0:00.32[h:]min:sec. CPU time: user 0.28 sys 0.03 (98%). Peak memory: 117800KB.
+Elapsed time: 0:00.32[h:]min:sec. CPU time: user 0.27 sys 0.05 (99%). Peak memory: 117664KB.
+Elapsed time: 0:00.33[h:]min:sec. CPU time: user 0.30 sys 0.04 (99%). Peak memory: 119932KB.
+Elapsed time: 0:00.32[h:]min:sec. CPU time: user 0.32 sys 0.03 (108%). Peak memory: 118500KB.
+Elapsed time: 0:00.32[h:]min:sec. CPU time: user 0.30 sys 0.02 (99%). Peak memory: 118132KB.
+Elapsed time: 0:00.43[h:]min:sec. CPU time: user 0.49 sys 0.09 (134%). Peak memory: 212064KB.
+Elapsed time: 0:00.38[h:]min:sec. CPU time: user 0.32 sys 0.06 (99%). Peak memory: 138936KB.
+Elapsed time: 0:00.34[h:]min:sec. CPU time: user 0.30 sys 0.03 (99%). Peak memory: 120912KB.
+Elapsed time: 0:01.73[h:]min:sec. CPU time: user 1.66 sys 0.07 (99%). Peak memory: 154572KB.
+Elapsed time: 0:00.94[h:]min:sec. CPU time: user 1.51 sys 0.19 (180%). Peak memory: 235408KB.
+Elapsed time: 0:01.18[h:]min:sec. CPU time: user 1.71 sys 0.30 (170%). Peak memory: 578852KB.
+Elapsed time: 0:00.38[h:]min:sec. CPU time: user 0.34 sys 0.04 (99%). Peak memory: 119360KB.
+Elapsed time: 0:00.33[h:]min:sec. CPU time: user 0.28 sys 0.04 (99%). Peak memory: 117392KB.
+Elapsed time: 0:01.04[h:]min:sec. CPU time: user 0.93 sys 0.13 (101%). Peak memory: 182360KB.
+Elapsed time: 0:01.42[h:]min:sec. CPU time: user 1.25 sys 0.17 (99%). Peak memory: 438376KB.
+
+timing_metrics=wns:0.0,tns:0.0,whs:0.0,area:115.11,setup_pass:True,hold_pass:True,meets_timing:True
+selected_timing_metrics=wns:0.0,tns:0.0,whs:0.0,area:115.11,setup_pass:True,hold_pass:True,meets_timing:True
+reports_found=True
+final_outputs_found=True

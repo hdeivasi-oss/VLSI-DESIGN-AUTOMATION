@@ -1,0 +1,139 @@
+
+==========================================================================
+global place report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+global place report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+global place report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 0.18
+
+==========================================================================
+global place report_clock_min_period
+--------------------------------------------------------------------------
+clk period_min = 0.92 fmax = 1091.94
+
+==========================================================================
+global place report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: detect_pending$_DFF_P_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: detected$_DFF_P_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ detect_pending$_DFF_P_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     1    0.00    0.03    0.28    0.28 ^ detect_pending$_DFF_P_/Q (sky130_fd_sc_hd__dfxtp_1)
+                                         detect_pending (net)
+                  0.03    0.00    0.28 ^ _8_/B (sky130_fd_sc_hd__and2b_2)
+     1    0.00    0.03    0.12    0.40 ^ _8_/X (sky130_fd_sc_hd__and2b_2)
+                                         _01_ (net)
+                  0.03    0.00    0.40 ^ detected$_DFF_P_/D (sky130_fd_sc_hd__dfxtp_1)
+                                  0.40   data arrival time
+
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ detected$_DFF_P_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                         -0.03   -0.03   library hold time
+                                 -0.03   data required time
+-----------------------------------------------------------------------------
+                                 -0.03   data required time
+                                 -0.40   data arrival time
+-----------------------------------------------------------------------------
+                                  0.43   slack (MET)
+
+
+
+==========================================================================
+global place report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: detected$_DFF_P_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: detected (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ detected$_DFF_P_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     1    0.00    0.04    0.28    0.28 ^ detected$_DFF_P_/Q (sky130_fd_sc_hd__dfxtp_1)
+                                         net3 (net)
+                  0.04    0.00    0.28 ^ output3/A (sky130_fd_sc_hd__clkdlybuf4s50_1)
+     1    0.03    0.26    0.63    0.91 ^ output3/X (sky130_fd_sc_hd__clkdlybuf4s50_1)
+                                         detected (net)
+                  0.26    0.00    0.92 ^ detected (out)
+                                  0.92   data arrival time
+
+                  0.00    1.10    1.10   clock clk (rise edge)
+                          0.00    1.10   clock network delay (ideal)
+                          0.00    1.10   clock reconvergence pessimism
+                          0.00    1.10   output external delay
+                                  1.10   data required time
+-----------------------------------------------------------------------------
+                                  1.10   data required time
+                                 -0.92   data arrival time
+-----------------------------------------------------------------------------
+                                  0.18   slack (MET)
+
+
+
+==========================================================================
+global place report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: detected$_DFF_P_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: detected (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ detected$_DFF_P_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     1    0.00    0.04    0.28    0.28 ^ detected$_DFF_P_/Q (sky130_fd_sc_hd__dfxtp_1)
+                                         net3 (net)
+                  0.04    0.00    0.28 ^ output3/A (sky130_fd_sc_hd__clkdlybuf4s50_1)
+     1    0.03    0.26    0.63    0.91 ^ output3/X (sky130_fd_sc_hd__clkdlybuf4s50_1)
+                                         detected (net)
+                  0.26    0.00    0.92 ^ detected (out)
+                                  0.92   data arrival time
+
+                  0.00    1.10    1.10   clock clk (rise edge)
+                          0.00    1.10   clock network delay (ideal)
+                          0.00    1.10   clock reconvergence pessimism
+                          0.00    1.10   output external delay
+                                  1.10   data required time
+-----------------------------------------------------------------------------
+                                  1.10   data required time
+                                 -0.92   data arrival time
+-----------------------------------------------------------------------------
+                                  0.18   slack (MET)
+
+
+
+==========================================================================
+global place report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             1.91e-04   1.54e-06   4.09e-11   1.93e-04  91.7%
+Combinational          1.25e-05   5.05e-06   3.85e-11   1.75e-05   8.3%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  2.04e-04   6.59e-06   7.94e-11   2.10e-04 100.0%
+                          96.9%       3.1%       0.0%

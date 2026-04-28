@@ -1,0 +1,25 @@
+attempt: 4
+spec_id: "p5"
+status: "PASS"
+passed: true
+rtl_strategy: "single_pulse"
+tb_strategy: "pulse_check"
+compile_pass: true
+sim_pass: true
+synthesis_pass: true
+gls_pass: true
+openroad_pass: true
+openroad_skipped: false
+report_generated: true
+final_artifacts_exist: true
+stale_logs: false
+failure_type: "none"
+compile_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_04_compile.log"
+sim_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_04_sim.log"
+synthesis_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p5/Synthesis/synth.log"
+gls_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p5/Synthesis/gls_sim.log"
+openroad_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p5/openroad/openroad_run.log"
+generation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_04_generation.log"
+validation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_04_validation.log"
+repair_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_04_repair.log"
+failure_summary: "Flow completed successfully."

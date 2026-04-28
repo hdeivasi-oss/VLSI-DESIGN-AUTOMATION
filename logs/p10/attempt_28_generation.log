@@ -1,0 +1,3 @@
+Generated locally for spec_key=rising_edge_detector
+rtl_strategy=prev_reg
+tb_strategy=default_check

@@ -1,0 +1,25 @@
+attempt: 4
+spec_id: "p2"
+status: "FAIL"
+passed: false
+rtl_strategy: "correct"
+tb_strategy: "default_check"
+compile_pass: true
+sim_pass: true
+synthesis_pass: true
+gls_pass: true
+openroad_pass: false
+openroad_skipped: false
+report_generated: true
+final_artifacts_exist: false
+stale_logs: false
+failure_type: "openroad_failure"
+compile_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p2/attempt_04_compile.log"
+sim_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p2/attempt_04_sim.log"
+synthesis_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p2/Synthesis/synth.log"
+gls_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p2/Synthesis/gls_sim.log"
+openroad_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p2/openroad/openroad_run.log"
+generation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p2/attempt_04_generation.log"
+validation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p2/attempt_04_validation.log"
+repair_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p2/attempt_04_repair.log"
+failure_summary: "Compile and simulation passed."

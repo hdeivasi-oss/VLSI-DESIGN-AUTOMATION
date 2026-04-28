@@ -1,0 +1,4 @@
+$ /usr/bin/vvp /mnt/c/Users/Harish D/Downloads/VLSI Design Automation/Spec_to_Tapeout-main/output/p1/sim.out
+FAIL: cycle=5 expected detected=0 got=1 time=56000
+FATAL: /mnt/c/Users/Harish D/Downloads/VLSI Design Automation/Spec_to_Tapeout-main/output/p1/tb_candidate.v:28: 
+       Time: 56000 Scope: tb.check_detected

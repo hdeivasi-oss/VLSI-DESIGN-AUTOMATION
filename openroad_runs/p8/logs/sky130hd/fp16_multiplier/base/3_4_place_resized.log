@@ -1,0 +1,101 @@
+OpenROAD 26Q2-339-g0504146ce6 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p8/results/sky130hd/fp16_multiplier/base/3_3_place_gp.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p8/results/sky130hd/fp16_multiplier/base/2_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       706
+       10 |     +0.0% |       0 |       0 |             0 |       696
+       20 |     +0.0% |       0 |       0 |             0 |       686
+       30 |     +0.0% |       0 |       0 |             0 |       676
+       40 |     +0.0% |       0 |       0 |             0 |       666
+       50 |     +0.0% |       0 |       0 |             0 |       656
+       60 |     +0.0% |       0 |       0 |             0 |       646
+       70 |     +0.0% |       0 |       0 |             0 |       636
+       80 |     +0.0% |       0 |       0 |             0 |       626
+       90 |     +0.0% |       0 |       0 |             0 |       616
+      100 |     +0.0% |       0 |       0 |             0 |       606
+      110 |     +0.0% |       0 |       0 |             0 |       596
+      120 |     +0.0% |       0 |       0 |             0 |       586
+      130 |     +0.0% |       0 |       0 |             0 |       576
+      140 |     +0.0% |       0 |       0 |             0 |       566
+      150 |     +0.0% |       0 |       0 |             0 |       556
+      160 |     +0.0% |       0 |       0 |             0 |       546
+      170 |     +0.0% |       0 |       0 |             0 |       536
+      180 |     +0.0% |       0 |       0 |             0 |       526
+      190 |     +0.0% |       0 |       0 |             0 |       516
+      200 |     +0.0% |       0 |       0 |             0 |       506
+      210 |     +0.0% |       0 |       0 |             0 |       496
+      220 |     +0.0% |       0 |       0 |             0 |       486
+      230 |     +0.0% |       0 |       0 |             0 |       476
+      240 |     +0.0% |       0 |       0 |             0 |       466
+      250 |     +0.0% |       0 |       0 |             0 |       456
+      260 |     +0.0% |       0 |       0 |             0 |       446
+      270 |     +0.0% |       0 |       0 |             0 |       436
+      280 |     +0.0% |       0 |       0 |             0 |       426
+      290 |     +0.0% |       0 |       0 |             0 |       416
+      300 |     +0.0% |       0 |       0 |             0 |       406
+      310 |     +0.0% |       0 |       0 |             0 |       396
+      320 |     +0.0% |       0 |       0 |             0 |       386
+      330 |     +0.0% |       0 |       0 |             0 |       376
+      340 |     +0.0% |       0 |       0 |             0 |       366
+      350 |     +0.0% |       0 |       0 |             0 |       356
+      360 |     +0.0% |       0 |       0 |             0 |       346
+      370 |     +0.0% |       0 |       0 |             0 |       336
+      380 |     +0.0% |       0 |       0 |             0 |       326
+      390 |     +0.0% |       0 |       0 |             0 |       316
+      400 |     +0.0% |       0 |       0 |             0 |       306
+      410 |     +0.0% |       0 |       0 |             0 |       296
+      420 |     +0.0% |       0 |       0 |             0 |       286
+      430 |     +0.0% |       0 |       0 |             0 |       276
+      440 |     +0.0% |       0 |       0 |             0 |       266
+      450 |     +0.0% |       0 |       0 |             0 |       256
+      460 |     +0.0% |       0 |       0 |             0 |       246
+      470 |     +0.0% |       0 |       0 |             0 |       236
+      480 |     +0.0% |       0 |       0 |             0 |       226
+      490 |     +0.0% |       0 |       0 |             0 |       216
+      500 |     +0.0% |       0 |       0 |             0 |       206
+      510 |     +0.0% |       0 |       0 |             0 |       196
+      520 |     +0.0% |       0 |       0 |             0 |       186
+      530 |     +0.0% |       0 |       0 |             0 |       176
+      540 |     +0.0% |       0 |       0 |             0 |       166
+      550 |     +0.0% |       0 |       0 |             0 |       156
+      560 |     +0.0% |       0 |       0 |             0 |       146
+      570 |     +0.0% |       0 |       0 |             0 |       136
+      580 |     +0.0% |       0 |       0 |             0 |       126
+      590 |     +0.0% |       0 |       0 |             0 |       116
+      600 |     +0.0% |       0 |       0 |             0 |       106
+      610 |     +0.0% |       0 |       0 |             0 |        96
+      620 |     +0.0% |       0 |       0 |             0 |        86
+      630 |     +0.0% |       0 |       0 |             0 |        76
+      640 |     +0.0% |       0 |       0 |             0 |        66
+      650 |     +0.0% |       0 |       0 |             0 |        56
+      660 |     +0.0% |       0 |       0 |             0 |        46
+      670 |     +0.0% |       0 |       0 |             0 |        36
+      680 |     +0.0% |       0 |       0 |             0 |        26
+      690 |     +0.0% |       0 |       0 |             0 |        16
+      700 |     +0.0% |       0 |       0 |             0 |         6
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+Floating nets: 
+Report metrics stage 3, resizer...
+No registers in design
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 5021 um^2 40% utilization.
+Instance count before 698, after 698
+Pin count before 1800, after 1800
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p8/results/sky130hd/fp16_multiplier/base/3_4_place_resized.odb
+Elapsed time: 0:00.47[h:]min:sec. CPU time: user 0.39 sys 0.10 (103%). Peak memory: 140784KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_4_place_resized                  0            137 61c2c4a497fb3faa98af

@@ -1,0 +1,20 @@
+attempt: 1
+spec_id: "p4"
+rtl_strategy: "counter_correct"
+tb_strategy: "default_check"
+compile_pass: true
+sim_pass: true
+synthesis_pass: true
+gls_pass: true
+openroad_pass: false
+openroad_skipped: false
+failure_type: "openroad_failure"
+compile_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p4/attempt_01_compile.log"
+sim_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p4/attempt_01_sim.log"
+synthesis_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p4/Synthesis/synth.log"
+gls_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p4/Synthesis/gls_sim.log"
+openroad_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p4/openroad/openroad_run.log"
+generation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p4/attempt_01_generation.log"
+validation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p4/attempt_01_validation.log"
+repair_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p4/attempt_01_repair.log"
+failure_summary: "OpenROAD failed or expected reports/results were not produced."

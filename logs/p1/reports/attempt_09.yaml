@@ -1,0 +1,30 @@
+attempt: 9
+spec_id: "p1"
+status: "PASS"
+passed: true
+rtl_strategy: "delayed_pulse"
+tb_strategy: "sample_delayed"
+compile_pass: true
+sim_pass: true
+synthesis_pass: true
+gls_pass: true
+openroad_pass: true
+openroad_skipped: false
+report_generated: true
+final_artifacts_exist: true
+stale_logs: false
+meets_timing: true
+wns: 0.116034
+tns: 0.0
+area: 220.211
+timing_fix: "rtl=delayed_pulse; flow_profile=timing_closed"
+failure_type: "none"
+compile_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p1/attempt_09_compile.log"
+sim_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p1/attempt_09_sim.log"
+synthesis_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p1/Synthesis/synth.log"
+gls_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p1/Synthesis/gls_sim.log"
+openroad_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p1/openroad/openroad_run.log"
+generation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p1/attempt_09_generation.log"
+validation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p1/attempt_09_validation.log"
+repair_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p1/attempt_09_repair.log"
+failure_summary: "Flow completed successfully."

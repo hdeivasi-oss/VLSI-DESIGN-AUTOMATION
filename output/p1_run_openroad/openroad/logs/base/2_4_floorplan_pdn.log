@@ -1,0 +1,15 @@
+OpenROAD 26Q2-339-g0504146ce6 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/seq_detector_0011/base/2_3_floorplan_tapcell.odb
+read_sdc ./results/sky130hd/seq_detector_0011/base/2_1_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[INFO PDN-0001] Inserting grid: grid
+Design area 689 um^2 2% utilization.
+write_db ./results/sky130hd/seq_detector_0011/base/2_4_floorplan_pdn.odb
+Elapsed time: 0:00.37[h:]min:sec. CPU time: user 0.31 sys 0.05 (96%). Peak memory: 121640KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_4_floorplan_pdn                  0            118 820bcf894a7d64360e51

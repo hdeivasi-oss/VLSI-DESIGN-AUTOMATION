@@ -1,0 +1,4 @@
+$ C:\ProgramData\chocolatey\bin\iverilog.exe -g2012 -o C:\Users\denni\Desktop\Spec2RTL\generated\p4\sim.out C:\Users\denni\Desktop\Spec2RTL\generated\p4\design.v C:\Users\denni\Desktop\Spec2RTL\generated\p4\tb.v
+
+$ C:\ProgramData\chocolatey\bin\vvp.exe C:\Users\denni\Desktop\Spec2RTL\generated\p4\sim.out
+TEST PASSED

@@ -1,0 +1,4 @@
+$ /usr/bin/vvp /home/harish_d1121/Spec_to_Tapeout-main/output/p5/sim.out
+FAIL: cycle 1 expected valid=0 got valid=1 time=16000
+FATAL: /home/harish_d1121/Spec_to_Tapeout-main/output/p5/tb_candidate.v:37: 
+       Time: 16000 Scope: tb.check_state

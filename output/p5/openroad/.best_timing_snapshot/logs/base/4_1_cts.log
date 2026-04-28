@@ -1,0 +1,244 @@
+OpenROAD 26Q2-339-g0504146ce6 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p5/results/sky130hd/dot_product/base/3_place.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p5/results/sky130hd/dot_product/base/3_place.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+clock_tree_synthesis -sink_clustering_enable -repair_clock_nets -sink_clustering_size 10 -sink_clustering_max_diameter 50
+[INFO CTS-0050] Root buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0051] Sink buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sky130_fd_sc_hd__clkbuf_16
+[INFO CTS-0049] Characterization buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0007] Net "clk" found for clock "clk".
+[INFO CTS-0010]  Clock net "clk" has 192 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 1 buffer(s) types.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net clk.
+[INFO CTS-0028]  Total number of sinks: 192.
+[INFO CTS-0029]  Register sinks will be clustered in groups of up to 10 and with maximum cluster diameter of 50.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13600  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(87665, 120980), (315755, 295060)].
+[INFO CTS-0024]  Normalized sink region: [(6.44596, 8.89559), (23.2173, 21.6956)].
+[INFO CTS-0025]     Width:  16.7713.
+[INFO CTS-0026]     Height: 12.8000.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 96
+    Sub-region size: 8.3857 X 12.8000
+[INFO CTS-0034]     Segment length (rounded): 4.
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 48
+    Sub-region size: 8.3857 X 6.4000
+[INFO CTS-0034]     Segment length (rounded): 4.
+ Level 3
+    Direction: Horizontal
+    Sinks per sub-region: 24
+    Sub-region size: 4.1928 X 6.4000
+[INFO CTS-0034]     Segment length (rounded): 2.
+ Level 4
+    Direction: Vertical
+    Sinks per sub-region: 12
+    Sub-region size: 4.1928 X 3.2000
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 192.
+[INFO CTS-0018]     Created 17 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 17 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 9:3, 10:2, 11:3, 12:2, 13:1, 14:2, 15:1, 16:2..
+[INFO CTS-0017]     Max level of the clock tree: 4.
+[INFO CTS-0098] Clock net "clk"
+[INFO CTS-0099]  Sinks 206
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 420.67 um
+[INFO CTS-0102]  Path depth 2 - 2
+[INFO CTS-0207]  Dummy loads inserted 14
+estimate_parasitics -placement
+detailed_placement
+[INFO DPL-0006] Core area: 143829.19 um^2, Instances area: 36712.71 um^2, Utilization: 25.5%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1101] Legalizing using diamond search.
+Movements Summary
+---------------------------------------
+Total cells:                    3592
+Diamond Move Success:           3592 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement        174.1 u
+average displacement        0.0 u
+max displacement            5.9 u
+original HPWL           70754.0 u
+legalized HPWL          72646.0 u
+delta HPWL                    3 %
+
+estimate_parasitics -placement
+repair_timing -setup_margin 0.1 -hold_margin 0.05 -repair_tns 100 -match_cell_footprint -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0094] Found 42 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 42 out of 42 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   StTNS    |   EnTNS    |  Viol  |  Worst  
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            |            | Endpts | St/EnPt 
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -0.748 |      -40.2 |       -5.8 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+      10* |       0 |       8 |        0 |      0 |     1 |    +0.0% |   -0.477 |      -35.9 |       -4.8 |     42 | prod_regs\[4\]\[15\]$_DFF_P_/D
+      20* |       0 |      18 |        0 |      0 |     1 |    +0.0% |   -0.433 |      -33.3 |       -4.7 |     42 | prod_regs\[2\]\[15\]$_DFF_P_/D
+      30* |       0 |      26 |        0 |      0 |     3 |    +0.0% |   -0.415 |      -31.9 |       -4.6 |     42 | prod_regs\[2\]\[15\]$_DFF_P_/D
+      40* |       0 |      35 |        0 |      0 |     4 |    +0.1% |   -0.391 |      -29.2 |       -4.4 |     42 | prod_regs\[2\]\[15\]$_DFF_P_/D
+      50* |       0 |      43 |        1 |      0 |     5 |    +0.1% |   -0.372 |      -27.9 |       -4.3 |     42 | prod_regs\[1\]\[15\]$_DFF_P_/D
+      60* |       0 |      51 |        4 |      0 |     6 |    +0.2% |   -0.340 |      -25.1 |       -4.0 |     42 | prod_regs\[0\]\[15\]$_DFF_P_/D
+      70* |       0 |      57 |        4 |      0 |    10 |    +0.2% |   -0.320 |      -24.0 |       -3.7 |     42 | prod_regs\[6\]\[15\]$_DFF_P_/D
+      80* |       0 |      65 |        4 |      0 |    12 |    +0.2% |   -0.307 |      -22.2 |       -3.6 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+      90* |       0 |      71 |        4 |      0 |    16 |    +0.2% |   -0.296 |      -21.2 |       -3.4 |     42 | prod_regs\[1\]\[15\]$_DFF_P_/D
+     100* |       0 |      79 |        4 |      0 |    18 |    +0.2% |   -0.285 |      -20.0 |       -3.3 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     110* |       0 |      86 |        4 |      0 |    21 |    +0.2% |   -0.280 |      -17.6 |       -3.2 |     42 | prod_regs\[1\]\[15\]$_DFF_P_/D
+     120* |       0 |      96 |        4 |      0 |    21 |    +0.3% |   -0.271 |      -16.6 |       -3.0 |     42 | prod_regs\[0\]\[15\]$_DFF_P_/D
+     130* |       0 |     105 |        4 |      0 |    22 |    +0.3% |   -0.264 |      -15.2 |       -2.9 |     42 | prod_regs\[1\]\[15\]$_DFF_P_/D
+     140* |       0 |     110 |        5 |      0 |    26 |    +0.3% |   -0.251 |      -14.3 |       -2.8 |     42 | prod_regs\[0\]\[15\]$_DFF_P_/D
+     150* |       0 |     116 |        6 |      0 |    29 |    +0.3% |   -0.245 |      -12.7 |       -2.6 |     42 | prod_regs\[2\]\[15\]$_DFF_P_/D
+     160* |       0 |     122 |        6 |      0 |    33 |    +0.4% |   -0.254 |      -12.0 |       -2.5 |     42 | prod_regs\[6\]\[15\]$_DFF_P_/D
+     170* |       0 |     123 |        7 |      0 |    41 |    +0.4% |   -0.240 |      -11.7 |       -2.4 |     42 | prod_regs\[4\]\[15\]$_DFF_P_/D
+     180* |       0 |     129 |        8 |      0 |    44 |    +0.5% |   -0.212 |      -10.3 |       -2.2 |     42 | prod_regs\[2\]\[15\]$_DFF_P_/D
+     190* |       0 |     136 |        8 |      0 |    47 |    +0.5% |   -0.199 |       -9.0 |       -2.0 |     42 | prod_regs\[7\]\[15\]$_DFF_P_/D
+     200* |       0 |     142 |        8 |      0 |    51 |    +0.5% |   -0.199 |       -7.9 |       -2.0 |     42 | prod_regs\[2\]\[15\]$_DFF_P_/D
+     210* |       0 |     147 |        9 |      0 |    55 |    +0.6% |   -0.182 |       -7.3 |       -1.8 |     42 | prod_regs\[1\]\[15\]$_DFF_P_/D
+     220* |       0 |     152 |        9 |      0 |    60 |    +0.6% |   -0.164 |       -5.9 |       -1.6 |     42 | prod_regs\[0\]\[15\]$_DFF_P_/D
+     230* |       0 |     158 |        9 |      0 |    64 |    +0.6% |   -0.148 |       -4.9 |       -1.4 |     42 | prod_regs\[6\]\[15\]$_DFF_P_/D
+     240* |       0 |     164 |        9 |      0 |    68 |    +0.6% |   -0.156 |       -4.2 |       -1.3 |     42 | prod_regs\[0\]\[15\]$_DFF_P_/D
+     250* |       0 |     169 |        9 |      0 |    73 |    +0.7% |   -0.166 |       -4.2 |       -1.3 |     42 | prod_regs\[4\]\[15\]$_DFF_P_/D
+     260* |       0 |     176 |       10 |      0 |    75 |    +0.7% |   -0.123 |       -3.5 |       -1.2 |     42 | prod_regs\[6\]\[15\]$_DFF_P_/D
+     270* |       0 |     179 |       10 |      0 |    82 |    +0.7% |   -0.133 |       -3.0 |       -1.1 |     42 | prod_regs\[5\]\[13\]$_DFF_P_/D
+     280* |       0 |     183 |       10 |      0 |    88 |    +0.7% |   -0.103 |       -2.7 |       -0.9 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     290* |       0 |     187 |       11 |      0 |    93 |    +0.8% |   -0.085 |       -2.3 |       -0.8 |     42 | prod_regs\[1\]\[15\]$_DFF_P_/D
+     300* |       0 |     193 |       11 |      0 |    97 |    +0.8% |   -0.082 |       -2.1 |       -0.7 |     42 | prod_regs\[6\]\[15\]$_DFF_P_/D
+     310* |       0 |     199 |       12 |      0 |   100 |    +0.8% |   -0.089 |       -1.6 |       -0.6 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     320* |       0 |     203 |       12 |      0 |   106 |    +0.8% |   -0.069 |       -1.3 |       -0.5 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     330* |       0 |     208 |       13 |      0 |   110 |    +0.9% |   -0.063 |       -1.1 |       -0.4 |     42 | prod_regs\[4\]\[15\]$_DFF_P_/D
+     340* |       0 |     215 |       13 |      0 |   113 |    +1.0% |   -0.056 |       -0.9 |       -0.4 |     42 | prod_regs\[2\]\[15\]$_DFF_P_/D
+     350* |       0 |     220 |       13 |      0 |   118 |    +1.0% |   -0.056 |       -0.8 |       -0.4 |     42 | prod_regs\[1\]\[15\]$_DFF_P_/D
+     360* |       0 |     225 |       14 |      0 |   122 |    +1.0% |   -0.074 |       -0.7 |       -0.3 |     42 | prod_regs\[0\]\[15\]$_DFF_P_/D
+     362* |       0 |     225 |       14 |      0 |   124 |    +1.0% |   -0.041 |       -0.5 |       -0.2 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     370* |       0 |     228 |       14 |      0 |   128 |    +1.1% |   -0.041 |       -0.5 |       -0.2 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     377* |       0 |     232 |       14 |      0 |   131 |    +1.1% |   -0.041 |       -0.5 |       -0.2 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     380* |       0 |     234 |       14 |      0 |   131 |    +1.1% |   -0.041 |       -0.5 |       -0.2 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     390* |       0 |     240 |       14 |      0 |   135 |    +1.2% |   -0.041 |       -0.4 |       -0.2 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     400* |       0 |     247 |       15 |      0 |   137 |    +1.3% |   -0.041 |       -0.4 |       -0.2 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     410* |       0 |     252 |       15 |      0 |   142 |    +1.2% |   -0.041 |       -0.4 |       -0.2 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     420* |       0 |     260 |       16 |      0 |   143 |    +1.2% |   -0.041 |       -0.4 |       -0.2 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     428* |       0 |     266 |       16 |      0 |   145 |    +1.3% |   -0.041 |       -0.4 |       -0.2 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     430* |       0 |     267 |       16 |      0 |   145 |    +1.3% |   -0.041 |       -0.3 |       -0.2 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     440* |       0 |     273 |       16 |      0 |   149 |    +1.3% |   -0.041 |       -0.3 |       -0.2 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     450* |       0 |     281 |       17 |      0 |   150 |    +1.3% |   -0.041 |       -0.3 |       -0.2 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     459* |       0 |     288 |       17 |      0 |   152 |    +1.4% |   -0.041 |       -0.3 |       -0.2 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     460* |       0 |     288 |       17 |      0 |   152 |    +1.4% |   -0.041 |       -0.3 |       -0.2 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     470* |       0 |     295 |       17 |      0 |   155 |    +1.4% |   -0.041 |       -0.3 |       -0.1 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     480* |       0 |     303 |       17 |      0 |   157 |    +1.4% |   -0.041 |       -0.3 |       -0.1 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     489* |       0 |     310 |       17 |      0 |   159 |    +1.4% |   -0.041 |       -0.3 |       -0.1 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     490* |       0 |     310 |       17 |      0 |   159 |    +1.4% |   -0.041 |       -0.3 |       -0.1 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     500* |       0 |     316 |       18 |      0 |   162 |    +1.5% |   -0.041 |       -0.2 |       -0.1 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     505* |       0 |     320 |       18 |      0 |   163 |    +1.6% |   -0.041 |       -0.2 |       -0.1 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     509* |       0 |     320 |       19 |      0 |   165 |    +1.6% |   -0.041 |       -0.2 |       -0.1 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     510* |       0 |     320 |       19 |      0 |   165 |    +1.6% |   -0.041 |       -0.2 |       -0.1 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     510* |       0 |     320 |       19 |      0 |   165 |    +1.6% |   -0.041 |       -0.2 |       -0.1 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     520* |       0 |     325 |       19 |      0 |   169 |    +1.6% |   -0.041 |       -0.2 |       -0.1 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     528* |       0 |     330 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     529* |       0 |     330 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     530* |       0 |     330 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     530* |       0 |     330 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     531* |       0 |     330 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     532* |       0 |     330 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     533* |       0 |     330 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     534* |       0 |     330 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     537* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     538* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     539* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     540* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     540* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     541* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     542* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     543* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     544* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     545* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     546* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     547* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     548* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     549* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     550* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     550* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     551* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     552* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     553* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     554* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     555* |       0 |     332 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     557* |       0 |     333 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     558* |       0 |     333 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     559* |       0 |     333 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     560* |       0 |     333 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     560* |       0 |     333 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     561* |       0 |     333 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     562* |       0 |     333 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     563* |       0 |     333 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     564* |       0 |     333 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     564* |       0 |     333 |       19 |      0 |   172 |    +1.6% |   -0.041 |       -0.1 |       -0.0 |     42 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     570+ |       0 |     338 |       19 |      0 |   172 |    +1.7% |   -0.003 |       -0.0 |       -0.0 |      1 | prod_regs\[5\]\[15\]$_DFF_P_/D
+     574+ |       0 |     342 |       19 |      0 |   173 |    +1.7% |    0.017 |        0.0 |        0.0 |      1 | prod_regs\[5\]\[15\]$_DFF_P_/D
+    final |       0 |     342 |       19 |      0 |   173 |    +1.7% |    0.017 |        0.0 |        0.0 |      1 | prod_regs\[5\]\[15\]$_DFF_P_/D
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0040] Inserted 19 buffers.
+[INFO RSZ-0051] Resized 342 instances: 342 up, 0 up match, 0 down, 0 VT
+[INFO RSZ-0043] Swapped pins on 173 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0046] Found 27 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% |  -0.082 |  -1.799 | prod_regs[2][10]$_DFF_P_/D
+       10 |       0 |       1 |            0 |    +0.0% |   0.217 |   0.000 | prod_regs[4][0]$_DFF_P_/D
+       20 |       0 |       1 |            0 |    +0.0% |   0.217 |   0.000 | prod_regs[4][0]$_DFF_P_/D
+    final |       0 |       1 |            0 |    +0.0% |   0.217 |   0.000 | prod_regs[4][0]$_DFF_P_/D
+--------------------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 1 hold buffers.
+detailed_placement
+[INFO DPL-0006] Core area: 143829.19 um^2, Instances area: 37347.07 um^2, Utilization: 26.0%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1101] Legalizing using diamond search.
+Movements Summary
+---------------------------------------
+Total cells:                    3612
+Diamond Move Success:           3612 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement        219.5 u
+average displacement        0.0 u
+max displacement            4.8 u
+original HPWL           72796.9 u
+legalized HPWL          73009.5 u
+delta HPWL                    0 %
+
+Report metrics stage 4, cts final...
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 37347 um^2 26% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p5/results/sky130hd/dot_product/base/4_1_cts.odb
+write_sdc -no_timestamp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p5/results/sky130hd/dot_product/base/4_cts.sdc
+Elapsed time: 0:04.31[h:]min:sec. CPU time: user 3.98 sys 2.28 (145%). Peak memory: 177984KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+4_1_cts                            4            173 7ded64ca52565c4ea3c0

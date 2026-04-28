@@ -1,0 +1,4 @@
+read_verilog ../design_candidate.v
+hierarchy -check -top seq_detector_0011
+proc
+check

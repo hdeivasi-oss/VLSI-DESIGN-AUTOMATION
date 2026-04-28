@@ -1,0 +1,19 @@
+attempt: 2
+spec_id: "p1"
+rtl_strategy: "immediate_pulse"
+tb_strategy: "sample_delayed"
+compile_pass: true
+sim_pass: false
+synthesis_pass: false
+gls_pass: false
+openroad_pass: false
+failure_type: "rtl_off_by_one"
+compile_log_path: "/mnt/c/Users/Harish D/Downloads/VLSI Design Automation/Spec_to_Tapeout-main/logs/p1/attempt_02_compile.log"
+sim_log_path: "/mnt/c/Users/Harish D/Downloads/VLSI Design Automation/Spec_to_Tapeout-main/logs/p1/attempt_02_sim.log"
+synthesis_log_path: "/mnt/c/Users/Harish D/Downloads/VLSI Design Automation/Spec_to_Tapeout-main/output/p1/Synthesis/synth.log"
+gls_log_path: "/mnt/c/Users/Harish D/Downloads/VLSI Design Automation/Spec_to_Tapeout-main/output/p1/Synthesis/gls_sim.log"
+openroad_log_path: "/mnt/c/Users/Harish D/Downloads/VLSI Design Automation/Spec_to_Tapeout-main/output/p1/openroad/openroad_run.log"
+generation_log_path: "/mnt/c/Users/Harish D/Downloads/VLSI Design Automation/Spec_to_Tapeout-main/logs/p1/attempt_02_generation.log"
+validation_log_path: "/mnt/c/Users/Harish D/Downloads/VLSI Design Automation/Spec_to_Tapeout-main/logs/p1/attempt_02_validation.log"
+repair_log_path: "/mnt/c/Users/Harish D/Downloads/VLSI Design Automation/Spec_to_Tapeout-main/logs/p1/attempt_02_repair.log"
+failure_summary: "Simulation assertion suggests an RTL timing or off-by-one bug."

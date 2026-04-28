@@ -1,0 +1,36 @@
+module_name: rising_edge_detector
+description: Detects a rising edge on the input signal and emits a one-cycle pulse.
+
+inputs:
+  - name: clk
+    width: 1
+  - name: rst
+    width: 1
+  - name: sig_in
+    width: 1
+
+outputs:
+  - name: pulse
+    width: 1
+
+clock:
+  name: clk
+  edge: posedge
+
+reset:
+  name: rst
+  type: synchronous
+  active_level: high
+
+behavior:
+  - "On each positive edge of clk, if rst is high, the internal previous-value state is cleared to 0 and pulse is set to 0."
+  - "Otherwise, pulse is 1 for exactly one clock cycle when sig_in changes from 0 in the previous cycle to 1 in the current cycle."
+  - "In all other cases, pulse is 0."
+  - "If sig_in stays high for multiple cycles, pulse must only be asserted on the first cycle after the 0-to-1 transition."
+
+verification_goals:
+  - "Verify reset clears the detector state and pulse output."
+  - "Verify a 0-to-1 transition on sig_in produces a one-cycle pulse."
+  - "Verify a stable high input does not keep pulse asserted."
+  - "Verify a 1-to-0 transition does not produce a pulse."
+  - "Verify multiple separate rising edges each produce exactly one pulse."

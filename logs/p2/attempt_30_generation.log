@@ -1,0 +1,3 @@
+Generated locally for spec_key=shift_register_4bit
+rtl_strategy=correct
+tb_strategy=default_check

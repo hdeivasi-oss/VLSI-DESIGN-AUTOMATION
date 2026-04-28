@@ -1,0 +1,3 @@
+read_verilog ../design_candidate.v
+synth -top exp_fixed_point
+write_verilog design_syn.v

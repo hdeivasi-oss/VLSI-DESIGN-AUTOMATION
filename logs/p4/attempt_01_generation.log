@@ -1,0 +1,3 @@
+Generated locally for spec_key=button_debouncer
+rtl_strategy=counter_correct
+tb_strategy=default_check

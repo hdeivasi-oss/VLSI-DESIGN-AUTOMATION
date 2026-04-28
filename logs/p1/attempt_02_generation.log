@@ -1,0 +1,3 @@
+Generated locally for spec_key=seq_detector_0011
+rtl_strategy=immediate_pulse
+tb_strategy=sample_delayed

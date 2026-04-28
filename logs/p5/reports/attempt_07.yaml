@@ -1,0 +1,30 @@
+attempt: 7
+spec_id: "p5"
+status: "FAIL"
+passed: false
+rtl_strategy: "timing_pipelined"
+tb_strategy: "pulse_check"
+compile_pass: true
+sim_pass: true
+synthesis_pass: true
+gls_pass: true
+openroad_pass: false
+openroad_skipped: false
+report_generated: true
+final_artifacts_exist: false
+stale_logs: false
+meets_timing: false
+wns: null
+tns: null
+area: null
+timing_fix: "rtl=timing_pipelined; flow_profile=timing_optimized"
+failure_type: "openroad_failure"
+compile_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_07_compile.log"
+sim_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_07_sim.log"
+synthesis_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p5/Synthesis/synth.log"
+gls_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p5/Synthesis/gls_sim.log"
+openroad_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p5/openroad/openroad_run.log"
+generation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_07_generation.log"
+validation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_07_validation.log"
+repair_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_07_repair.log"
+failure_summary: "Compile and simulation passed."

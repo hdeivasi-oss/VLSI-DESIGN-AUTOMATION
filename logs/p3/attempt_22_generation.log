@@ -1,0 +1,3 @@
+Generated locally for spec_key=seq_detect_101
+rtl_strategy=overlap_correct
+tb_strategy=default_check

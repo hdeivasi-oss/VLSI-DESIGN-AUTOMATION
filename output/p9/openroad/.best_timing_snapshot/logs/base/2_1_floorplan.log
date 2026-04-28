@@ -1,0 +1,69 @@
+OpenROAD 26Q2-339-g0504146ce6 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/results/sky130hd/fir_filter/base/1_synth.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/results/sky130hd/fir_filter/base/1_synth.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+Master sky130_ef_sc_hd__decap_12 is loaded but not used in the design
+Removed 0 unused instances and 0 unused nets.
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+number instances in verilog is 9120
+[INFO IFP-0107] Defining die area using utilization: 18.00% and aspect ratio: 1.
+[WARNING IFP-0028] Core area lower left (4.000, 4.000) snapped to (4.140, 5.440).
+[INFO IFP-0001] Added 263 rows of 1560 site unithd.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 726.160 726.160 ) um
+[INFO IFP-0101] Core BBox: (  4.140  5.440 ) ( 721.740 720.800 ) um
+[INFO IFP-0102] Core area:                       513342.336 um^2
+[INFO IFP-0103] Total instances area:             92835.286 um^2
+[INFO IFP-0104] Effective utilization:                0.181
+[INFO IFP-0105] Number of instances:                   9120
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/make_tracks.tcl
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/fastroute.tcl
+Repair tie lo fanout...
+Repair tie hi fanout...
+[INFO RSZ-0026] Removed 389 buffers.
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+   Layer   | Unit Resistance | Unit Capacitance 
+           |       (kohm/um) |          (pF/um)
+------------------------------------------------
+       li1 |        7.18e-02 |         1.50e-04
+      met1 |        8.93e-04 |         1.72e-04
+      met2 |        8.93e-04 |         1.36e-04
+      met3 |        1.57e-04 |         2.15e-04
+      met4 |        1.57e-04 |         1.48e-04
+      met5 |        1.78e-05 |         1.54e-04
+------------------------------------------------
+
+   Layer   | Via Resistance 
+           |         (kohm) 
+----------------------------
+      mcon |       9.25e-03 
+       via |       4.50e-03 
+      via2 |       3.37e-03 
+      via3 |       3.77e-04 
+      via4 |       5.80e-06 
+----------------------------
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 91375 um^2 18% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/results/sky130hd/fir_filter/base/2_1_floorplan.odb
+write_sdc -no_timestamp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/results/sky130hd/fir_filter/base/2_1_floorplan.sdc
+Elapsed time: 0:00.88[h:]min:sec. CPU time: user 1.00 sys 0.24 (141%). Peak memory: 159432KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_1_floorplan                      0            155 d12607cd49d41bdfeeff

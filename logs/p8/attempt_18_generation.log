@@ -1,0 +1,3 @@
+Generated locally for spec_key=fp16_multiplier
+rtl_strategy=default
+tb_strategy=default

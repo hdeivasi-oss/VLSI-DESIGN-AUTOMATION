@@ -1,0 +1,67 @@
+OpenROAD 26Q2-339-g0504146ce6 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p3/results/sky130hd/seq_detect_101/base/6_1_fill.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p3/results/sky130hd/seq_detect_101/base/6_1_fill.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p3/results/sky130hd/seq_detect_101/base/6_final.odb
+Deleted 0 routing obstructions
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation seq_detect_101 (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 25 rc segments
+[INFO RCX-0439] Coupling Cap extraction seq_detect_101 ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 80% of 105 wires extracted
+[INFO RCX-0442] 100% of 105 wires extracted
+[INFO RCX-0045] Extract 13 nets, 38 rsegs, 38 caps, 21 ccs
+[INFO RCX-0443] 13 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Total power      : 2.69e-05 W
+Supply voltage   : 1.80e+00 V
+Worstcase voltage: 1.80e+00 V
+Average voltage  : 1.80e+00 V
+Average IR drop  : 7.38e-06 V
+Worstcase IR drop: 4.56e-05 V
+Percentage drop  : 0.00 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Total power      : 2.69e-05 W
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 1.68e-05 V
+Average voltage  : 3.25e-06 V
+Average IR drop  : 3.25e-06 V
+Worstcase IR drop: 1.68e-05 V
+Percentage drop  : 0.00 %
+######################################
+Cell type report:                       Count       Area
+  Fill cell                               175    1412.60
+  Tap cell                                 16      20.02
+  Timing Repair Buffer                      4      40.04
+  Sequential cell                           3      60.06
+  Multi-Input combinational cell            3      26.28
+  Total                                   201    1559.00
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 146 um^2 9% utilization.
+[WARNING GUI-0076] QStandardPaths: wrong permissions on runtime directory /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p3/.xdg_runtime, 0755 instead of 0700
+[WARNING GUI-0066] Heat map "IR Drop" has not been populated with data.
+[WARNING STA-0351] clock '*' not found.
+[WARNING GUI-0066] Heat map "Routing Congestion" has not been populated with data.
+Elapsed time: 0:01.03[h:]min:sec. CPU time: user 0.94 sys 0.10 (101%). Peak memory: 181780KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+6_report                           1            177                  N/A

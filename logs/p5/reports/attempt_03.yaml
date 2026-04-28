@@ -1,0 +1,20 @@
+attempt: 3
+spec_id: "p5"
+rtl_strategy: "single_pulse"
+tb_strategy: "pulse_check"
+compile_pass: true
+sim_pass: true
+synthesis_pass: true
+gls_pass: true
+openroad_pass: true
+openroad_skipped: true
+failure_type: "none"
+compile_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_03_compile.log"
+sim_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_03_sim.log"
+synthesis_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p5/Synthesis/synth.log"
+gls_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p5/Synthesis/gls_sim.log"
+openroad_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p5/openroad/openroad_run.log"
+generation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_03_generation.log"
+validation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_03_validation.log"
+repair_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p5/attempt_03_repair.log"
+failure_summary: "Compile and simulation passed."

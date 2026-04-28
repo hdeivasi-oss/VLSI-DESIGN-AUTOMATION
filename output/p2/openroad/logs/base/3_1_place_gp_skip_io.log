@@ -1,0 +1,95 @@
+OpenROAD 26Q2-339-g0504146ce6 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p2/results/sky130hd/shift_register_4bit/base/2_floorplan.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p2/results/sky130hd/shift_register_4bit/base/2_floorplan.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[INFO GPL-0022] Initialize gpl and calculate uniform density.
+Placement density is 0.22699999570846557, computed from PLACE_DENSITY_LB_ADDON  0.10 and lower bound 0.12999999523162842
+global_placement -skip_io -density 0.22699999570846557 -pad_left 0 -pad_right 0
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: (  4.140  5.440 ) ( 47.380 46.240 ) um
+[INFO GPL-0036] Movable instances area:        190.182 um^2
+[INFO GPL-0037] Total instances area:          221.462 um^2
+[INFO GPL-0035] Pin density area adjust:        23.513 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:                43
+[INFO GPL-0007] Movable instances:                  18
+[INFO GPL-0008] Fixed instances:                    25
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                     27
+[INFO GPL-0011] Number of pins:                     64
+[INFO GPL-0012] Die BBox:  (  0.000  0.000 ) ( 51.610 51.610 ) um
+[INFO GPL-0013] Core BBox: (  4.140  5.440 ) ( 47.380 46.240 ) um
+[INFO GPL-0016] Core area:                    1764.192 um^2
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                  1764.192 um^2
+[INFO GPL-0017] Fixed instances area:           31.280 um^2
+[INFO GPL-0018] Movable instances area:        213.696 um^2
+[INFO GPL-0019] Utilization:                    12.332 %
+[INFO GPL-0020] Standard cells area:           213.696 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 18	Region center = 0
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[INFO GPL-0023] Placement target density:       0.2270
+[INFO GPL-0024] Movable insts average area:     11.872 um^2
+[INFO GPL-0025] Ideal bin area:                 52.300 um^2
+[INFO GPL-0026] Ideal bin count:                    33
+[INFO GPL-0027] Total bin area:               1764.192 um^2
+[INFO GPL-0028] Bin count (X, Y):           4 ,      4
+[INFO GPL-0029] Bin size (W * H):      10.810 * 10.200 um
+[INFO GPL-0030] Number of bins:                     16
+[INFO GPL-0007] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.5413 |  4.498000e+01 |   +0.00% |  7.33e-13 |      
+       10 |   0.5413 |  3.635800e+01 |  -19.17% |  1.19e-12 |      
+       20 |   0.5413 |  3.632900e+01 |   -0.08% |  1.95e-12 |      
+       30 |   0.5413 |  3.633900e+01 |   +0.03% |  3.17e-12 |      
+       40 |   0.5413 |  3.633700e+01 |   -0.01% |  5.16e-12 |      
+       50 |   0.5413 |  3.633700e+01 |   +0.00% |  8.41e-12 |      
+       60 |   0.5413 |  3.633600e+01 |   -0.00% |  1.37e-11 |      
+       70 |   0.5413 |  3.634700e+01 |   +0.03% |  2.23e-11 |      
+       80 |   0.5413 |  3.642000e+01 |   +0.20% |  3.63e-11 |      
+       90 |   0.5413 |  3.658000e+01 |   +0.44% |  5.92e-11 |      
+      100 |   0.5413 |  3.682800e+01 |   +0.68% |  9.64e-11 |      
+      110 |   0.5413 |  3.721900e+01 |   +1.06% |  1.57e-10 |      
+      120 |   0.5413 |  3.745500e+01 |   +0.63% |  2.56e-10 |      
+      130 |   0.5413 |  3.751100e+01 |   +0.15% |  4.17e-10 |      
+      140 |   0.5342 |  3.658800e+01 |   -2.46% |  6.79e-10 |      
+      150 |   0.5299 |  3.637400e+01 |   -0.58% |  1.11e-09 |      
+      160 |   0.5413 |  3.667800e+01 |   +0.84% |  1.80e-09 |      
+      170 |   0.5413 |  3.644700e+01 |   -0.63% |  2.93e-09 |      
+      180 |   0.5413 |  3.725100e+01 |   +2.21% |  4.78e-09 |      
+      190 |   0.5411 |  3.852800e+01 |   +3.43% |  7.78e-09 |      
+      200 |   0.5356 |  4.048200e+01 |   +5.07% |  1.27e-08 |      
+      210 |   0.5156 |  4.776600e+01 |  +17.99% |  2.06e-08 |      
+      220 |   0.4915 |  5.602700e+01 |  +17.29% |  3.36e-08 |      
+      230 |   0.4520 |  7.111800e+01 |  +26.94% |  5.48e-08 |      
+      240 |   0.4143 |  9.219500e+01 |  +29.64% |  8.92e-08 |      
+      250 |   0.3183 |  1.539680e+02 |  +67.00% |  1.40e-07 |      
+      260 |   0.3825 |  1.280740e+02 |  -16.82% |  2.06e-07 |      
+      262 |   0.0997 |  2.491940e+02 |          |  2.31e-07 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 262
+[INFO GPL-1002] Placed Cell Area              213.6958
+[INFO GPL-1003] Available Free Area          1732.9120
+[INFO GPL-1004] Minimum Feasible Density        0.1300 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.1370
+[INFO GPL-1008]     - For 80% usage of free space: 0.1541
+[INFO GPL-1009]     - For 50% usage of free space: 0.2466
+[INFO GPL-1014] Final placement area: 213.70 (+0.00%)
+Design area 221 um^2 13% utilization.
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p2/results/sky130hd/shift_register_4bit/base/3_1_place_gp_skip_io.odb
+Elapsed time: 0:00.35[h:]min:sec. CPU time: user 0.35 sys 0.05 (114%). Peak memory: 118776KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_1_place_gp_skip_io               0            115 5997b7c2fc6582e093bb

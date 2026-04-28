@@ -1,0 +1,496 @@
+{
+  "creator": "Yosys 0.64 (git sha1 8449dd470, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3) [the-openroad-project/yosys]",
+  "modules": {
+    "seq_detector_0011": {
+      "attributes": {
+        "hdlname": "seq_detector_0011",
+        "top": "00000000000000000000000000000001",
+        "src": "../design_candidate.v:1"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "reset": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "data_in": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "detected": {
+          "direction": "output",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+        "$and$/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:26$5585": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:26.17-26.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 7 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:27$5586": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:27.19-27.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 4 ],
+            "Y": [ 10 ]
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:30$5592": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:30.17-30.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 7 ],
+            "Y": [ 12 ]
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:31$5594": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:31.20-31.38"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 7 ],
+            "Y": [ 13 ]
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:32$5596": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:32.20-32.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 7 ],
+            "Y": [ 14 ]
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:33$5598": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:33.20-33.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 7 ],
+            "Y": [ 16 ]
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:27$5587": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:27.17-27.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "Y": [ 17 ]
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:29$5590": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:29.17-29.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:33$5597": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:33.33-33.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$or$/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:28$5588": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:28.17-28.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "B": [ 15 ],
+            "Y": [ 20 ]
+          }
+        },
+        "$or$/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:29$5589": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:29.19-29.30"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ 17 ],
+            "Y": [ 18 ]
+          }
+        },
+        "$procdff$5604": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 8 ],
+            "Q": [ 5 ]
+          }
+        },
+        "$procdff$5605": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 12 ],
+            "Q": [ 6 ]
+          }
+        },
+        "$procdff$5606": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 16 ],
+            "Q": [ 19 ]
+          }
+        },
+        "$procdff$5607": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 14 ],
+            "Q": [ 15 ]
+          }
+        },
+        "$procdff$5608": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 13 ],
+            "Q": [ 9 ]
+          }
+        }
+      },
+      "netnames": {
+        "$and$/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:27$5586_Y": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:27.19-27.39"
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:26$5584_Y": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:26.34-26.42"
+          }
+        },
+        "$or$/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:29$5589_Y": {
+          "hide_name": 1,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:29.19-29.30"
+          }
+        },
+        "_00_": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          }
+        },
+        "_01_": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          }
+        },
+        "_02_": {
+          "hide_name": 0,
+          "bits": [ 13, 14, 16 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:10.14-10.18"
+          }
+        },
+        "_03_": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:11.8-11.12"
+          }
+        },
+        "_04_": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:12.8-12.12"
+          }
+        },
+        "_05_": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:13.8-13.12"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "../design_candidate.v:2"
+          }
+        },
+        "data_in": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "../design_candidate.v:4"
+          }
+        },
+        "detect_pending": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "../design_candidate.v:8"
+          }
+        },
+        "detected": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "../design_candidate.v:5"
+          }
+        },
+        "history": {
+          "hide_name": 0,
+          "bits": [ 9, 15, 19 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p1/flow/designs/sky130hd/seq_detector_0011/src/design_syn.v:23.13-23.20"
+          }
+        },
+        "reset": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "../design_candidate.v:3"
+          }
+        }
+      }
+    }
+  }
+}

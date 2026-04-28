@@ -1,0 +1,27 @@
+
+20. Printing statistics.
+
+=== rising_edge_detector ===
+
+        +----------------------------Count including submodules.
+        |        +-------------------Area including submodules.
+        |        |        +----------Local count, excluding submodules.
+        |        |        |        +-Local area, excluding submodules.
+        |        |        |        | 
+        7        -        7        - wires
+        7        -        7        - wire bits
+        7        -        7        - public wires
+        7        -        7        - public wire bits
+        4        -        4        - ports
+        4        -        4        - port bits
+        -        -        -        - memories
+        -        -        -        - memory bits
+        -        -        -        - processes
+        4   58.806        4   58.806 cells
+        2   40.038        2   40.038   sky130_fd_sc_hd__dfxtp_1
+        1    6.256        1    6.256   sky130_fd_sc_hd__nor2b_1
+        1   12.512        1   12.512   sky130_fd_sc_hd__nor3b_2
+
+   Chip area for module '\rising_edge_detector': 58.806400
+     of which used for sequential elements: 40.038400 (68.09%)
+

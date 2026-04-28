@@ -1,0 +1,630 @@
+$ yosys synth.ys > synth.log 2>&1
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `synth.ys' --
+
+1. Executing Verilog-2005 frontend: ../design_candidate.v
+Parsing Verilog input from `../design_candidate.v' to AST representation.
+Generating RTLIL representation for module `\exp_fixed_point'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \exp_fixed_point
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \exp_fixed_point
+Removed 0 unused modules.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\exp_fixed_point.$proc$../design_candidate.v:295$2'.
+Cleaned up 1 empty switch.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$../design_candidate.v:295$2 in module exp_fixed_point.
+Marked 4 switch rules as full_case in process $proc$../design_candidate.v:295$2 in module exp_fixed_point.
+Removed a total of 1 dead cases.
+
+2.2.3. Executing PROC_INIT pass (extract init attributes).
+
+2.2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\exp_fixed_point.$proc$../design_candidate.v:295$2'.
+     1/13: $4$func$\approx_exp$../design_candidate.v:311$1$\approx_exp[15:0]$10
+     2/13: $3$func$\approx_exp$../design_candidate.v:311$1$\approx_exp[15:0]$9
+     3/13: $2$func$\approx_exp$../design_candidate.v:311$1$\approx_exp[15:0]$7
+     4/13: $2$func$\approx_exp$../design_candidate.v:311$1$\xin[7:0]$8
+     5/13: $1$func$\approx_exp$../design_candidate.v:311$1$\xin[7:0]$6
+     6/13: $1$func$\approx_exp$../design_candidate.v:311$1$\approx_exp[15:0]$5
+     7/13: $0$func$\approx_exp$../design_candidate.v:311$1$\xin[7:0]$4
+     8/13: $0$func$\approx_exp$../design_candidate.v:311$1$\approx_exp[15:0]$3
+     9/13: $0\stage2_valid[0:0]
+    10/13: $0\stage1_valid[0:0]
+    11/13: $0\lut_stage2[15:0]
+    12/13: $0\x_stage1[7:0]
+    13/13: $0\exp_out[15:0]
+
+2.2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\exp_fixed_point.\exp_out' using process `\exp_fixed_point.$proc$../design_candidate.v:295$2'.
+  created $dff cell `$procdff$324' with positive edge clock.
+Creating register for signal `\exp_fixed_point.\x_stage1' using process `\exp_fixed_point.$proc$../design_candidate.v:295$2'.
+  created $dff cell `$procdff$325' with positive edge clock.
+Creating register for signal `\exp_fixed_point.\lut_stage2' using process `\exp_fixed_point.$proc$../design_candidate.v:295$2'.
+  created $dff cell `$procdff$326' with positive edge clock.
+Creating register for signal `\exp_fixed_point.\stage1_valid' using process `\exp_fixed_point.$proc$../design_candidate.v:295$2'.
+  created $dff cell `$procdff$327' with positive edge clock.
+Creating register for signal `\exp_fixed_point.\stage2_valid' using process `\exp_fixed_point.$proc$../design_candidate.v:295$2'.
+  created $dff cell `$procdff$328' with positive edge clock.
+Creating register for signal `\exp_fixed_point.$func$\approx_exp$../design_candidate.v:311$1$\approx_exp' using process `\exp_fixed_point.$proc$../design_candidate.v:295$2'.
+  created $dff cell `$procdff$329' with positive edge clock.
+Creating register for signal `\exp_fixed_point.$func$\approx_exp$../design_candidate.v:311$1$\xin' using process `\exp_fixed_point.$proc$../design_candidate.v:295$2'.
+  created $dff cell `$procdff$330' with positive edge clock.
+
+2.2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 5 empty switches in `\exp_fixed_point.$proc$../design_candidate.v:295$2'.
+Removing empty process `exp_fixed_point.$proc$../design_candidate.v:295$2'.
+Cleaned up 5 empty switches.
+
+2.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exp_fixed_point.
+<suppressed ~1 debug messages>
+
+2.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exp_fixed_point..
+Removed 8 unused cells and 44 unused wires.
+<suppressed ~9 debug messages>
+
+2.5. Executing CHECK pass (checking for obvious problems).
+checking module exp_fixed_point..
+found and reported 0 problems.
+
+2.6. Executing OPT pass (performing simple optimizations).
+
+2.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exp_fixed_point.
+
+2.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exp_fixed_point'.
+Removed a total of 0 cells.
+
+2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \exp_fixed_point..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$269.
+    dead port 1/2 on $mux $procmux$272.
+    dead port 2/2 on $mux $procmux$275.
+    dead port 1/2 on $mux $procmux$278.
+Removed 4 multiplexer ports.
+<suppressed ~5 debug messages>
+
+2.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \exp_fixed_point.
+Performed a total of 0 changes.
+
+2.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exp_fixed_point'.
+Removed a total of 0 cells.
+
+2.6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exp_fixed_point..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+2.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exp_fixed_point.
+
+2.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \exp_fixed_point..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~5 debug messages>
+
+2.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \exp_fixed_point.
+Performed a total of 0 changes.
+
+2.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exp_fixed_point'.
+Removed a total of 0 cells.
+
+2.6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exp_fixed_point..
+
+2.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exp_fixed_point.
+
+2.6.16. Finished OPT passes. (There is nothing left to do.)
+
+2.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 6 bits (of 16) from mux cell exp_fixed_point.$procmux$12 ($pmux).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$141_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$142_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$143_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$144_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$145_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$146_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$147_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$148_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$149_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$150_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$151_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$152_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$153_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$154_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$155_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$156_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$157_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$158_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$159_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$160_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$161_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$162_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$163_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$164_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$165_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$166_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$167_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$168_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$169_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$170_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$171_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$172_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$173_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$174_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$175_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$176_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$177_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$178_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$179_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$180_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$181_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$182_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$183_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$184_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$185_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$186_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$187_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$188_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$189_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$190_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$191_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$192_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$193_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$194_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$195_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$196_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$197_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$198_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$199_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$200_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$201_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$202_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$203_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell exp_fixed_point.$procmux$204_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$205_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$206_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$207_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$208_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$209_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$210_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$211_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$212_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$213_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$214_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$215_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$216_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$217_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$218_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$219_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$220_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$221_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$222_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$223_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$224_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$225_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$226_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$227_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$228_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$229_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$230_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$231_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$232_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$233_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$234_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$235_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell exp_fixed_point.$procmux$236_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$237_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$238_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$239_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$240_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$241_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$242_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$243_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$244_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$245_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$246_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$247_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$248_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$249_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$250_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$251_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell exp_fixed_point.$procmux$252_CMP0 ($eq).
+Removed top 4 bits (of 8) from port B of cell exp_fixed_point.$procmux$253_CMP0 ($eq).
+Removed top 4 bits (of 8) from port B of cell exp_fixed_point.$procmux$254_CMP0 ($eq).
+Removed top 4 bits (of 8) from port B of cell exp_fixed_point.$procmux$255_CMP0 ($eq).
+Removed top 4 bits (of 8) from port B of cell exp_fixed_point.$procmux$256_CMP0 ($eq).
+Removed top 4 bits (of 8) from port B of cell exp_fixed_point.$procmux$257_CMP0 ($eq).
+Removed top 4 bits (of 8) from port B of cell exp_fixed_point.$procmux$258_CMP0 ($eq).
+Removed top 4 bits (of 8) from port B of cell exp_fixed_point.$procmux$259_CMP0 ($eq).
+Removed top 4 bits (of 8) from port B of cell exp_fixed_point.$procmux$260_CMP0 ($eq).
+Removed top 5 bits (of 8) from port B of cell exp_fixed_point.$procmux$261_CMP0 ($eq).
+Removed top 5 bits (of 8) from port B of cell exp_fixed_point.$procmux$262_CMP0 ($eq).
+Removed top 5 bits (of 8) from port B of cell exp_fixed_point.$procmux$263_CMP0 ($eq).
+Removed top 5 bits (of 8) from port B of cell exp_fixed_point.$procmux$264_CMP0 ($eq).
+Removed top 6 bits (of 8) from port B of cell exp_fixed_point.$procmux$265_CMP0 ($eq).
+Removed top 6 bits (of 8) from port B of cell exp_fixed_point.$procmux$266_CMP0 ($eq).
+Removed top 7 bits (of 8) from port B of cell exp_fixed_point.$procmux$267_CMP0 ($eq).
+Removed top 6 bits (of 16) from wire exp_fixed_point.$3$func$\approx_exp$../design_candidate.v:311$1$\approx_exp[15:0]$9.
+
+2.8. Executing PEEPOPT pass (run peephole optimizers).
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exp_fixed_point..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.10. Executing TECHMAP pass (map to technology primitives).
+
+2.10.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/usr/bin/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+2.10.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4084 debug messages>
+
+2.11. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module exp_fixed_point:
+  created 0 $alu and 0 $macc cells.
+
+2.12. Executing SHARE pass (SAT-based resource sharing).
+
+2.13. Executing OPT pass (performing simple optimizations).
+
+2.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exp_fixed_point.
+
+2.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exp_fixed_point'.
+Removed a total of 0 cells.
+
+2.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \exp_fixed_point..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~5 debug messages>
+
+2.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \exp_fixed_point.
+Performed a total of 0 changes.
+
+2.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exp_fixed_point'.
+Removed a total of 0 cells.
+
+2.13.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exp_fixed_point..
+
+2.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exp_fixed_point.
+
+2.13.9. Finished OPT passes. (There is nothing left to do.)
+
+2.14. Executing FSM pass (extract and optimize FSM).
+
+2.14.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking exp_fixed_point.lut_stage2 as FSM state register:
+    Users of register don't seem to benefit from recoding.
+
+2.14.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.14.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.14.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exp_fixed_point..
+
+2.14.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.14.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.14.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.14.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.15. Executing OPT pass (performing simple optimizations).
+
+2.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exp_fixed_point.
+
+2.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exp_fixed_point'.
+Removed a total of 0 cells.
+
+2.15.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exp_fixed_point..
+
+2.15.5. Finished fast OPT passes.
+
+2.16. Executing MEMORY pass.
+
+2.16.1. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+2.16.2. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exp_fixed_point..
+
+2.16.3. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.16.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exp_fixed_point..
+
+2.16.5. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exp_fixed_point..
+
+2.18. Executing OPT pass (performing simple optimizations).
+
+2.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exp_fixed_point.
+<suppressed ~2 debug messages>
+
+2.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exp_fixed_point'.
+Removed a total of 0 cells.
+
+2.18.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exp_fixed_point..
+Removed 1 unused cells and 2 unused wires.
+<suppressed ~2 debug messages>
+
+2.18.5. Finished fast OPT passes.
+
+2.19. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+
+2.20. Executing OPT pass (performing simple optimizations).
+
+2.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exp_fixed_point.
+
+2.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exp_fixed_point'.
+Removed a total of 0 cells.
+
+2.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \exp_fixed_point..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~5 debug messages>
+
+2.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \exp_fixed_point.
+Performed a total of 0 changes.
+
+2.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exp_fixed_point'.
+Removed a total of 0 cells.
+
+2.20.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.20.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exp_fixed_point..
+
+2.20.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exp_fixed_point.
+
+2.20.9. Finished OPT passes. (There is nothing left to do.)
+
+2.21. Executing TECHMAP pass (map to technology primitives).
+
+2.21.1. Executing Verilog-2005 frontend: <techmap.v>
+Parsing Verilog input from `<techmap.v>' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+2.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod\_90_pmux\WIDTH=10\S_WIDTH=255 for cells of type $pmux.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $and.
+No more expansions possible.
+<suppressed ~547 debug messages>
+
+2.22. Executing OPT pass (performing simple optimizations).
+
+2.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exp_fixed_point.
+<suppressed ~4926 debug messages>
+
+2.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exp_fixed_point'.
+<suppressed ~9591 debug messages>
+Removed a total of 3197 cells.
+
+2.22.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exp_fixed_point..
+Removed 0 unused cells and 1532 unused wires.
+<suppressed ~1 debug messages>
+
+2.22.5. Finished fast OPT passes.
+
+2.23. Executing ABC pass (technology mapping using ABC).
+
+2.23.1. Extracting gate netlist of module `\exp_fixed_point' to `<abc-temp-dir>/input.blif'..
+Extracted 1393 gates and 1447 wires to a netlist network with 52 inputs and 42 outputs.
+
+2.23.1.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + retime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.23.1.2. Re-integrating ABC results.
+ABC RESULTS:            ANDNOT cells:       41
+ABC RESULTS:              AOI3 cells:      203
+ABC RESULTS:               MUX cells:       33
+ABC RESULTS:              NAND cells:        4
+ABC RESULTS:               NOR cells:      110
+ABC RESULTS:               NOT cells:       11
+ABC RESULTS:              OAI3 cells:       11
+ABC RESULTS:              OAI4 cells:        9
+ABC RESULTS:                OR cells:      539
+ABC RESULTS:             ORNOT cells:       15
+ABC RESULTS:        internal signals:     1353
+ABC RESULTS:           input signals:       52
+ABC RESULTS:          output signals:       42
+Removing temp directory.
+
+2.24. Executing OPT pass (performing simple optimizations).
+
+2.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exp_fixed_point.
+<suppressed ~9 debug messages>
+
+2.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exp_fixed_point'.
+Removed a total of 0 cells.
+
+2.24.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exp_fixed_point..
+Removed 1 unused cells and 468 unused wires.
+<suppressed ~2 debug messages>
+
+2.24.5. Finished fast OPT passes.
+
+2.25. Executing HIERARCHY pass (managing design hierarchy).
+
+2.25.1. Analyzing design hierarchy..
+Top module:  \exp_fixed_point
+
+2.25.2. Analyzing design hierarchy..
+Top module:  \exp_fixed_point
+Removed 0 unused modules.
+
+2.26. Printing statistics.
+
+=== exp_fixed_point ===
+
+   Number of wires:                947
+   Number of wire bits:           1028
+   Number of public wires:           9
+   Number of public wire bits:      53
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1017
+     $_ANDNOT_                      41
+     $_AOI3_                       203
+     $_DFF_P_                       42
+     $_MUX_                         33
+     $_NAND_                         4
+     $_NOR_                        110
+     $_NOT_                         10
+     $_OAI3_                        11
+     $_OAI4_                         9
+     $_ORNOT_                       15
+     $_OR_                         539
+
+2.27. Executing CHECK pass (checking for obvious problems).
+checking module exp_fixed_point..
+found and reported 0 problems.
+
+3. Executing Verilog backend.
+Dumping module `\exp_fixed_point'.
+
+End of script. Logfile hash: bd19f29731
+CPU: user 0.88s system 0.02s, MEM: 49.09 MB total, 43.62 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 23% 2x techmap (0 sec), 18% 11x opt_merge (0 sec), ...

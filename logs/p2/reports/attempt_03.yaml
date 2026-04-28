@@ -1,0 +1,29 @@
+attempt: 3
+spec_name: "p2"
+rtl_variant: "correct"
+tb_variant: "default_check"
+status: "failed"
+failure_type: "value_mismatch"
+compile_returncode: 0
+simulation_returncode: 1
+analysis:
+  summary: "Simulation value mismatched expected result."
+compile_command: "C:\\ProgramData\\chocolatey\\bin\\iverilog.exe -g2012 -o C:\\Users\\denni\\Desktop\\Spec2RTL\\generated\\p2\\sim.out C:\\Users\\denni\\Desktop\\Spec2RTL\\generated\\p2\\design.v C:\\Users\\denni\\Desktop\\Spec2RTL\\generated\\p2\\tb.v"
+simulation_command: "C:\\ProgramData\\chocolatey\\bin\\vvp.exe C:\\Users\\denni\\Desktop\\Spec2RTL\\generated\\p2\\sim.out"
+compile_stdout: |
+  
+compile_stderr: |
+  
+simulation_stdout: |
+  FAIL: shift left works expected=0101 got=1010 time=26000
+  FATAL: C:\Users\denni\Desktop\Spec2RTL\generated\p2\tb.v:31: 
+         Time: 26000  Scope: tb.check_data_out
+simulation_stderr: |
+  
+combined_log: |
+  $ C:\ProgramData\chocolatey\bin\iverilog.exe -g2012 -o C:\Users\denni\Desktop\Spec2RTL\generated\p2\sim.out C:\Users\denni\Desktop\Spec2RTL\generated\p2\design.v C:\Users\denni\Desktop\Spec2RTL\generated\p2\tb.v
+  
+  $ C:\ProgramData\chocolatey\bin\vvp.exe C:\Users\denni\Desktop\Spec2RTL\generated\p2\sim.out
+  FAIL: shift left works expected=0101 got=1010 time=26000
+  FATAL: C:\Users\denni\Desktop\Spec2RTL\generated\p2\tb.v:31: 
+         Time: 26000  Scope: tb.check_data_out

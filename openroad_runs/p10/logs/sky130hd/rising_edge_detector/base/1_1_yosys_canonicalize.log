@@ -1,0 +1,19 @@
+Yosys 0.64 (git sha1 8449dd470, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3) [the-openroad-project/yosys]
+Using ABC speed script.
+Extracting clock period from SDC file: /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p10/results/sky130hd/rising_edge_detector/base/clock_period.txt
+1. Executing Liberty frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+2. Executing Liberty frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+3. Executing Verilog-2005 frontend: /tmp/spec2rtl_openroad/p10/flow/designs/sky130hd/rising_edge_detector/src/design_syn.v
+4. Executing Verilog-2005 frontend: /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_clkgate_hd.v
+5. Executing HIERARCHY pass (managing design hierarchy).
+6. Executing AST frontend in derive mode using pre-parsed AST for module `\rising_edge_detector'.
+6.1. Analyzing design hierarchy..
+6.2. Analyzing design hierarchy..
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module rising_edge_detector because it contains processes (run 'proc' command first).
+8. Executing RTLIL backend.
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: e6b0731948, time: 0.15s, user: 0.13s, system: 0.01s, MEM: 51.00 MB peak
+Yosys 0.64 (git sha1 8449dd470, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3) [the-openroad-project/yosys]
+Time spent: 78% 4x read_liberty (0 sec), 8% 4x read_verilog (0 sec), ...
+Elapsed time: 0:00.16[h:]min:sec. CPU time: user 0.14 sys 0.02 (98%). Peak memory: 56192KB.

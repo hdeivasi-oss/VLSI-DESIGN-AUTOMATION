@@ -1,0 +1,209 @@
+validation_round=0
+log_path=/home/harish_d1121/Spec_to_Tapeout-main/logs/p9/attempt_07_yosys_check_r0.log
+status=PASS
+details=/----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `sanity_check.ys' --
+
+1. Executing Verilog-2005 frontend: ../design_candidate.v
+Parsing Verilog input from `../design_candidate.v' to AST representation.
+Generating RTLIL representation for module `\fir_filter'.
+Warning: Replacing memory \samples with list of registers. See ../design_candidate.v:27
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \fir_filter
+
+2.2. Analyzing design hierarchy..
+Top module:  \fir_filter
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$../design_candidate.v:24$31 in module fir_filter.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_INIT pass (extract init attributes).
+
+3.4. Executing PROC_ARST pass (detect async resets in processes).
+
+3.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\fir_filter.$proc$../design_candidate.v:24$31'.
+     1/61: $1\i[31:0]
+     2/61: $1$func$\coeff_at$../design_candidate.v:38$30$\idx[31:0]$79
+     3/61: $1$func$\coeff_at$../design_candidate.v:38$30$\coeffs[127:0]$78
+     4/61: $1$func$\coeff_at$../design_candidate.v:38$30$\coeff_at[15:0]$77
+     5/61: $1$func$\coeff_at$../design_candidate.v:38$29$\idx[31:0]$76
+     6/61: $1$func$\coeff_at$../design_candidate.v:38$29$\coeffs[127:0]$75
+     7/61: $1$func$\coeff_at$../design_candidate.v:38$29$\coeff_at[15:0]$74
+     8/61: $1$func$\coeff_at$../design_candidate.v:38$28$\idx[31:0]$73
+     9/61: $1$func$\coeff_at$../design_candidate.v:38$28$\coeffs[127:0]$72
+    10/61: $1$func$\coeff_at$../design_candidate.v:38$28$\coeff_at[15:0]$71
+    11/61: $1$func$\coeff_at$../design_candidate.v:38$27$\idx[31:0]$70
+    12/61: $1$func$\coeff_at$../design_candidate.v:38$27$\coeffs[127:0]$69
+    13/61: $1$func$\coeff_at$../design_candidate.v:38$27$\coeff_at[15:0]$68
+    14/61: $1$func$\coeff_at$../design_candidate.v:38$26$\idx[31:0]$67
+    15/61: $1$func$\coeff_at$../design_candidate.v:38$26$\coeffs[127:0]$66
+    16/61: $1$func$\coeff_at$../design_candidate.v:38$26$\coeff_at[15:0]$65
+    17/61: $1$func$\coeff_at$../design_candidate.v:38$25$\idx[31:0]$64
+    18/61: $1$func$\coeff_at$../design_candidate.v:38$25$\coeffs[127:0]$63
+    19/61: $1$func$\coeff_at$../design_candidate.v:38$25$\coeff_at[15:0]$62
+    20/61: $1$func$\coeff_at$../design_candidate.v:38$24$\idx[31:0]$61
+    21/61: $1$func$\coeff_at$../design_candidate.v:38$24$\coeffs[127:0]$60
+    22/61: $1$func$\coeff_at$../design_candidate.v:38$24$\coeff_at[15:0]$59
+    23/61: $1$func$\coeff_at$../design_candidate.v:36$16$\idx[31:0]$58
+    24/61: $1$func$\coeff_at$../design_candidate.v:36$16$\coeffs[127:0]$57
+    25/61: $1$func$\coeff_at$../design_candidate.v:36$16$\coeff_at[15:0]$56
+    26/61: $1\acc[35:0]
+    27/61: $0$func$\coeff_at$../design_candidate.v:38$30$\idx[31:0]$55
+    28/61: $0$func$\coeff_at$../design_candidate.v:38$30$\coeffs[127:0]$54
+    29/61: $0$func$\coeff_at$../design_candidate.v:38$30$\coeff_at[15:0]$53
+    30/61: $0$func$\coeff_at$../design_candidate.v:38$29$\idx[31:0]$52
+    31/61: $0$func$\coeff_at$../design_candidate.v:38$29$\coeffs[127:0]$51
+    32/61: $0$func$\coeff_at$../design_candidate.v:38$29$\coeff_at[15:0]$50
+    33/61: $0$func$\coeff_at$../design_candidate.v:38$28$\idx[31:0]$49
+    34/61: $0$func$\coeff_at$../design_candidate.v:38$28$\coeffs[127:0]$48
+    35/61: $0$func$\coeff_at$../design_candidate.v:38$28$\coeff_at[15:0]$47
+    36/61: $0$func$\coeff_at$../design_candidate.v:38$27$\idx[31:0]$46
+    37/61: $0$func$\coeff_at$../design_candidate.v:38$27$\coeffs[127:0]$45
+    38/61: $0$func$\coeff_at$../design_candidate.v:38$27$\coeff_at[15:0]$44
+    39/61: $0$func$\coeff_at$../design_candidate.v:38$26$\idx[31:0]$43
+    40/61: $0$func$\coeff_at$../design_candidate.v:38$26$\coeffs[127:0]$42
+    41/61: $0$func$\coeff_at$../design_candidate.v:38$26$\coeff_at[15:0]$41
+    42/61: $0$func$\coeff_at$../design_candidate.v:38$25$\idx[31:0]$40
+    43/61: $0$func$\coeff_at$../design_candidate.v:38$25$\coeffs[127:0]$39
+    44/61: $0$func$\coeff_at$../design_candidate.v:38$25$\coeff_at[15:0]$38
+    45/61: $0$func$\coeff_at$../design_candidate.v:38$24$\idx[31:0]$37
+    46/61: $0$func$\coeff_at$../design_candidate.v:38$24$\coeffs[127:0]$36
+    47/61: $0$func$\coeff_at$../design_candidate.v:38$24$\coeff_at[15:0]$35
+    48/61: $0$func$\coeff_at$../design_candidate.v:36$16$\idx[31:0]$34
+    49/61: $0$func$\coeff_at$../design_candidate.v:36$16$\coeffs[127:0]$33
+    50/61: $0$func$\coeff_at$../design_candidate.v:36$16$\coeff_at[15:0]$32
+    51/61: $0\acc[35:0]
+    52/61: $0\i[31:0]
+    53/61: $0\samples[7][15:0]
+    54/61: $0\samples[6][15:0]
+    55/61: $0\samples[5][15:0]
+    56/61: $0\samples[4][15:0]
+    57/61: $0\samples[3][15:0]
+    58/61: $0\samples[2][15:0]
+    59/61: $0\samples[1][15:0]
+    60/61: $0\samples[0][15:0]
+    61/61: $0\y_out[35:0]
+
+3.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\fir_filter.\y_out' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$223' with positive edge clock.
+Creating register for signal `\fir_filter.\i' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$224' with positive edge clock.
+Creating register for signal `\fir_filter.\acc' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$225' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:36$16$\coeff_at' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$226' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:36$16$\coeffs' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$227' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:36$16$\idx' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$228' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$24$\coeff_at' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$229' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$24$\coeffs' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$230' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$24$\idx' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$231' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$25$\coeff_at' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$232' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$25$\coeffs' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$233' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$25$\idx' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$234' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$26$\coeff_at' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$235' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$26$\coeffs' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$236' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$26$\idx' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$237' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$27$\coeff_at' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$238' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$27$\coeffs' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$239' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$27$\idx' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$240' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$28$\coeff_at' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$241' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$28$\coeffs' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$242' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$28$\idx' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$243' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$29$\coeff_at' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$244' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$29$\coeffs' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$245' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$29$\idx' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$246' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$30$\coeff_at' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$247' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$30$\coeffs' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$248' with positive edge clock.
+Creating register for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:38$30$\idx' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$249' with positive edge clock.
+Creating register for signal `\fir_filter.\samples[0]' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$250' with positive edge clock.
+Creating register for signal `\fir_filter.\samples[1]' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$251' with positive edge clock.
+Creating register for signal `\fir_filter.\samples[2]' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$252' with positive edge clock.
+Creating register for signal `\fir_filter.\samples[3]' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$253' with positive edge clock.
+Creating register for signal `\fir_filter.\samples[4]' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$254' with positive edge clock.
+Creating register for signal `\fir_filter.\samples[5]' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$255' with positive edge clock.
+Creating register for signal `\fir_filter.\samples[6]' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$256' with positive edge clock.
+Creating register for signal `\fir_filter.\samples[7]' using process `\fir_filter.$proc$../design_candidate.v:24$31'.
+  created $dff cell `$procdff$257' with positive edge clock.
+
+3.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\fir_filter.$proc$../design_candidate.v:24$31'.
+Removing empty process `fir_filter.$proc$../design_candidate.v:24$31'.
+Cleaned up 1 empty switch.
+
+4. Executing CHECK pass (checking for obvious problems).
+checking module fir_filter..
+found and reported 0 problems.
+
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: da8a68db85
+CPU: user 0.05s system 0.00s, MEM: 19.56 MB total, 13.72 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 44% 1x check (0 sec), 22% 1x proc_mux (0 sec), ...
+

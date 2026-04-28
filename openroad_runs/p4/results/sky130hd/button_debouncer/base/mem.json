@@ -1,0 +1,855 @@
+{
+  "creator": "Yosys 0.64 (git sha1 8449dd470, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3) [the-openroad-project/yosys]",
+  "modules": {
+    "button_debouncer": {
+      "attributes": {
+        "hdlname": "button_debouncer",
+        "top": "00000000000000000000000000000001",
+        "src": "../design_candidate.v:1"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "noisy_btn": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "clean_btn": {
+          "direction": "output",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+        "$and$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:32$5585": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:32.17-32.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 7 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:34$5588": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:34.17-34.30"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 10 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:36$5592": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:36.17-36.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 13 ],
+            "Y": [ 14 ]
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:37$5593": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:37.23-37.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 15 ],
+            "Y": [ 16 ]
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:38$5597": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:38.19-38.61"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ 15 ],
+            "Y": [ 18 ]
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:40$5601": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:40.19-40.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 19 ],
+            "Y": [ 20 ]
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:42$5605": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:42.20-42.31"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 21 ],
+            "B": [ 22 ],
+            "Y": [ 23 ]
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:32$5584": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:32.35-32.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:34$5587": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:34.24-34.30"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 10 ]
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:35$5590": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:35.17-35.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 24 ],
+            "Y": [ 15 ]
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:36$5591": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:36.35-36.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "Y": [ 13 ]
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:37$5595": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:37.20-37.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 25 ],
+            "Y": [ 26 ]
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:38$5598": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:38.17-38.62"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "Y": [ 27 ]
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:39$5600": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:39.20-39.33"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 28 ],
+            "Y": [ 29 ]
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:40$5602": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:40.17-40.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20 ],
+            "Y": [ 22 ]
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:41$5603": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:41.31-41.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "Y": [ 30 ]
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:42$5607": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:42.17-42.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 31 ],
+            "Y": [ 32 ]
+          }
+        },
+        "$or$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:37$5594": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:37.22-37.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16 ],
+            "B": [ 3 ],
+            "Y": [ 25 ]
+          }
+        },
+        "$or$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:38$5596": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:38.20-38.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 12 ],
+            "Y": [ 17 ]
+          }
+        },
+        "$or$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:39$5599": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:39.22-39.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 27 ],
+            "B": [ 3 ],
+            "Y": [ 28 ]
+          }
+        },
+        "$or$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:41$5604": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:41.17-41.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "B": [ 30 ],
+            "Y": [ 21 ]
+          }
+        },
+        "$or$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:42$5606": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:42.19-42.38"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 23 ],
+            "B": [ 3 ],
+            "Y": [ 31 ]
+          }
+        },
+        "$procdff$5612": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 11 ],
+            "Q": [ 5 ]
+          }
+        },
+        "$procdff$5613": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 29 ],
+            "Q": [ 6 ]
+          }
+        },
+        "$procdff$5614": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 26 ],
+            "Q": [ 12 ]
+          }
+        },
+        "$procdff$5615": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 32 ],
+            "Q": [ 19 ]
+          }
+        },
+        "$ternary$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:33$5586": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:33.17-33.47"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 19 ],
+            "S": [ 8 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$xor$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:35$5589": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:35.19-35.42"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 19 ],
+            "Y": [ 24 ]
+          }
+        }
+      },
+      "netnames": {
+        "$and$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:37$5593_Y": {
+          "hide_name": 1,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:37.23-37.34"
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:38$5597_Y": {
+          "hide_name": 1,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:38.19-38.61"
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:40$5601_Y": {
+          "hide_name": 1,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:40.19-40.42"
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:42$5605_Y": {
+          "hide_name": 1,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:42.20-42.31"
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:32$5584_Y": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:32.35-32.53"
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:34$5587_Y": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:34.24-34.30"
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:36$5591_Y": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:36.35-36.53"
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:41$5603_Y": {
+          "hide_name": 1,
+          "bits": [ 30 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:41.31-41.43"
+          }
+        },
+        "$or$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:37$5594_Y": {
+          "hide_name": 1,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:37.22-37.41"
+          }
+        },
+        "$or$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:38$5596_Y": {
+          "hide_name": 1,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:38.20-38.53"
+          }
+        },
+        "$or$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:39$5599_Y": {
+          "hide_name": 1,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:39.22-39.32"
+          }
+        },
+        "$or$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:42$5606_Y": {
+          "hide_name": 1,
+          "bits": [ 31 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:42.19-42.38"
+          }
+        },
+        "$xor$/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:35$5589_Y": {
+          "hide_name": 1,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:35.19-35.42"
+          }
+        },
+        "_00_": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          }
+        },
+        "_01_": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          }
+        },
+        "_02_": {
+          "hide_name": 0,
+          "bits": [ 26, 29 ],
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          }
+        },
+        "_03_": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:12.8-12.12"
+          }
+        },
+        "_04_": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:13.8-13.12"
+          }
+        },
+        "_05_": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:14.8-14.12"
+          }
+        },
+        "_06_": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:15.8-15.12"
+          }
+        },
+        "_07_": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:16.8-16.12"
+          }
+        },
+        "_08_": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:17.8-17.12"
+          }
+        },
+        "_09_": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p4/flow/designs/sky130hd/button_debouncer/src/design_syn.v:18.8-18.12"
+          }
+        },
+        "clean_btn": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "../design_candidate.v:5"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "../design_candidate.v:2"
+          }
+        },
+        "last_sample": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "../design_candidate.v:7"
+          }
+        },
+        "noisy_btn": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "../design_candidate.v:4"
+          }
+        },
+        "rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "../design_candidate.v:3"
+          }
+        },
+        "stable_count": {
+          "hide_name": 0,
+          "bits": [ 12, 6 ],
+          "attributes": {
+            "src": "../design_candidate.v:8"
+          }
+        }
+      }
+    }
+  }
+}

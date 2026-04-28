@@ -1,0 +1,29 @@
+attempt: 3
+spec_name: "p4"
+rtl_variant: "counter_correct"
+tb_variant: "default_check"
+status: "failed"
+failure_type: "unknown"
+compile_returncode: 0
+simulation_returncode: 1
+analysis:
+  summary: "Unknown failure mode. Try the next available variant."
+compile_command: "C:\\ProgramData\\chocolatey\\bin\\iverilog.exe -g2012 -o C:\\Users\\denni\\Desktop\\Spec2RTL\\generated\\p4\\sim.out C:\\Users\\denni\\Desktop\\Spec2RTL\\generated\\p4\\design.v C:\\Users\\denni\\Desktop\\Spec2RTL\\generated\\p4\\tb.v"
+simulation_command: "C:\\ProgramData\\chocolatey\\bin\\vvp.exe C:\\Users\\denni\\Desktop\\Spec2RTL\\generated\\p4\\sim.out"
+compile_stdout: |
+  
+compile_stderr: |
+  
+simulation_stdout: |
+  FAIL: 3 updates output expected clean_btn=1 got clean_btn=0 time=56000
+  FATAL: C:\Users\denni\Desktop\Spec2RTL\generated\p4\tb.v:28: 
+         Time: 56000  Scope: tb.drive_and_check
+simulation_stderr: |
+  
+combined_log: |
+  $ C:\ProgramData\chocolatey\bin\iverilog.exe -g2012 -o C:\Users\denni\Desktop\Spec2RTL\generated\p4\sim.out C:\Users\denni\Desktop\Spec2RTL\generated\p4\design.v C:\Users\denni\Desktop\Spec2RTL\generated\p4\tb.v
+  
+  $ C:\ProgramData\chocolatey\bin\vvp.exe C:\Users\denni\Desktop\Spec2RTL\generated\p4\sim.out
+  FAIL: 3 updates output expected clean_btn=1 got clean_btn=0 time=56000
+  FATAL: C:\Users\denni\Desktop\Spec2RTL\generated\p4\tb.v:28: 
+         Time: 56000  Scope: tb.drive_and_check

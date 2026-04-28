@@ -1,0 +1,3 @@
+read_verilog ../design_candidate.v
+synth -top seq_detector_0011
+write_verilog design_syn.v

@@ -1,0 +1,41 @@
+module_name: shift_register_4bit
+description: 4-bit shift register with synchronous reset, load, and shift enable.
+
+inputs:
+  - name: clk
+    width: 1
+  - name: rst
+    width: 1
+  - name: load
+    width: 1
+  - name: shift_en
+    width: 1
+  - name: serial_in
+    width: 1
+  - name: data_in
+    width: 4
+
+outputs:
+  - name: data_out
+    width: 4
+
+clock:
+  name: clk
+  edge: posedge
+
+reset:
+  name: rst
+  type: synchronous
+  active_level: high
+
+behavior:
+  - "On each positive edge of clk, if rst is high, data_out becomes 0."
+  - "Else if load is high, data_out becomes data_in."
+  - "Else if shift_en is high, data_out shifts left by one bit and serial_in enters bit 0."
+  - "Else data_out holds its previous value."
+
+verification_goals:
+  - "Verify reset clears the register."
+  - "Verify load has priority over shift."
+  - "Verify shift operation updates bits correctly."
+  - "Verify hold behavior."

@@ -1,0 +1,7 @@
+$ /usr/bin/iverilog -g2012 -o /home/harish_d1121/Spec_to_Tapeout-main/output/p5/Synthesis/gls_sim.out /home/harish_d1121/Spec_to_Tapeout-main/output/p5/Synthesis/design_syn.v /home/harish_d1121/Spec_to_Tapeout-main/output/p5/tb_candidate.v
+/home/harish_d1121/Spec_to_Tapeout-main/output/p5/tb_candidate.v:15: warning: parameter N not found in tb.dut.
+/home/harish_d1121/Spec_to_Tapeout-main/output/p5/tb_candidate.v:16: warning: parameter WIDTH not found in tb.dut.
+
+$ /usr/bin/vvp /home/harish_d1121/Spec_to_Tapeout-main/output/p5/Synthesis/gls_sim.out
+TEST PASSED
+

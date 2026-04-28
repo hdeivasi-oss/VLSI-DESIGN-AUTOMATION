@@ -1,0 +1,3 @@
+read_verilog ../design_candidate.v
+synth -top button_debouncer
+write_verilog design_syn.v

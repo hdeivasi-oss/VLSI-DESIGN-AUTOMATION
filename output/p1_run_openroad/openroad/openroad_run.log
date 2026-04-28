@@ -1,0 +1,16 @@
+openroad_output_dir=/home/harish_d1121/Spec_to_Tapeout-main/output/p1_run_openroad/openroad
+platform=sky130hd
+design_name=seq_detector_0011
+clock_port=clk
+clock_period=1.1
+workspace=/tmp/spec2rtl_openroad/p1_run_openroad
+$ make -C /home/harish_d1121/OpenROAD-flow-scripts/flow DESIGN_CONFIG=/tmp/spec2rtl_openroad/p1_run_openroad/flow/designs/sky130hd/seq_detector_0011/config.mk PLATFORM=sky130hd DESIGN_NAME=seq_detector_0011
+make: Entering directory '/home/harish_d1121/OpenROAD-flow-scripts/flow'
+mkdir -p results/sky130hd/seq_detector_0011/base/
+echo 1.1 > results/sky130hd/seq_detector_0011/base/clock_period.txt
+make: Leaving directory '/home/harish_d1121/OpenROAD-flow-scripts/flow'
+
+bash: line 1: results/sky130hd/seq_detector_0011/base/clock_period.txt: Read-only file system
+make: *** [Makefile:261: results/sky130hd/seq_detector_0011/base/clock_period.txt] Error 1
+
+reports_found=True

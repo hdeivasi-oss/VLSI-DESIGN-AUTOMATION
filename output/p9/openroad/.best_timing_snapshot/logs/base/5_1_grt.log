@@ -1,0 +1,287 @@
+OpenROAD 26Q2-339-g0504146ce6 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+read_liberty /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/results/sky130hd/fir_filter/base/4_cts.odb
+read_sdc /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/results/sky130hd/fir_filter/base/4_cts.sdc
+source /home/harish_d1121/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+pin_access
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+
+Units:                1000
+Number of layers:     13
+Number of macros:     441
+Number of vias:       29
+Number of viarulegen: 25
+
+[INFO DRT-0150] Reading design.
+
+Design:                   fir_filter
+Die area:                 ( 0 0 ) ( 726160 726160 )
+Number of track patterns: 12
+Number of DEF vias:       0
+Number of components:     16425
+Number of terminals:      184
+Number of snets:          2
+Number of nets:           13015
+
+[INFO DRT-0167] List of default vias:
+  Layer via
+    default via: M1M2_PR
+  Layer via2
+    default via: M2M3_PR
+  Layer via3
+    default via: M3M4_PR
+  Layer via4
+    default via: M4M5_PR
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 123.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete FR_MASTERSLICE.
+[INFO DRT-0024]   Complete Fr_VIA.
+[INFO DRT-0024]   Complete li1.
+[INFO DRT-0024]   Complete mcon.
+[INFO DRT-0024]   Complete met1.
+[INFO DRT-0024]   Complete via.
+[INFO DRT-0024]   Complete met2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete met3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete met4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete met5.
+[INFO DRT-0033] FR_MASTERSLICE shape region query size = 0.
+[INFO DRT-0033] FR_VIA shape region query size = 0.
+[INFO DRT-0033] li1 shape region query size = 332185.
+[INFO DRT-0033] mcon shape region query size = 202257.
+[INFO DRT-0033] met1 shape region query size = 91669.
+[INFO DRT-0033] via shape region query size = 34320.
+[INFO DRT-0033] met2 shape region query size = 20675.
+[INFO DRT-0033] via2 shape region query size = 27456.
+[INFO DRT-0033] met3 shape region query size = 20691.
+[INFO DRT-0033] via3 shape region query size = 27456.
+[INFO DRT-0033] met4 shape region query size = 8268.
+[INFO DRT-0033] via4 shape region query size = 1352.
+[INFO DRT-0033] met5 shape region query size = 1456.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 950 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0081]   Complete 123 unique inst patterns.
+[INFO DRT-0084]   Complete 7359 groups.
+#scanned instances     = 16425
+#unique  instances     = 123
+#stdCellGenAp          = 3868
+#stdCellValidPlanarAp  = 26
+#stdCellValidViaAp     = 2662
+#stdCellPinNoAp        = 6
+#stdCellPinCnt         = 32212
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:01:39, elapsed time = 00:00:27, memory = 205.67 (MB), peak = 209.79 (MB)
+Took 28 seconds: pin_access
+global_route -congestion_report_file /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/reports/sky130hd/fir_filter/base/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+[INFO GRT-0020] Min routing layer: met1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 16981
+[INFO GRT-0019] Found 87 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 55
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal     147809        114218          22.73%
+met2       Vertical       141752        108888          23.18%
+met3       Horizontal     103896         81172          21.87%
+met4       Vertical        70048         50382          28.08%
+met5       Horizontal      15912         11024          30.72%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 56043
+[INFO GRT-0198] Via related Steiner nodes: 829
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 71864
+[INFO GRT-0112] Final usage 3D: 260824
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1                  0             0            0.00%             0 /  0 /  0
+met1            114218         18160           15.90%             0 /  0 /  0
+met2            108888         23619           21.69%             0 /  0 /  0
+met3             81172          2966            3.65%             0 /  0 /  0
+met4             50382           487            0.97%             0 /  0 /  0
+met5             11024             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total           365684         45232           12.37%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 466702 um
+[INFO GRT-0014] Routed nets: 12993
+[INFO GRT-0303] Global routing runtime = 00:00:00
+estimate_parasitics -global_routing
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     13083
+     1000 |     +0.0% |       0 |       0 |             0 |     12083
+[WARNING RSZ-0104] Net _21119_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _21078_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _21057_ only has one pin. Check if it is intended to be dangling.
+     2000 |     +0.0% |       0 |       0 |             0 |     11083
+[WARNING RSZ-0104] Net _21184_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _21161_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _21140_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _21098_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _21203_ only has one pin. Check if it is intended to be dangling.
+     3000 |     +0.0% |       0 |       0 |             0 |     10083
+[WARNING RSZ-0104] Net _21198_ only has one pin. Check if it is intended to be dangling.
+     4000 |     +0.0% |       0 |       0 |             0 |      9083
+     5000 |     +0.0% |       0 |       0 |             0 |      8083
+     6000 |     +0.0% |       0 |       0 |             0 |      7083
+     7000 |     +0.0% |       0 |       0 |             0 |      6083
+[WARNING RSZ-0104] Net _06992_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _21186_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _04751_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _21163_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _02543_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _21142_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _00335_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _21121_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _11654_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _09679_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _21059_ only has one pin. Check if it is intended to be dangling.
+     8000 |     +0.0% |       0 |       0 |             0 |      5083
+[WARNING RSZ-0104] Net _13801_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _21100_ only has one pin. Check if it is intended to be dangling.
+     9000 |     +0.0% |       0 |       0 |             0 |      4083
+    10000 |     +0.0% |       0 |       0 |             0 |      3083
+    11000 |     +0.0% |       0 |       0 |             0 |      2083
+    12000 |     +0.0% |       0 |       0 |             0 |      1083
+    13000 |     +0.0% |       0 |       0 |             0 |        83
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+global_route -start_incremental
+detailed_placement
+[INFO DPL-0006] Core area: 513342.34 um^2, Instances area: 110821.29 um^2, Utilization: 21.6%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1101] Legalizing using diamond search.
+Movements Summary
+---------------------------------------
+Total cells:                    9668
+Diamond Move Success:           9668 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL          273582.5 u
+legalized HPWL         273582.5 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/reports/sky130hd/fir_filter/base/congestion_post_repair_design.rpt
+Repair setup and hold violations...
+estimate_parasitics -global_routing
+repair_timing -setup_margin 0.08 -hold_margin 0.05 -repair_tns 100 -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0033] No hold violations found.
+global_route -start_incremental
+detailed_placement
+[INFO DPL-0006] Core area: 513342.34 um^2, Instances area: 110821.29 um^2, Utilization: 21.6%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1101] Legalizing using diamond search.
+Movements Summary
+---------------------------------------
+Total cells:                    9668
+Diamond Move Success:           9668 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL          273582.5 u
+legalized HPWL         273582.5 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/reports/sky130hd/fir_filter/base/congestion_post_repair_timing.rpt
+global_route -start_incremental
+global_route -end_incremental -congestion_report_file /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/reports/sky130hd/fir_filter/base/congestion_post_recover_power.rpt
+Repair antennas...
+[INFO GRT-0012] Found 18 antenna violations.
+[INFO GRT-0302] Inserted 21 jumpers for 17 nets.
+[INFO GRT-0012] Found 2 antenna violations.
+[WARNING GRT-0243] Unable to repair antennas on net with diodes.
+[INFO DPL-0006] Core area: 513342.34 um^2, Instances area: 110826.29 um^2, Utilization: 21.6%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1101] Legalizing using diamond search.
+Movements Summary
+---------------------------------------
+Total cells:                    9666
+Diamond Move Success:           9666 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+[INFO GRT-0015] Inserted 2 diodes.
+[INFO GRT-0012] Found 1 antenna violations.
+[INFO GRT-0302] Inserted 1 jumpers for 1 nets.
+[INFO GRT-0012] Found 0 antenna violations.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Estimate parasitics...
+estimate_parasitics -global_routing
+Report metrics stage 5, global route...
+
+==========================================================================
+global route report_design_area
+--------------------------------------------------------------------------
+Design area 110826 um^2 22% utilization.
+[INFO FLW-0007] clock clk period 8.000000
+[INFO FLW-0008] Clock clk period 7.444
+[INFO FLW-0009] Clock clk slack 0.164
+[INFO FLW-0011] Path endpoint path count 412
+write_db /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/results/sky130hd/fir_filter/base/5_1_grt.odb
+write_sdc -no_timestamp /home/harish_d1121/Spec_to_Tapeout-main/openroad_runs/p9/results/sky130hd/fir_filter/base/5_1_grt.sdc
+Elapsed time: 0:36.95[h:]min:sec. CPU time: user 124.62 sys 1.18 (340%). Peak memory: 465828KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+5_1_grt                           36            454 b00d9b482c53b4bda2e8

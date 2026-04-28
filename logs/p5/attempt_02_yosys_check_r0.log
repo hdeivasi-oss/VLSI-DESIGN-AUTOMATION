@@ -1,0 +1,280 @@
+$ yosys sanity_check.ys
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `sanity_check.ys' --
+
+1. Executing Verilog-2005 frontend: ../design_candidate.v
+Parsing Verilog input from `../design_candidate.v' to AST representation.
+Generating RTLIL representation for module `\dot_product'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \dot_product
+
+2.2. Analyzing design hierarchy..
+Top module:  \dot_product
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$../design_candidate.v:23$25 in module dot_product.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_INIT pass (extract init attributes).
+
+3.4. Executing PROC_ARST pass (detect async resets in processes).
+
+3.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\dot_product.$proc$../design_candidate.v:23$25'.
+     1/102: $1$func$\vec_elem$../design_candidate.v:30$24$\idx[31:0]$121
+     2/102: $1$func$\vec_elem$../design_candidate.v:30$24$\vec[63:0]$120
+     3/102: $1$func$\vec_elem$../design_candidate.v:30$24$\vec_elem[7:0]$119
+     4/102: $1$func$\vec_elem$../design_candidate.v:30$23$\idx[31:0]$118
+     5/102: $1$func$\vec_elem$../design_candidate.v:30$23$\vec[63:0]$117
+     6/102: $1$func$\vec_elem$../design_candidate.v:30$23$\vec_elem[7:0]$116
+     7/102: $1$func$\vec_elem$../design_candidate.v:30$22$\idx[31:0]$115
+     8/102: $1$func$\vec_elem$../design_candidate.v:30$22$\vec[63:0]$114
+     9/102: $1$func$\vec_elem$../design_candidate.v:30$22$\vec_elem[7:0]$113
+    10/102: $1$func$\vec_elem$../design_candidate.v:30$21$\idx[31:0]$112
+    11/102: $1$func$\vec_elem$../design_candidate.v:30$21$\vec[63:0]$111
+    12/102: $1$func$\vec_elem$../design_candidate.v:30$21$\vec_elem[7:0]$110
+    13/102: $1$func$\vec_elem$../design_candidate.v:30$20$\idx[31:0]$109
+    14/102: $1$func$\vec_elem$../design_candidate.v:30$20$\vec[63:0]$108
+    15/102: $1$func$\vec_elem$../design_candidate.v:30$20$\vec_elem[7:0]$107
+    16/102: $1$func$\vec_elem$../design_candidate.v:30$19$\idx[31:0]$106
+    17/102: $1$func$\vec_elem$../design_candidate.v:30$19$\vec[63:0]$105
+    18/102: $1$func$\vec_elem$../design_candidate.v:30$19$\vec_elem[7:0]$104
+    19/102: $1$func$\vec_elem$../design_candidate.v:30$18$\idx[31:0]$103
+    20/102: $1$func$\vec_elem$../design_candidate.v:30$18$\vec[63:0]$102
+    21/102: $1$func$\vec_elem$../design_candidate.v:30$18$\vec_elem[7:0]$101
+    22/102: $1$func$\vec_elem$../design_candidate.v:30$17$\idx[31:0]$100
+    23/102: $1$func$\vec_elem$../design_candidate.v:30$17$\vec[63:0]$99
+    24/102: $1$func$\vec_elem$../design_candidate.v:30$17$\vec_elem[7:0]$98
+    25/102: $1$func$\vec_elem$../design_candidate.v:30$16$\idx[31:0]$97
+    26/102: $1$func$\vec_elem$../design_candidate.v:30$16$\vec[63:0]$96
+    27/102: $1$func$\vec_elem$../design_candidate.v:30$16$\vec_elem[7:0]$95
+    28/102: $1$func$\vec_elem$../design_candidate.v:30$15$\idx[31:0]$94
+    29/102: $1$func$\vec_elem$../design_candidate.v:30$15$\vec[63:0]$93
+    30/102: $1$func$\vec_elem$../design_candidate.v:30$15$\vec_elem[7:0]$92
+    31/102: $1$func$\vec_elem$../design_candidate.v:30$14$\idx[31:0]$91
+    32/102: $1$func$\vec_elem$../design_candidate.v:30$14$\vec[63:0]$90
+    33/102: $1$func$\vec_elem$../design_candidate.v:30$14$\vec_elem[7:0]$89
+    34/102: $1$func$\vec_elem$../design_candidate.v:30$13$\idx[31:0]$88
+    35/102: $1$func$\vec_elem$../design_candidate.v:30$13$\vec[63:0]$87
+    36/102: $1$func$\vec_elem$../design_candidate.v:30$13$\vec_elem[7:0]$86
+    37/102: $1$func$\vec_elem$../design_candidate.v:30$12$\idx[31:0]$85
+    38/102: $1$func$\vec_elem$../design_candidate.v:30$12$\vec[63:0]$84
+    39/102: $1$func$\vec_elem$../design_candidate.v:30$12$\vec_elem[7:0]$83
+    40/102: $1$func$\vec_elem$../design_candidate.v:30$11$\idx[31:0]$82
+    41/102: $1$func$\vec_elem$../design_candidate.v:30$11$\vec[63:0]$81
+    42/102: $1$func$\vec_elem$../design_candidate.v:30$11$\vec_elem[7:0]$80
+    43/102: $1$func$\vec_elem$../design_candidate.v:30$10$\idx[31:0]$79
+    44/102: $1$func$\vec_elem$../design_candidate.v:30$10$\vec[63:0]$78
+    45/102: $1$func$\vec_elem$../design_candidate.v:30$10$\vec_elem[7:0]$77
+    46/102: $1$func$\vec_elem$../design_candidate.v:30$9$\idx[31:0]$76
+    47/102: $1$func$\vec_elem$../design_candidate.v:30$9$\vec[63:0]$75
+    48/102: $1$func$\vec_elem$../design_candidate.v:30$9$\vec_elem[7:0]$74
+    49/102: $1\sum_reg[19:0]
+    50/102: $1\i[31:0]
+    51/102: $0$func$\vec_elem$../design_candidate.v:30$24$\idx[31:0]$73
+    52/102: $0$func$\vec_elem$../design_candidate.v:30$24$\vec[63:0]$72
+    53/102: $0$func$\vec_elem$../design_candidate.v:30$24$\vec_elem[7:0]$71
+    54/102: $0$func$\vec_elem$../design_candidate.v:30$23$\idx[31:0]$70
+    55/102: $0$func$\vec_elem$../design_candidate.v:30$23$\vec[63:0]$69
+    56/102: $0$func$\vec_elem$../design_candidate.v:30$23$\vec_elem[7:0]$68
+    57/102: $0$func$\vec_elem$../design_candidate.v:30$22$\idx[31:0]$67
+    58/102: $0$func$\vec_elem$../design_candidate.v:30$22$\vec[63:0]$66
+    59/102: $0$func$\vec_elem$../design_candidate.v:30$22$\vec_elem[7:0]$65
+    60/102: $0$func$\vec_elem$../design_candidate.v:30$21$\idx[31:0]$64
+    61/102: $0$func$\vec_elem$../design_candidate.v:30$21$\vec[63:0]$63
+    62/102: $0$func$\vec_elem$../design_candidate.v:30$21$\vec_elem[7:0]$62
+    63/102: $0$func$\vec_elem$../design_candidate.v:30$20$\idx[31:0]$61
+    64/102: $0$func$\vec_elem$../design_candidate.v:30$20$\vec[63:0]$60
+    65/102: $0$func$\vec_elem$../design_candidate.v:30$20$\vec_elem[7:0]$59
+    66/102: $0$func$\vec_elem$../design_candidate.v:30$19$\idx[31:0]$58
+    67/102: $0$func$\vec_elem$../design_candidate.v:30$19$\vec[63:0]$57
+    68/102: $0$func$\vec_elem$../design_candidate.v:30$19$\vec_elem[7:0]$56
+    69/102: $0$func$\vec_elem$../design_candidate.v:30$18$\idx[31:0]$55
+    70/102: $0$func$\vec_elem$../design_candidate.v:30$18$\vec[63:0]$54
+    71/102: $0$func$\vec_elem$../design_candidate.v:30$18$\vec_elem[7:0]$53
+    72/102: $0$func$\vec_elem$../design_candidate.v:30$17$\idx[31:0]$52
+    73/102: $0$func$\vec_elem$../design_candidate.v:30$17$\vec[63:0]$51
+    74/102: $0$func$\vec_elem$../design_candidate.v:30$17$\vec_elem[7:0]$50
+    75/102: $0$func$\vec_elem$../design_candidate.v:30$16$\idx[31:0]$49
+    76/102: $0$func$\vec_elem$../design_candidate.v:30$16$\vec[63:0]$48
+    77/102: $0$func$\vec_elem$../design_candidate.v:30$16$\vec_elem[7:0]$47
+    78/102: $0$func$\vec_elem$../design_candidate.v:30$15$\idx[31:0]$46
+    79/102: $0$func$\vec_elem$../design_candidate.v:30$15$\vec[63:0]$45
+    80/102: $0$func$\vec_elem$../design_candidate.v:30$15$\vec_elem[7:0]$44
+    81/102: $0$func$\vec_elem$../design_candidate.v:30$14$\idx[31:0]$43
+    82/102: $0$func$\vec_elem$../design_candidate.v:30$14$\vec[63:0]$42
+    83/102: $0$func$\vec_elem$../design_candidate.v:30$14$\vec_elem[7:0]$41
+    84/102: $0$func$\vec_elem$../design_candidate.v:30$13$\idx[31:0]$40
+    85/102: $0$func$\vec_elem$../design_candidate.v:30$13$\vec[63:0]$39
+    86/102: $0$func$\vec_elem$../design_candidate.v:30$13$\vec_elem[7:0]$38
+    87/102: $0$func$\vec_elem$../design_candidate.v:30$12$\idx[31:0]$37
+    88/102: $0$func$\vec_elem$../design_candidate.v:30$12$\vec[63:0]$36
+    89/102: $0$func$\vec_elem$../design_candidate.v:30$12$\vec_elem[7:0]$35
+    90/102: $0$func$\vec_elem$../design_candidate.v:30$11$\idx[31:0]$34
+    91/102: $0$func$\vec_elem$../design_candidate.v:30$11$\vec[63:0]$33
+    92/102: $0$func$\vec_elem$../design_candidate.v:30$11$\vec_elem[7:0]$32
+    93/102: $0$func$\vec_elem$../design_candidate.v:30$10$\idx[31:0]$31
+    94/102: $0$func$\vec_elem$../design_candidate.v:30$10$\vec[63:0]$30
+    95/102: $0$func$\vec_elem$../design_candidate.v:30$10$\vec_elem[7:0]$29
+    96/102: $0$func$\vec_elem$../design_candidate.v:30$9$\idx[31:0]$28
+    97/102: $0$func$\vec_elem$../design_candidate.v:30$9$\vec[63:0]$27
+    98/102: $0$func$\vec_elem$../design_candidate.v:30$9$\vec_elem[7:0]$26
+    99/102: $0\sum_reg[19:0]
+   100/102: $0\i[31:0]
+   101/102: $0\valid[0:0]
+   102/102: $0\dot_out[19:0]
+
+3.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\dot_product.\i' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$342' with positive edge clock.
+Creating register for signal `\dot_product.\sum_reg' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$343' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$9$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$344' with positive edge clock.
+Creating register for signal `\dot_product.\dot_out' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$345' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$9$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$346' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$9$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$347' with positive edge clock.
+Creating register for signal `\dot_product.\valid' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$348' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$10$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$349' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$10$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$350' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$10$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$351' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$11$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$352' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$11$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$353' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$11$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$354' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$12$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$355' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$12$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$356' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$12$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$357' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$13$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$358' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$13$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$359' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$13$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$360' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$14$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$361' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$14$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$362' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$14$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$363' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$15$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$364' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$15$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$365' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$15$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$366' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$16$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$367' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$16$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$368' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$16$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$369' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$17$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$370' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$17$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$371' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$17$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$372' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$18$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$373' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$18$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$374' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$18$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$375' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$19$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$376' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$19$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$377' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$19$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$378' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$20$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$379' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$20$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$380' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$20$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$381' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$21$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$382' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$21$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$383' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$21$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$384' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$22$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$385' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$22$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$386' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$22$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$387' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$23$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$388' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$23$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$389' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$23$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$390' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$24$\vec_elem' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$391' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$24$\vec' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$392' with positive edge clock.
+Creating register for signal `\dot_product.$func$\vec_elem$../design_candidate.v:30$24$\idx' using process `\dot_product.$proc$../design_candidate.v:23$25'.
+  created $dff cell `$procdff$393' with positive edge clock.
+
+3.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\dot_product.$proc$../design_candidate.v:23$25'.
+Removing empty process `dot_product.$proc$../design_candidate.v:23$25'.
+Cleaned up 1 empty switch.
+
+4. Executing CHECK pass (checking for obvious problems).
+checking module dot_product..
+found and reported 0 problems.
+
+End of script. Logfile hash: 025bfec503
+CPU: user 0.06s system 0.00s, MEM: 20.68 MB total, 14.66 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 40% 1x check (0 sec), 24% 1x proc_mux (0 sec), ...

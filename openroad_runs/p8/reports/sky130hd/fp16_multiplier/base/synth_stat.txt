@@ -1,0 +1,69 @@
+
+20. Printing statistics.
+
+=== fp16_multiplier ===
+
+        +----------------------------Count including submodules.
+        |        +-------------------Area including submodules.
+        |        |        +----------Local count, excluding submodules.
+        |        |        |        +-Local area, excluding submodules.
+        |        |        |        | 
+      637        -      637        - wires
+      682        -      682        - wire bits
+      261        -      261        - public wires
+      306        -      306        - public wire bits
+        3        -        3        - ports
+       48        -       48        - port bits
+        -        -        -        - memories
+        -        -        -        - memory bits
+        -        -        -        - processes
+      502 4.42E+03      502 4.42E+03 cells
+        1   27.526        1   27.526   sky130_fd_sc_hd__a2111oi_4
+        1   12.512        1   12.512   sky130_fd_sc_hd__a211oi_2
+        1    7.507        1    7.507   sky130_fd_sc_hd__a21boi_0
+        1    7.507        1    7.507   sky130_fd_sc_hd__a21boi_1
+        7    52.55        7    52.55   sky130_fd_sc_hd__a21o_1
+       16   80.077       16   80.077   sky130_fd_sc_hd__a21oi_1
+        1    10.01        1    10.01   sky130_fd_sc_hd__a221o_1
+        1    8.758        1    8.758   sky130_fd_sc_hd__a221oi_1
+        3   26.275        3   26.275   sky130_fd_sc_hd__a2bb2oi_1
+        1    8.758        1    8.758   sky130_fd_sc_hd__a31o_2
+        1    6.256        1    6.256   sky130_fd_sc_hd__a31oi_1
+        1   16.266        1   16.266   sky130_fd_sc_hd__a41oi_2
+       47  294.032       47  294.032   sky130_fd_sc_hd__and2_1
+        1    8.758        1    8.758   sky130_fd_sc_hd__and4_1
+        1    3.754        1    3.754   sky130_fd_sc_hd__buf_1
+        3   15.014        3   15.014   sky130_fd_sc_hd__buf_2
+        1    7.507        1    7.507   sky130_fd_sc_hd__buf_4
+        1   11.261        1   11.261   sky130_fd_sc_hd__buf_6
+       20   75.072       20   75.072   sky130_fd_sc_hd__clkbuf_1
+       92 1.84E+03       92 1.84E+03   sky130_fd_sc_hd__fa_1
+       56  700.672       56  700.672   sky130_fd_sc_hd__ha_1
+       84  315.302       84  315.302   sky130_fd_sc_hd__inv_1
+        2   20.019        2   20.019   sky130_fd_sc_hd__mux2i_1
+       75   281.52       75   281.52   sky130_fd_sc_hd__nand2_1
+        2    10.01        2    10.01   sky130_fd_sc_hd__nand3_1
+        5    31.28        5    31.28   sky130_fd_sc_hd__nand4_1
+        1   23.773        1   23.773   sky130_fd_sc_hd__nand4b_4
+       18   67.565       18   67.565   sky130_fd_sc_hd__nor2_1
+        1    6.256        1    6.256   sky130_fd_sc_hd__nor2_2
+        3   18.768        3   18.768   sky130_fd_sc_hd__nor2b_1
+        6   30.029        6   30.029   sky130_fd_sc_hd__nor3_1
+        1    10.01        1    10.01   sky130_fd_sc_hd__nor3_2
+        7   43.792        7   43.792   sky130_fd_sc_hd__nor4_1
+        1    21.27        1    21.27   sky130_fd_sc_hd__nor4_4
+        1    8.758        1    8.758   sky130_fd_sc_hd__nor4b_1
+        4   40.038        4   40.038   sky130_fd_sc_hd__o211a_1
+        1    7.507        1    7.507   sky130_fd_sc_hd__o211ai_1
+        8   40.038        8   40.038   sky130_fd_sc_hd__o21ai_0
+        1   16.266        1   16.266   sky130_fd_sc_hd__o21ai_4
+        1    8.758        1    8.758   sky130_fd_sc_hd__o22a_1
+        1   12.512        1   12.512   sky130_fd_sc_hd__o22ai_2
+        1    6.256        1    6.256   sky130_fd_sc_hd__or2_1
+        1    6.256        1    6.256   sky130_fd_sc_hd__or3_1
+       15  131.376       15  131.376   sky130_fd_sc_hd__xnor2_1
+        5   43.792        5   43.792   sky130_fd_sc_hd__xor2_1
+
+   Chip area for module '\fp16_multiplier': 4422.992000
+     of which used for sequential elements: 0.000000 (0.00%)
+

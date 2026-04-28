@@ -1,0 +1,192 @@
+validation_round=0
+log_path=/home/harish_d1121/Spec_to_Tapeout-main/logs/p9/attempt_13_yosys_check_r0.log
+status=PASS
+details=/----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `sanity_check.ys' --
+
+1. Executing Verilog-2005 frontend: ../design_candidate.v
+Parsing Verilog input from `../design_candidate.v' to AST representation.
+Generating RTLIL representation for module `\fir_filter'.
+Warning: Replacing memory \state with list of registers. See ../design_candidate.v:39
+Warning: Replacing memory \stage_sum with list of registers. See ../design_candidate.v:30
+Warning: Replacing memory \prod with list of registers. See ../design_candidate.v:30, ../design_candidate.v:27
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \fir_filter
+
+2.2. Analyzing design hierarchy..
+Top module:  \fir_filter
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$../design_candidate.v:36$101 in module fir_filter.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_INIT pass (extract init attributes).
+
+3.4. Executing PROC_ARST pass (detect async resets in processes).
+
+3.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\fir_filter.$proc$../design_candidate.v:36$101'.
+     1/10: $2\i[31:0]
+     2/10: $1\i[31:0]
+     3/10: $0\state[6][35:0]
+     4/10: $0\state[5][35:0]
+     5/10: $0\state[4][35:0]
+     6/10: $0\state[3][35:0]
+     7/10: $0\state[2][35:0]
+     8/10: $0\state[1][35:0]
+     9/10: $0\state[0][35:0]
+    10/10: $0\y_out[35:0]
+Creating decoders for process `\fir_filter.$proc$../design_candidate.v:25$37'.
+     1/41: $0\i[31:0]
+     2/41: $0\stage_sum[0][35:0]
+     3/41: $0\stage_sum[1][35:0]
+     4/41: $0\stage_sum[2][35:0]
+     5/41: $0\stage_sum[3][35:0]
+     6/41: $0\stage_sum[4][35:0]
+     7/41: $0\stage_sum[5][35:0]
+     8/41: $0\stage_sum[6][35:0]
+     9/41: $0\stage_sum[7][35:0]
+    10/41: $0\prod[7][35:0]
+    11/41: $0$func$\coeff_at$../design_candidate.v:27$16$\coeff_at[15:0]$59
+    12/41: $0$func$\coeff_at$../design_candidate.v:27$16$\idx[31:0]$61
+    13/41: $0$func$\coeff_at$../design_candidate.v:27$16$\coeffs[127:0]$60
+    14/41: $0\prod[6][35:0]
+    15/41: $0$func$\coeff_at$../design_candidate.v:27$15$\coeff_at[15:0]$56
+    16/41: $0$func$\coeff_at$../design_candidate.v:27$15$\idx[31:0]$58
+    17/41: $0$func$\coeff_at$../design_candidate.v:27$15$\coeffs[127:0]$57
+    18/41: $0\prod[5][35:0]
+    19/41: $0$func$\coeff_at$../design_candidate.v:27$14$\coeff_at[15:0]$53
+    20/41: $0$func$\coeff_at$../design_candidate.v:27$14$\idx[31:0]$55
+    21/41: $0$func$\coeff_at$../design_candidate.v:27$14$\coeffs[127:0]$54
+    22/41: $0\prod[4][35:0]
+    23/41: $0$func$\coeff_at$../design_candidate.v:27$13$\coeff_at[15:0]$50
+    24/41: $0$func$\coeff_at$../design_candidate.v:27$13$\idx[31:0]$52
+    25/41: $0$func$\coeff_at$../design_candidate.v:27$13$\coeffs[127:0]$51
+    26/41: $0\prod[3][35:0]
+    27/41: $0$func$\coeff_at$../design_candidate.v:27$12$\coeff_at[15:0]$47
+    28/41: $0$func$\coeff_at$../design_candidate.v:27$12$\idx[31:0]$49
+    29/41: $0$func$\coeff_at$../design_candidate.v:27$12$\coeffs[127:0]$48
+    30/41: $0\prod[2][35:0]
+    31/41: $0$func$\coeff_at$../design_candidate.v:27$11$\coeff_at[15:0]$44
+    32/41: $0$func$\coeff_at$../design_candidate.v:27$11$\idx[31:0]$46
+    33/41: $0$func$\coeff_at$../design_candidate.v:27$11$\coeffs[127:0]$45
+    34/41: $0\prod[1][35:0]
+    35/41: $0$func$\coeff_at$../design_candidate.v:27$10$\coeff_at[15:0]$41
+    36/41: $0$func$\coeff_at$../design_candidate.v:27$10$\idx[31:0]$43
+    37/41: $0$func$\coeff_at$../design_candidate.v:27$10$\coeffs[127:0]$42
+    38/41: $0\prod[0][35:0]
+    39/41: $0$func$\coeff_at$../design_candidate.v:27$9$\coeff_at[15:0]$38
+    40/41: $0$func$\coeff_at$../design_candidate.v:27$9$\idx[31:0]$40
+    41/41: $0$func$\coeff_at$../design_candidate.v:27$9$\coeffs[127:0]$39
+
+3.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\fir_filter.\i' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$9$\coeff_at' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$9$\coeffs' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$9$\idx' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$10$\coeff_at' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$10$\coeffs' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$10$\idx' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$11$\coeff_at' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$11$\coeffs' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$11$\idx' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$12$\coeff_at' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$12$\coeffs' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$12$\idx' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$13$\coeff_at' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$13$\coeffs' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$13$\idx' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$14$\coeff_at' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$14$\coeffs' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$14$\idx' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$15$\coeff_at' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$15$\coeffs' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$15$\idx' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$16$\coeff_at' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$16$\coeffs' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.$func$\coeff_at$../design_candidate.v:27$16$\idx' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\prod[0]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\prod[1]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\prod[2]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\prod[3]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\prod[4]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\prod[5]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\prod[6]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\prod[7]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\stage_sum[0]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\stage_sum[1]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\stage_sum[2]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\stage_sum[3]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\stage_sum[4]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\stage_sum[5]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\stage_sum[6]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+No latch inferred for signal `\fir_filter.\stage_sum[7]' from process `\fir_filter.$proc$../design_candidate.v:25$37'.
+
+3.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\fir_filter.\y_out' using process `\fir_filter.$proc$../design_candidate.v:36$101'.
+  created $dff cell `$procdff$129' with positive edge clock.
+Creating register for signal `\fir_filter.\i' using process `\fir_filter.$proc$../design_candidate.v:36$101'.
+  created $dff cell `$procdff$130' with positive edge clock.
+Creating register for signal `\fir_filter.\state[0]' using process `\fir_filter.$proc$../design_candidate.v:36$101'.
+  created $dff cell `$procdff$131' with positive edge clock.
+Creating register for signal `\fir_filter.\state[1]' using process `\fir_filter.$proc$../design_candidate.v:36$101'.
+  created $dff cell `$procdff$132' with positive edge clock.
+Creating register for signal `\fir_filter.\state[2]' using process `\fir_filter.$proc$../design_candidate.v:36$101'.
+  created $dff cell `$procdff$133' with positive edge clock.
+Creating register for signal `\fir_filter.\state[3]' using process `\fir_filter.$proc$../design_candidate.v:36$101'.
+  created $dff cell `$procdff$134' with positive edge clock.
+Creating register for signal `\fir_filter.\state[4]' using process `\fir_filter.$proc$../design_candidate.v:36$101'.
+  created $dff cell `$procdff$135' with positive edge clock.
+Creating register for signal `\fir_filter.\state[5]' using process `\fir_filter.$proc$../design_candidate.v:36$101'.
+  created $dff cell `$procdff$136' with positive edge clock.
+Creating register for signal `\fir_filter.\state[6]' using process `\fir_filter.$proc$../design_candidate.v:36$101'.
+  created $dff cell `$procdff$137' with positive edge clock.
+
+3.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\fir_filter.$proc$../design_candidate.v:36$101'.
+Removing empty process `fir_filter.$proc$../design_candidate.v:36$101'.
+Removing empty process `fir_filter.$proc$../design_candidate.v:25$37'.
+Cleaned up 1 empty switch.
+
+4. Executing CHECK pass (checking for obvious problems).
+checking module fir_filter..
+found and reported 0 problems.
+
+Warnings: 3 unique messages, 3 total
+End of script. Logfile hash: 7aa0a3d11b
+CPU: user 0.03s system 0.00s, MEM: 17.68 MB total, 11.86 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 40% 1x check (0 sec), 31% 2x read_verilog (0 sec), ...
+

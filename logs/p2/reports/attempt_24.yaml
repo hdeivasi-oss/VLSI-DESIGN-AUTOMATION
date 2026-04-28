@@ -1,0 +1,36 @@
+attempt: 24
+spec_id: "p2"
+status: "PASS"
+final_status: "PASS"
+passed: true
+flow_pass: true
+rtl_strategy: "correct"
+tb_strategy: "default_check"
+compile_pass: true
+sim_pass: true
+synthesis_pass: true
+gls_pass: true
+openroad_pass: true
+openroad_skipped: false
+report_generated: true
+final_artifacts_exist: true
+stale_logs: false
+setup_pass: true
+hold_pass: true
+hold_violation: false
+meets_timing: true
+wns: 0.0
+tns: 0.0
+whs: 0.0
+area: 340.326
+timing_fix: "rtl=correct; flow_profile=timing_closed; hold_mode=hold_closed"
+failure_type: "none"
+compile_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p2/attempt_24_compile.log"
+sim_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p2/attempt_24_sim.log"
+synthesis_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p2/Synthesis/synth.log"
+gls_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p2/Synthesis/gls_sim.log"
+openroad_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p2/openroad/openroad_run.log"
+generation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p2/attempt_24_generation.log"
+validation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p2/attempt_24_validation.log"
+repair_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p2/attempt_24_repair.log"
+failure_summary: "Flow completed successfully."

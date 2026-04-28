@@ -1,0 +1,4 @@
+read_verilog ../design_candidate.v
+hierarchy -check -top dot_product
+proc
+check

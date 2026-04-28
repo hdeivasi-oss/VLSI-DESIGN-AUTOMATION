@@ -1,0 +1,541 @@
+{
+  "creator": "Yosys 0.64 (git sha1 8449dd470, g++ 11.4.0-1ubuntu1~22.04.3 -fPIC -O3) [the-openroad-project/yosys]",
+  "modules": {
+    "shift_register_4bit": {
+      "attributes": {
+        "hdlname": "shift_register_4bit",
+        "top": "00000000000000000000000000000001",
+        "src": "../design_candidate.v:1"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "load": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "shift_en": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "serial_in": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "data_in": {
+          "direction": "input",
+          "bits": [ 7, 8, 9, 10 ]
+        },
+        "data_out": {
+          "direction": "output",
+          "bits": [ 11, 12, 13, 14 ]
+        }
+      },
+      "cells": {
+        "$and$/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:33$5587": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:33.20-33.33"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 16 ],
+            "Y": [ 17 ]
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:36$5591": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:36.20-36.33"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 16 ],
+            "Y": [ 19 ]
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:39$5595": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:39.20-39.33"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ 16 ],
+            "Y": [ 21 ]
+          }
+        },
+        "$and$/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:42$5599": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:42.20-42.33"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 22 ],
+            "B": [ 16 ],
+            "Y": [ 23 ]
+          }
+        },
+        "$not$/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:42$5598": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:42.27-42.33"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 16 ]
+          }
+        },
+        "$procdff$5604": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 23 ],
+            "Q": [ 14 ]
+          }
+        },
+        "$procdff$5605": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 21 ],
+            "Q": [ 13 ]
+          }
+        },
+        "$procdff$5606": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 19 ],
+            "Q": [ 12 ]
+          }
+        },
+        "$procdff$5607": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 17 ],
+            "Q": [ 11 ]
+          }
+        },
+        "$ternary$/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:31$5584": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:31.17-31.51"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 6 ],
+            "S": [ 5 ],
+            "Y": [ 24 ]
+          }
+        },
+        "$ternary$/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:32$5585": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:32.17-32.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 24 ],
+            "B": [ 7 ],
+            "S": [ 4 ],
+            "Y": [ 15 ]
+          }
+        },
+        "$ternary$/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:34$5588": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:34.17-34.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 11 ],
+            "S": [ 5 ],
+            "Y": [ 25 ]
+          }
+        },
+        "$ternary$/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:35$5589": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:35.17-35.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 25 ],
+            "B": [ 8 ],
+            "S": [ 4 ],
+            "Y": [ 18 ]
+          }
+        },
+        "$ternary$/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:37$5592": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:37.17-37.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ 12 ],
+            "S": [ 5 ],
+            "Y": [ 26 ]
+          }
+        },
+        "$ternary$/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:38$5593": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:38.17-38.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 26 ],
+            "B": [ 9 ],
+            "S": [ 4 ],
+            "Y": [ 20 ]
+          }
+        },
+        "$ternary$/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:40$5596": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:40.17-40.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 13 ],
+            "S": [ 5 ],
+            "Y": [ 27 ]
+          }
+        },
+        "$ternary$/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:41$5597": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:41.17-41.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 27 ],
+            "B": [ 10 ],
+            "S": [ 4 ],
+            "Y": [ 22 ]
+          }
+        }
+      },
+      "netnames": {
+        "$not$/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:33$5586_Y": {
+          "hide_name": 1,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:33.27-33.33"
+          }
+        },
+        "_00_": {
+          "hide_name": 0,
+          "bits": [ 17, 19, 21, 23 ],
+          "attributes": {
+            "src": "../design_candidate.v:10"
+          }
+        },
+        "_01_": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:8.8-8.12"
+          }
+        },
+        "_02_": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:9.8-9.12"
+          }
+        },
+        "_03_": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:10.8-10.12"
+          }
+        },
+        "_04_": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:11.8-11.12"
+          }
+        },
+        "_05_": {
+          "hide_name": 0,
+          "bits": [ 26 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:12.8-12.12"
+          }
+        },
+        "_06_": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:13.8-13.12"
+          }
+        },
+        "_07_": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:14.8-14.12"
+          }
+        },
+        "_08_": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "/tmp/spec2rtl_openroad/p2/flow/designs/sky130hd/shift_register_4bit/src/design_syn.v:15.8-15.12"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "../design_candidate.v:2"
+          }
+        },
+        "data_in": {
+          "hide_name": 0,
+          "bits": [ 7, 8, 9, 10 ],
+          "attributes": {
+            "src": "../design_candidate.v:7"
+          }
+        },
+        "data_out": {
+          "hide_name": 0,
+          "bits": [ 11, 12, 13, 14 ],
+          "attributes": {
+            "src": "../design_candidate.v:8"
+          }
+        },
+        "load": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "../design_candidate.v:4"
+          }
+        },
+        "rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "../design_candidate.v:3"
+          }
+        },
+        "serial_in": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "../design_candidate.v:6"
+          }
+        },
+        "shift_en": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "../design_candidate.v:5"
+          }
+        }
+      }
+    }
+  }
+}

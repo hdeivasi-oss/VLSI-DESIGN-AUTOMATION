@@ -1,0 +1,28 @@
+
+20. Printing statistics.
+
+=== seq_detect_101 ===
+
+        +----------------------------Count including submodules.
+        |        +-------------------Area including submodules.
+        |        |        +----------Local count, excluding submodules.
+        |        |        |        +-Local area, excluding submodules.
+        |        |        |        | 
+        9        -        9        - wires
+        9        -        9        - wire bits
+        9        -        9        - public wires
+        9        -        9        - public wire bits
+        4        -        4        - ports
+        4        -        4        - port bits
+        -        -        -        - memories
+        -        -        -        - memory bits
+        -        -        -        - processes
+        6   86.333        6   86.333 cells
+        1    8.758        1    8.758   sky130_fd_sc_hd__and2b_2
+        1    10.01        1    10.01   sky130_fd_sc_hd__and3b_2
+        3   60.058        3   60.058   sky130_fd_sc_hd__dfxtp_1
+        1    7.507        1    7.507   sky130_fd_sc_hd__nor3b_1
+
+   Chip area for module '\seq_detect_101': 86.332800
+     of which used for sequential elements: 60.057600 (69.57%)
+

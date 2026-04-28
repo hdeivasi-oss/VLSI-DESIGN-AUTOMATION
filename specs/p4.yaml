@@ -1,0 +1,42 @@
+name: button_debouncer
+kind: sequential_module
+
+summary: >
+  Debounces a noisy button input. The output should change only after the
+  input has remained stable for 3 consecutive clock cycles.
+
+interface:
+  clk:  { dir: input,  bits: 1 }
+  rst:  { dir: input,  bits: 1 }
+  noisy_btn: { dir: input, bits: 1 }
+  clean_btn: { dir: output, bits: 1 }
+
+timing:
+  clock_edge: posedge
+  reset:
+    signal: rst
+    style: synchronous
+    active: high
+
+requirements:
+  stable_cycles_required: 3
+
+functional_spec:
+  - On reset, clean_btn shall be 0.
+  - The module monitors noisy_btn on each rising edge of clk.
+  - If noisy_btn changes value, the stability counter restarts.
+  - If noisy_btn remains unchanged for 3 consecutive clock cycles,
+    clean_btn updates to that stable value.
+  - Until stability is confirmed, clean_btn keeps its previous value.
+
+notes:
+  - This module is sequential and requires internal state.
+  - A counter may be used to track input stability.
+  - clean_btn must not toggle immediately when noisy_btn toggles.
+
+test_expectations:
+  - Reset forces clean_btn to 0.
+  - Short glitches shorter than 3 cycles do not change clean_btn.
+  - A stable high input for 3 cycles updates clean_btn to 1.
+  - A stable low input for 3 cycles updates clean_btn to 0.
+  - clean_btn changes only after the required stable period.

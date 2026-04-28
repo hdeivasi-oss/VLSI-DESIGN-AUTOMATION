@@ -1,0 +1,3 @@
+Generated locally for spec_key=fir_filter
+rtl_strategy=direct_form
+tb_strategy=direct_expectation

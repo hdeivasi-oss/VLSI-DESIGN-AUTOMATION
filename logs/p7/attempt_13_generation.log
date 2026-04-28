@@ -1,0 +1,3 @@
+Generated locally for spec_key=exp_fixed_point
+rtl_strategy=lut_pipeline
+tb_strategy=two_stage_check

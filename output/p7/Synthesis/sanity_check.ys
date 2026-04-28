@@ -1,0 +1,4 @@
+read_verilog ../design_candidate.v
+hierarchy -check -top exp_fixed_point
+proc
+check

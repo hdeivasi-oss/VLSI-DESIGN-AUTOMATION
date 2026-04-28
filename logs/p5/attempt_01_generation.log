@@ -1,0 +1,3 @@
+Generated locally for spec_key=dot_product
+rtl_strategy=single_pulse
+tb_strategy=pulse_check

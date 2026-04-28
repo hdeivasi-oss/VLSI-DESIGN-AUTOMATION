@@ -1,0 +1,1 @@
+$ /usr/bin/iverilog -g2012 -o /home/harish_d1121/Spec_to_Tapeout-main/output/p9/sim.out /home/harish_d1121/Spec_to_Tapeout-main/output/p9/design_candidate.v /home/harish_d1121/Spec_to_Tapeout-main/output/p9/tb_candidate.v

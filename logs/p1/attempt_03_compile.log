@@ -1,0 +1,1 @@
+$ /usr/bin/iverilog -g2012 -o /mnt/c/Users/Harish D/Downloads/VLSI Design Automation/Spec_to_Tapeout-main/output/p1/sim.out /mnt/c/Users/Harish D/Downloads/VLSI Design Automation/Spec_to_Tapeout-main/output/p1/design_candidate.v /mnt/c/Users/Harish D/Downloads/VLSI Design Automation/Spec_to_Tapeout-main/output/p1/tb_candidate.v

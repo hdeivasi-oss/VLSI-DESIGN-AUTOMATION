@@ -1,0 +1,20 @@
+attempt: 3
+spec_id: "p9"
+rtl_strategy: "direct_form"
+tb_strategy: "direct_expectation"
+compile_pass: true
+sim_pass: true
+synthesis_pass: true
+gls_pass: true
+openroad_pass: true
+openroad_skipped: false
+failure_type: "none"
+compile_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p9/attempt_03_compile.log"
+sim_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p9/attempt_03_sim.log"
+synthesis_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p9/Synthesis/synth.log"
+gls_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p9/Synthesis/gls_sim.log"
+openroad_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/output/p9/openroad/openroad_run.log"
+generation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p9/attempt_03_generation.log"
+validation_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p9/attempt_03_validation.log"
+repair_log_path: "/home/harish_d1121/Spec_to_Tapeout-main/logs/p9/attempt_03_repair.log"
+failure_summary: "Compile and simulation passed."
