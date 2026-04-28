@@ -1,3 +1,4 @@
+
 # Spec2RTL Agent – Topic 1 (Spec-to-Tapeout)
 
 ## Overview
@@ -207,3 +208,7 @@ Expected:
 - No manual steps required
 - Logs and outputs generated automatically
 - PASS results for supported specs
+=======
+# VLSI-DESIGN-AUTOMATION
+This project implement Spec to GDS with Agent
+
