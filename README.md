@@ -53,7 +53,7 @@ cd OpenROAD-flow-scripts
 ## Add path is important
 echo 'export PATH=$HOME/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
-
+-------------
 
 ### How to Run the System
 Run the entire pipeline with a single command:
