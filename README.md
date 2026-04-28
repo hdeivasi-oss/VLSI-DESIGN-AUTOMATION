@@ -61,11 +61,11 @@ Run the entire pipeline with a single command:
 ```bash
 python3 agent.py --all specs/
 ```
-
-### To see the Report 
 ```bash
 summary_table.md
 ```
+
+### How to Run the System
 This will:
 1. Read every YAML spec from the specs/ directory.
 2. Create separate output and log folders for each spec.
