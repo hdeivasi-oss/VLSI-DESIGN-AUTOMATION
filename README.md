@@ -6,14 +6,14 @@
 
 ## Overview
 
-This project implements a **local spec-aware AI agent** that converts hardware specifications (YAML) into:
+This project implements a **local spec-aware AI agent** that converts YAML hardware specifications into:
 
 * Synthesizable Verilog RTL
 * Self-checking testbenches
 * Gate-level netlists
 * Physical design outputs (OpenROAD)
 
-The system performs **end-to-end verification and repair** using a feedback-driven loop.
+The system includes a **feedback-driven repair loop** to automatically fix failures during simulation and synthesis.
 
 * Fully automated
 * Single-command execution
@@ -88,13 +88,28 @@ openroad
 
 ---
 
-## How to Run (Single Command)
+## Quick Start (Reproducibility)
+
+Clone the repository:
+
+```bash
+git clone https://github.com/hdeivasi-oss/VLSI-DESIGN-AUTOMATION
+cd VLSI-DESIGN-AUTOMATION
+```
+
+Run the full pipeline:
 
 ```bash
 python3 agent.py --all specs/
 ```
 
-✔ This satisfies the requirement: *single entry point execution* 
+This single command will:
+
+* Generate RTL and testbenches
+* Run simulation (Icarus Verilog)
+* Perform synthesis (Yosys)
+* Run OpenROAD flow
+* Generate logs and reports
 
 ---
 
@@ -125,43 +140,64 @@ output/<spec_name>/
 logs/<spec_name>/
 ```
 
-Includes:
+---
 
-* RTL + Testbench
-* Simulation logs
-* Synthesis results
-* OpenROAD outputs
+## File Generation and Locations
+
+| Stage                | Generated Files         | Location                                    |
+| -------------------- | ----------------------- | ------------------------------------------- |
+| Spec input           | YAML spec               | `specs/<spec_name>.yaml`                    |
+| RTL generation       | Candidate RTL           | `output/<spec_name>/design_candidate.v`     |
+| Testbench generation | Candidate testbench     | `output/<spec_name>/tb_candidate.v`         |
+| Final RTL            | Synthesizable RTL       | `output/<spec_name>/design.v`               |
+| Final Testbench      | Self-checking testbench | `output/<spec_name>/tb.v`                   |
+| Simulation output    | Executable              | `output/<spec_name>/sim.out`                |
+| Synthesis            | Netlist                 | `output/<spec_name>/Synthesis/design_syn.v` |
+| OpenROAD results     | Physical design outputs | `output/<spec_name>/openroad/`              |
+| Logs                 | Execution logs          | `logs/<spec_name>/`                         |
+| Summary              | Final results           | `summary_table.md`, `summary_table.csv`     |
+
+---
+
+## Example Outputs
+
+From your repository (example: `p1`):
+
+* RTL: `output/p1/design.v`
+* Testbench: `output/p1/tb.v`
+* Simulation executable: `output/p1/sim.out`
+* Synthesis results: `output/p1/Synthesis/`
+* OpenROAD results: `output/p1/openroad/`
+
+A successful run produces:
+
+```text
+TEST PASSED
+=== FINAL STATUS: PASS (timing met) ===
+```
+
+---
+
+## Viewing Results
+
+After execution, results are summarized in:
+
+* `summary_table.md` → formatted table
+* `summary_table.csv` → raw data
+
+To view:
+
+```bash
+cat summary_table.md
+```
+
+👉 Best viewed on GitHub (renders as table)
 
 ---
 
 ## Expected Results
 
-After running:
-
-```bash
-python3 agent.py --all specs/
-```
-
-Each spec should produce:
-
-* RTL: `design.v`
-* Testbench: `tb.v`
-* Netlist: `design_syn.v`
-* OpenROAD outputs
-
-Simulation output:
-
-```text
-TEST PASSED
-```
-
-Final status:
-
-```text
-=== FINAL STATUS: PASS (timing met) ===
-```
-
-Checks:
+Each spec should pass:
 
 ```text
 rtl_validation=PASS
@@ -179,20 +215,18 @@ openroad=PASS
 2. Generate RTL + Testbench
 3. Validate RTL (Yosys)
 4. Run simulation (Icarus Verilog)
-5. Repair if needed
+5. Apply repair if needed
 6. Run synthesis
 7. Gate-level simulation
 8. Run OpenROAD
-9. Check timing
+9. Check timing and outputs
 10. Generate reports
 
 ---
 
 ## Hidden Testcases
 
-To run additional specs:
-
-1. Add YAML file to:
+1. Add new YAML spec to:
 
 ```text
 specs/
@@ -225,22 +259,11 @@ Spec_to_Tapeout-main/
 
 ---
 
-## Reproducibility
-
-```bash
-git clone <your-repo-link>
-cd VLSI-DESIGN-AUTOMATION
-python3 agent.py --all specs/
-summary_table.md
-```
-
----
-
 ## Notes
 
 * Fully automated pipeline (no manual steps)
-* Supports multiple hardware designs
-* Repair is rule-based
+* Rule-based repair mechanism
 * Designed for reproducibility
+* Supports multiple hardware designs
 
 ---
